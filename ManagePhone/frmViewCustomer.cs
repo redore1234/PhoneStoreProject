@@ -12,8 +12,6 @@ namespace ManagePhone {
     public partial class frmViewCustomer : Form {
         public frmViewCustomer() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
         }
 
         private void btnCancelCustomer_Click(object sender, EventArgs e) {

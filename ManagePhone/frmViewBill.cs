@@ -12,8 +12,6 @@ namespace ManagePhone {
     public partial class frmViewBill : Form {
         public frmViewBill() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {

@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUpdateEmployee));
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,7 +76,8 @@
             this.tableLayoutPanel2.Controls.Add(this.txtEmployeePhone, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.label17, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.cbManager, 1, 8);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(51, 23);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(38, 19);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -87,17 +89,18 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(823, 450);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(617, 366);
             this.tableLayoutPanel2.TabIndex = 14;
             // 
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConfirmPassword.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtConfirmPassword.Location = new System.Drawing.Point(246, 210);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(184, 167);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(574, 30);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(431, 26);
             this.txtConfirmPassword.TabIndex = 25;
             // 
             // label13
@@ -105,9 +108,10 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(3, 63);
+            this.label13.Location = new System.Drawing.Point(2, 50);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(237, 24);
+            this.label13.Size = new System.Drawing.Size(178, 19);
             this.label13.TabIndex = 16;
             this.label13.Text = "Password:";
             // 
@@ -116,9 +120,10 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 213);
+            this.label5.Location = new System.Drawing.Point(2, 170);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(191, 24);
+            this.label5.Size = new System.Drawing.Size(157, 19);
             this.label5.TabIndex = 24;
             this.label5.Text = "Confirm Password:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -127,20 +132,22 @@
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(246, 60);
+            this.txtPassword.Location = new System.Drawing.Point(184, 47);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(574, 30);
+            this.txtPassword.Size = new System.Drawing.Size(431, 26);
             this.txtPassword.TabIndex = 16;
             // 
             // txtNewPassword
             // 
             this.txtNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNewPassword.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtNewPassword.Location = new System.Drawing.Point(246, 160);
+            this.txtNewPassword.Location = new System.Drawing.Point(184, 127);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
-            this.txtNewPassword.Size = new System.Drawing.Size(574, 30);
+            this.txtNewPassword.Size = new System.Drawing.Size(431, 26);
             this.txtNewPassword.TabIndex = 23;
             // 
             // label15
@@ -148,9 +155,10 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(3, 13);
+            this.label15.Location = new System.Drawing.Point(2, 10);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(237, 24);
+            this.label15.Size = new System.Drawing.Size(178, 19);
             this.label15.TabIndex = 17;
             this.label15.Text = "Username:";
             // 
@@ -159,9 +167,10 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 163);
+            this.label6.Location = new System.Drawing.Point(2, 130);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 24);
+            this.label6.Size = new System.Drawing.Size(130, 19);
             this.label6.TabIndex = 22;
             this.label6.Text = "New Password:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,20 +179,22 @@
             // 
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(246, 10);
+            this.txtUsername.Location = new System.Drawing.Point(184, 7);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(574, 30);
+            this.txtUsername.Size = new System.Drawing.Size(431, 26);
             this.txtUsername.TabIndex = 17;
             // 
             // txtCurrentPassword
             // 
             this.txtCurrentPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCurrentPassword.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCurrentPassword.Location = new System.Drawing.Point(246, 110);
+            this.txtCurrentPassword.Location = new System.Drawing.Point(184, 87);
+            this.txtCurrentPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
             this.txtCurrentPassword.PasswordChar = '*';
-            this.txtCurrentPassword.Size = new System.Drawing.Size(574, 30);
+            this.txtCurrentPassword.Size = new System.Drawing.Size(431, 26);
             this.txtCurrentPassword.TabIndex = 21;
             // 
             // label7
@@ -191,9 +202,10 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 113);
+            this.label7.Location = new System.Drawing.Point(2, 90);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(188, 24);
+            this.label7.Size = new System.Drawing.Size(154, 19);
             this.label7.TabIndex = 20;
             this.label7.Text = "Current Password:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,9 +215,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 313);
+            this.label3.Location = new System.Drawing.Point(2, 250);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(237, 24);
+            this.label3.Size = new System.Drawing.Size(178, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Address:";
             // 
@@ -213,9 +226,10 @@
             // 
             this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(246, 310);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(184, 247);
+            this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(574, 30);
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(431, 26);
             this.txtEmployeeAddress.TabIndex = 1;
             // 
             // label1
@@ -223,9 +237,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 263);
+            this.label1.Location = new System.Drawing.Point(2, 210);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(237, 24);
+            this.label1.Size = new System.Drawing.Size(178, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
@@ -233,9 +248,10 @@
             // 
             this.txtEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeeName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(246, 260);
+            this.txtEmployeeName.Location = new System.Drawing.Point(184, 207);
+            this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(574, 30);
+            this.txtEmployeeName.Size = new System.Drawing.Size(431, 26);
             this.txtEmployeeName.TabIndex = 1;
             // 
             // label2
@@ -243,9 +259,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 363);
+            this.label2.Location = new System.Drawing.Point(2, 290);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 24);
+            this.label2.Size = new System.Drawing.Size(178, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "Phone:";
             // 
@@ -253,10 +270,11 @@
             // 
             this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtEmployeePhone.Location = new System.Drawing.Point(246, 360);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(184, 287);
+            this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeePhone.Mask = "(9999) 000-000";
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(574, 30);
+            this.txtEmployeePhone.Size = new System.Drawing.Size(431, 26);
             this.txtEmployeePhone.TabIndex = 16;
             // 
             // label17
@@ -264,9 +282,10 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 413);
+            this.label17.Location = new System.Drawing.Point(2, 333);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(237, 24);
+            this.label17.Size = new System.Drawing.Size(178, 19);
             this.label17.TabIndex = 1;
             this.label17.Text = "Manager:";
             // 
@@ -275,9 +294,10 @@
             this.cbManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbManager.AutoSize = true;
             this.cbManager.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbManager.Location = new System.Drawing.Point(246, 416);
+            this.cbManager.Location = new System.Drawing.Point(184, 336);
+            this.cbManager.Margin = new System.Windows.Forms.Padding(2);
             this.cbManager.Name = "cbManager";
-            this.cbManager.Size = new System.Drawing.Size(574, 17);
+            this.cbManager.Size = new System.Drawing.Size(431, 14);
             this.cbManager.TabIndex = 18;
             this.cbManager.UseVisualStyleBackColor = true;
             // 
@@ -286,17 +306,19 @@
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.btnCancel);
             this.panel4.Controls.Add(this.btnUpdateEmployee);
-            this.panel4.Location = new System.Drawing.Point(591, 491);
+            this.panel4.Location = new System.Drawing.Point(443, 399);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(280, 55);
+            this.panel4.Size = new System.Drawing.Size(210, 45);
             this.panel4.TabIndex = 15;
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(21, 16);
+            this.btnCancel.Location = new System.Drawing.Point(16, 13);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(99, 29);
+            this.btnCancel.Size = new System.Drawing.Size(74, 24);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -305,21 +327,25 @@
             // btnUpdateEmployee
             // 
             this.btnUpdateEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(171, 16);
+            this.btnUpdateEmployee.Location = new System.Drawing.Point(128, 13);
+            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateEmployee.Name = "btnUpdateEmployee";
-            this.btnUpdateEmployee.Size = new System.Drawing.Size(93, 29);
+            this.btnUpdateEmployee.Size = new System.Drawing.Size(70, 24);
             this.btnUpdateEmployee.TabIndex = 3;
             this.btnUpdateEmployee.Text = "UPDATE";
             this.btnUpdateEmployee.UseVisualStyleBackColor = true;
             // 
             // frmUpdateEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(956, 558);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(717, 453);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.tableLayoutPanel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "frmUpdateEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Employee";

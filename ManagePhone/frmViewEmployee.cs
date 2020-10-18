@@ -12,8 +12,6 @@ namespace ManagePhone {
     public partial class frmViewEmployee : Form {
         public frmViewEmployee() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
         }
 
         private void btnSearchEmployee_Click(object sender, EventArgs e) {

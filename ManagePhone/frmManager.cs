@@ -12,9 +12,7 @@ using System.Windows.Forms;
 namespace ManagePhone {
     public partial class frmManager : Form {
         public frmManager() {
-            InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
+            InitializeComponent();  
             //Set custom format for DateTimePicker
             /*            this.dtEmployeeDOB.Format = DateTimePickerFormat.Custom;
                         this.dtPhoneYear.Format = DateTimePickerFormat.Custom;

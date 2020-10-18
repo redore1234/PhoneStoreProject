@@ -12,8 +12,6 @@ namespace ManagePhone {
     public partial class frmUpdateEmployee : Form {
         public frmUpdateEmployee() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {

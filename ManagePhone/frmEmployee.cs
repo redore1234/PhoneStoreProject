@@ -13,8 +13,6 @@ namespace ManagePhone {
     public partial class frmEmployee : Form {
         public frmEmployee() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e) {

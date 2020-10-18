@@ -12,8 +12,6 @@ namespace ManagePhone.GUI {
     public partial class frmAddCustomer : Form {
         public frmAddCustomer() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
-            this.MaximumSize = this.Size;
             this.dtCustomerDOB.Format = DateTimePickerFormat.Custom;
             dtCustomerDOB.CustomFormat = "dd-MM-yyyy";
         }
