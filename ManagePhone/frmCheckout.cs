@@ -9,22 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmViewCustomer : Form {
-        public frmViewCustomer() {
+    public partial class frmCheckout : Form {
+        public frmCheckout() {
             InitializeComponent();
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
         }
 
-        private void btnCancelCustomer_Click(object sender, EventArgs e) {
+        private void btnCancel_Click(object sender, EventArgs e) {
             this.Close();
-        }
-
-        private void btnUpdateCustomer_Click(object sender, EventArgs e) {
-            frmUpdateCustomer updateCustomer = new frmUpdateCustomer();
-            this.Hide();
-            updateCustomer.ShowDialog();
-            this.Show();
         }
     }
 }

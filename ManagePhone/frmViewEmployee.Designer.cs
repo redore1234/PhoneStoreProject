@@ -27,7 +27,7 @@
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
             this.btnDeleteEmployee = new System.Windows.Forms.Button();
             this.dgvListEmployee = new System.Windows.Forms.DataGridView();
-            this.txtSearchEmployeeID = new System.Windows.Forms.TextBox();
+            this.txtSearchEmployeeName = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -80,21 +80,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListEmployee.Location = new System.Drawing.Point(6, 234);
+            this.dgvListEmployee.Location = new System.Drawing.Point(12, 238);
             this.dgvListEmployee.Name = "dgvListEmployee";
             this.dgvListEmployee.RowHeadersWidth = 51;
             this.dgvListEmployee.RowTemplate.Height = 24;
             this.dgvListEmployee.Size = new System.Drawing.Size(1005, 472);
             this.dgvListEmployee.TabIndex = 16;
             // 
-            // txtSearchEmployeeID
+            // txtSearchEmployeeName
             // 
-            this.txtSearchEmployeeID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchEmployeeID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchEmployeeID.Location = new System.Drawing.Point(143, 28);
-            this.txtSearchEmployeeID.Name = "txtSearchEmployeeID";
-            this.txtSearchEmployeeID.Size = new System.Drawing.Size(385, 30);
-            this.txtSearchEmployeeID.TabIndex = 8;
+            this.txtSearchEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchEmployeeName.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtSearchEmployeeName.Location = new System.Drawing.Point(178, 28);
+            this.txtSearchEmployeeName.Name = "txtSearchEmployeeName";
+            this.txtSearchEmployeeName.Size = new System.Drawing.Size(350, 30);
+            this.txtSearchEmployeeName.TabIndex = 8;
             // 
             // label29
             // 
@@ -103,20 +103,20 @@
             this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(3, 31);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(134, 24);
+            this.label29.Size = new System.Drawing.Size(169, 24);
             this.label29.TabIndex = 7;
-            this.label29.Text = "EmployeeID:";
+            this.label29.Text = "Employee Name:";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.36535F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.63465F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.14501F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.85499F));
             this.tableLayoutPanel1.Controls.Add(this.label29, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtSearchEmployeeID, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(252, 12);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearchEmployeeName, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(255, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -134,7 +134,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnUpdateEmployee, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDeleteEmployee, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancelEmployee, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(275, 130);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(281, 135);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -166,7 +166,7 @@
         private System.Windows.Forms.Button btnUpdateEmployee;
         private System.Windows.Forms.Button btnDeleteEmployee;
         private System.Windows.Forms.DataGridView dgvListEmployee;
-        private System.Windows.Forms.TextBox txtSearchEmployeeID;
+        private System.Windows.Forms.TextBox txtSearchEmployeeName;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button btnCancelEmployee;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

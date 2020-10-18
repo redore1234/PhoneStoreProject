@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,24 @@ namespace ManagePhone {
     public partial class frmEmployee : Form {
         public frmEmployee() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e) {
+            frmCheckout checkout = new frmCheckout();
+            this.Hide();
+            checkout.ShowDialog();
+            this.Show();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e) {
+            frmAddCustomer addCustomer = new frmAddCustomer();
+            this.Hide();
+            addCustomer.ShowDialog();
+            this.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

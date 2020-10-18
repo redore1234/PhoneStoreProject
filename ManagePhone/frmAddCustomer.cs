@@ -12,6 +12,12 @@ namespace ManagePhone.GUI {
     public partial class frmAddCustomer : Form {
         public frmAddCustomer() {
             InitializeComponent();
+            this.MinimumSize = this.Size;
+            this.MaximumSize = this.Size;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e) {
+            this.Close();
         }
     }
 }

@@ -45,78 +45,105 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\frmAddCustomer.cs">
+    <Compile Include="frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmAddCustomer.Designer.cs">
+    <Compile Include="frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmLogin.cs">
+    <Compile Include="frmCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmLogin.Designer.cs">
+    <Compile Include="frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmManager.cs">
+    <Compile Include="frmManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmManager.Designer.cs">
+    <Compile Include="frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmEmployee.cs">
+    <Compile Include="frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmEmployee.Designer.cs">
+    <Compile Include="frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmViewBill.cs">
+    <Compile Include="frmUpdateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmViewBill.Designer.cs">
-      <DependentUpon>frmViewBill.cs</DependentUpon>
+    <Compile Include="frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmViewCustomer.cs">
+    <Compile Include="frmUpdateEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmViewCustomer.Designer.cs">
+    <Compile Include="frmUpdateEmployee.Designer.cs">
+      <DependentUpon>frmUpdateEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdatePhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdatePhone.Designer.cs">
+      <DependentUpon>frmUpdatePhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewCustomer.Designer.cs">
       <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmViewEmployee.cs">
+    <Compile Include="frmViewEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmViewEmployee.Designer.cs">
+    <Compile Include="frmViewEmployee.Designer.cs">
       <DependentUpon>frmViewEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\frmViewPhone.cs">
+    <Compile Include="frmViewPhone.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\frmViewPhone.Designer.cs">
+    <Compile Include="frmViewPhone.Designer.cs">
       <DependentUpon>frmViewPhone.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Program.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\frmAddCustomer.resx">
+    <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmLogin.resx">
+    <EmbeddedResource Include="frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmManager.resx">
+    <EmbeddedResource Include="frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmEmployee.resx">
+    <EmbeddedResource Include="frmEmployee.resx">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmViewBill.resx">
-      <DependentUpon>frmViewBill.cs</DependentUpon>
+    <EmbeddedResource Include="frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmViewCustomer.resx">
+    <EmbeddedResource Include="frmUpdateEmployee.resx">
+      <DependentUpon>frmUpdateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdatePhone.resx">
+      <DependentUpon>frmUpdatePhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewCustomer.resx">
       <DependentUpon>frmViewCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmViewEmployee.resx">
+    <EmbeddedResource Include="frmViewEmployee.resx">
       <DependentUpon>frmViewEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\frmViewPhone.resx">
+    <EmbeddedResource Include="frmViewPhone.resx">
       <DependentUpon>frmViewPhone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

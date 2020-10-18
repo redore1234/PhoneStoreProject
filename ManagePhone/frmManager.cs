@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,27 +13,12 @@ namespace ManagePhone {
     public partial class frmManager : Form {
         public frmManager() {
             InitializeComponent();
-            this.MinimumSize = this.Size;
         }
 
         private void btnViewEmployee_Click(object sender, EventArgs e) {
             frmViewEmployee viewEmployee = new frmViewEmployee();
             this.Hide();
             viewEmployee.ShowDialog();
-            this.Show();
-        }
-
-        private void btnViewBill_Click(object sender, EventArgs e) {
-            frmViewBill viewBill = new frmViewBill();
-            this.Hide();
-            viewBill.ShowDialog();
-            this.Show();
-        }
-
-        private void btnViewCustomer_Click(object sender, EventArgs e) {
-            frmViewCustomer viewCustomer = new frmViewCustomer();
-            this.Hide();
-            viewCustomer.ShowDialog();
             this.Show();
         }
 
@@ -51,16 +37,22 @@ namespace ManagePhone {
 
         }
 
-        private void btnImagePhone_Click(object sender, EventArgs e) {
-
-        }
-
-        private void pbImage_Click(object sender, EventArgs e) {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e) {
+            frmCheckout checkout = new frmCheckout();
+            this.Hide();
+            checkout.ShowDialog();
+            this.Show();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e) {
+            frmAddCustomer addCustomer = new frmAddCustomer();
+            this.Hide();
+            addCustomer.ShowDialog();
+            this.Show();
         }
     }
 }

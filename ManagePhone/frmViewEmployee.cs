@@ -21,7 +21,10 @@ namespace ManagePhone {
         }
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e) {
-
+            frmUpdateEmployee updateEmployee = new frmUpdateEmployee();
+            this.Hide();
+            updateEmployee.ShowDialog();
+            this.Show();
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e) {
@@ -29,7 +32,7 @@ namespace ManagePhone {
         }
 
         private void btnCancelEmployee_Click(object sender, EventArgs e) {
-
+            this.Close();
         }
     }
 }

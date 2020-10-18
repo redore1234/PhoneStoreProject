@@ -44,21 +44,22 @@
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.btnViewEmployee = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtEmployeePhone = new System.Windows.Forms.MaskedTextBox();
-            this.cbEmployeeRole = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
-            this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtEmployeeDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtEmployeePhone = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dtEmployeeDOB = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -68,18 +69,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPhoneName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.cbPhoneBranch = new System.Windows.Forms.ComboBox();
+            this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.cbPhoneBrand = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.dtPhoneYear = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.pbImage = new System.Windows.Forms.PictureBox();
-            this.txtDescription = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.cbManager = new System.Windows.Forms.CheckBox();
             this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -90,14 +94,14 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,6 +190,7 @@
             this.btnCheck.TabIndex = 3;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // lbState
             // 
@@ -221,6 +226,7 @@
             this.btnCheckOut.TabIndex = 12;
             this.btnCheckOut.Text = "Checkout";
             this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // panel1
             // 
@@ -348,17 +354,6 @@
             this.panel3.Size = new System.Drawing.Size(959, 156);
             this.panel3.TabIndex = 15;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = global::ManagePhone.Properties.Resources.employeeinformation;
-            this.pictureBox1.Location = new System.Drawing.Point(285, -6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(392, 161);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -373,7 +368,7 @@
             // 
             this.btnAddEmployee.AutoSize = true;
             this.btnAddEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.Location = new System.Drawing.Point(0, 9);
+            this.btnAddEmployee.Location = new System.Drawing.Point(17, 9);
             this.btnAddEmployee.Name = "btnAddEmployee";
             this.btnAddEmployee.Size = new System.Drawing.Size(106, 35);
             this.btnAddEmployee.TabIndex = 3;
@@ -400,130 +395,156 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.38408F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.61593F));
-            this.tableLayoutPanel2.Controls.Add(this.txtEmployeePhone, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.cbEmployeeRole, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.dtEmployeeDOB, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtEmployeeAddress, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtEmployeeName, 1, 0);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.61592F));
+            this.tableLayoutPanel2.Controls.Add(this.cbManager, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.txtEmployeePhone, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.dtEmployeeDOB, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtPassword, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtUsername, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtEmployeeName, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtEmployeeAddress, 1, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(54, 164);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowCount = 7;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.6129F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.93548F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.87097F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.77419F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.48387F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.09678F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.90323F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(854, 310);
             this.tableLayoutPanel2.TabIndex = 13;
-            // 
-            // txtEmployeePhone
-            // 
-            this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtEmployeePhone.Location = new System.Drawing.Point(160, 202);
-            this.txtEmployeePhone.Mask = "(9999) 000-000";
-            this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(691, 30);
-            this.txtEmployeePhone.TabIndex = 16;
-            // 
-            // cbEmployeeRole
-            // 
-            this.cbEmployeeRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbEmployeeRole.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbEmployeeRole.FormattingEnabled = true;
-            this.cbEmployeeRole.Location = new System.Drawing.Point(160, 263);
-            this.cbEmployeeRole.Name = "cbEmployeeRole";
-            this.cbEmployeeRole.Size = new System.Drawing.Size(691, 31);
-            this.cbEmployeeRole.TabIndex = 2;
-            // 
-            // label17
-            // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 267);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(151, 24);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Role:";
-            // 
-            // txtEmployeeAddress
-            // 
-            this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(160, 78);
-            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(691, 30);
-            this.txtEmployeeAddress.TabIndex = 1;
-            // 
-            // txtEmployeeName
-            // 
-            this.txtEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeeName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(160, 16);
-            this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(691, 30);
-            this.txtEmployeeName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 205);
+            this.label2.Location = new System.Drawing.Point(3, 230);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Phone:";
             // 
-            // label1
+            // txtEmployeePhone
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
-            // 
-            // dtEmployeeDOB
-            // 
-            this.dtEmployeeDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtEmployeeDOB.Font = new System.Drawing.Font("Arial", 10F);
-            this.dtEmployeeDOB.Location = new System.Drawing.Point(160, 141);
-            this.dtEmployeeDOB.Name = "dtEmployeeDOB";
-            this.dtEmployeeDOB.Size = new System.Drawing.Size(691, 27);
-            this.dtEmployeeDOB.TabIndex = 1;
+            this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(160, 227);
+            this.txtEmployeePhone.Mask = "(9999) 000-000";
+            this.txtEmployeePhone.Name = "txtEmployeePhone";
+            this.txtEmployeePhone.Size = new System.Drawing.Size(691, 30);
+            this.txtEmployeePhone.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 143);
+            this.label4.Location = new System.Drawing.Point(3, 180);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(151, 24);
             this.label4.TabIndex = 0;
             this.label4.Text = "Date of Birth:";
+            // 
+            // dtEmployeeDOB
+            // 
+            this.dtEmployeeDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtEmployeeDOB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtEmployeeDOB.Location = new System.Drawing.Point(160, 177);
+            this.dtEmployeeDOB.Name = "dtEmployeeDOB";
+            this.dtEmployeeDOB.Size = new System.Drawing.Size(691, 30);
+            this.dtEmployeeDOB.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(3, 42);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(151, 24);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "Password:";
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 81);
+            this.label3.Location = new System.Drawing.Point(3, 130);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Address:";
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(160, 39);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(691, 30);
+            this.txtPassword.TabIndex = 16;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(3, 6);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(151, 24);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Username:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 82);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(160, 3);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(691, 30);
+            this.txtUsername.TabIndex = 17;
+            // 
+            // txtEmployeeName
+            // 
+            this.txtEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeeName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeName.Location = new System.Drawing.Point(160, 79);
+            this.txtEmployeeName.Name = "txtEmployeeName";
+            this.txtEmployeeName.Size = new System.Drawing.Size(691, 30);
+            this.txtEmployeeName.TabIndex = 1;
+            // 
+            // txtEmployeeAddress
+            // 
+            this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(160, 127);
+            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(691, 30);
+            this.txtEmployeeAddress.TabIndex = 1;
             // 
             // tabControl1
             // 
@@ -594,11 +615,11 @@
             this.tableLayoutPanel4.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.txtPhoneName, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.numericUpDown2, 1, 4);
-            this.tableLayoutPanel4.Controls.Add(this.cbPhoneBranch, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.numQuantity, 1, 4);
+            this.tableLayoutPanel4.Controls.Add(this.cbPhoneBrand, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.label10, 0, 4);
             this.tableLayoutPanel4.Controls.Add(this.label9, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.textBox2, 1, 3);
+            this.tableLayoutPanel4.Controls.Add(this.txtPrice, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.dtPhoneYear, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label11, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label12, 0, 5);
@@ -625,7 +646,7 @@
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(3, 6);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(198, 24);
+            this.label6.Size = new System.Drawing.Size(197, 24);
             this.label6.TabIndex = 0;
             this.label6.Text = "Name:";
             // 
@@ -633,9 +654,9 @@
             // 
             this.txtPhoneName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtPhoneName.Location = new System.Drawing.Point(207, 3);
+            this.txtPhoneName.Location = new System.Drawing.Point(206, 3);
             this.txtPhoneName.Name = "txtPhoneName";
-            this.txtPhoneName.Size = new System.Drawing.Size(619, 30);
+            this.txtPhoneName.Size = new System.Drawing.Size(620, 30);
             this.txtPhoneName.TabIndex = 1;
             // 
             // label8
@@ -645,47 +666,47 @@
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 42);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(198, 24);
+            this.label8.Size = new System.Drawing.Size(197, 24);
             this.label8.TabIndex = 0;
             this.label8.Text = "Brand:";
             // 
-            // numericUpDown2
+            // numQuantity
             // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown2.Font = new System.Drawing.Font("Arial", 12F);
-            this.numericUpDown2.Location = new System.Drawing.Point(207, 145);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numQuantity.Font = new System.Drawing.Font("Arial", 12F);
+            this.numQuantity.Location = new System.Drawing.Point(206, 148);
+            this.numQuantity.Maximum = new decimal(new int[] {
             100000000,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(619, 30);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numQuantity.Name = "numQuantity";
+            this.numQuantity.Size = new System.Drawing.Size(620, 30);
+            this.numQuantity.TabIndex = 2;
+            this.numQuantity.Value = new decimal(new int[] {
             500,
             0,
             0,
             0});
             // 
-            // cbPhoneBranch
+            // cbPhoneBrand
             // 
-            this.cbPhoneBranch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbPhoneBranch.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbPhoneBranch.FormattingEnabled = true;
-            this.cbPhoneBranch.Location = new System.Drawing.Point(207, 39);
-            this.cbPhoneBranch.Name = "cbPhoneBranch";
-            this.cbPhoneBranch.Size = new System.Drawing.Size(619, 31);
-            this.cbPhoneBranch.TabIndex = 1;
+            this.cbPhoneBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbPhoneBrand.Font = new System.Drawing.Font("Arial", 12F);
+            this.cbPhoneBrand.FormattingEnabled = true;
+            this.cbPhoneBrand.Location = new System.Drawing.Point(206, 39);
+            this.cbPhoneBrand.Name = "cbPhoneBrand";
+            this.cbPhoneBrand.Size = new System.Drawing.Size(620, 31);
+            this.cbPhoneBrand.TabIndex = 1;
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 148);
+            this.label10.Location = new System.Drawing.Point(3, 151);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(198, 24);
+            this.label10.Size = new System.Drawing.Size(197, 24);
             this.label10.TabIndex = 0;
             this.label10.Text = "Quantity:";
             // 
@@ -694,28 +715,28 @@
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 77);
+            this.label9.Location = new System.Drawing.Point(3, 79);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(198, 24);
+            this.label9.Size = new System.Drawing.Size(197, 24);
             this.label9.TabIndex = 0;
             this.label9.Text = "Release Year:";
             // 
-            // textBox2
+            // txtPrice
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBox2.Location = new System.Drawing.Point(207, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(619, 30);
-            this.textBox2.TabIndex = 2;
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtPrice.Location = new System.Drawing.Point(206, 112);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(620, 30);
+            this.txtPrice.TabIndex = 2;
             // 
             // dtPhoneYear
             // 
             this.dtPhoneYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtPhoneYear.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtPhoneYear.Location = new System.Drawing.Point(207, 76);
+            this.dtPhoneYear.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtPhoneYear.Location = new System.Drawing.Point(206, 76);
             this.dtPhoneYear.Name = "dtPhoneYear";
-            this.dtPhoneYear.Size = new System.Drawing.Size(619, 27);
+            this.dtPhoneYear.Size = new System.Drawing.Size(620, 30);
             this.dtPhoneYear.TabIndex = 1;
             // 
             // label11
@@ -723,15 +744,50 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(3, 112);
+            this.label11.Location = new System.Drawing.Point(3, 115);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(198, 24);
+            this.label11.Size = new System.Drawing.Size(197, 24);
             this.label11.TabIndex = 0;
             this.label11.Text = "Price:";
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(3, 229);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(197, 24);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Image:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 345);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(197, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Description:";
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescription.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtDescription.Location = new System.Drawing.Point(206, 304);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(620, 106);
+            this.txtDescription.TabIndex = 2;
             // 
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(885, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 31);
@@ -740,52 +796,50 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // label12
+            // pictureBox1
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(3, 226);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(198, 24);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Image:";
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = global::ManagePhone.Properties.Resources.employeeinformation;
+            this.pictureBox1.Location = new System.Drawing.Point(285, -6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(392, 161);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // pbImage
             // 
             this.pbImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbImage.InitialImage = global::ManagePhone.Properties.Resources.employeeinformation;
-            this.pbImage.Location = new System.Drawing.Point(371, 181);
+            this.pbImage.InitialImage = null;
+            this.pbImage.Location = new System.Drawing.Point(371, 184);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(290, 115);
+            this.pbImage.Size = new System.Drawing.Size(290, 114);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 6;
             this.pbImage.TabStop = false;
-            this.pbImage.Click += new System.EventHandler(this.pbImage_Click);
             // 
-            // txtDescription
+            // label17
             // 
-            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescription.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtDescription.Location = new System.Drawing.Point(207, 302);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(619, 108);
-            this.txtDescription.TabIndex = 2;
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 277);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(151, 24);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Manager:";
             // 
-            // label7
+            // cbManager
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 344);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Description:";
+            this.cbManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbManager.AutoSize = true;
+            this.cbManager.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbManager.Location = new System.Drawing.Point(160, 281);
+            this.cbManager.Name = "cbManager";
+            this.cbManager.Size = new System.Drawing.Size(691, 17);
+            this.cbManager.TabIndex = 19;
+            this.cbManager.UseVisualStyleBackColor = true;
             // 
             // frmManager
             // 
@@ -812,7 +866,6 @@
             this.tableLayoutPanel5.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -822,7 +875,8 @@
             this.panel5.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
 
@@ -834,8 +888,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnViewEmployee;
         private System.Windows.Forms.Button btnAddEmployee;
-        private System.Windows.Forms.ComboBox cbEmployeeRole;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.Label label3;
@@ -849,13 +901,13 @@
         private System.Windows.Forms.TextBox txtPhoneName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnViewPhoneDetails;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numQuantity;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtPhoneYear;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbPhoneBranch;
+        private System.Windows.Forms.ComboBox cbPhoneBrand;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAddPhone;
         private System.Windows.Forms.Panel panel2;
@@ -885,5 +937,11 @@
         private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox cbManager;
     }
 }

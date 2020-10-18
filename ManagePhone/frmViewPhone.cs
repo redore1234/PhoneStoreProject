@@ -15,5 +15,16 @@ namespace ManagePhone {
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
         }
+
+        private void btnCancelPhone_Click(object sender, EventArgs e) {
+            this.Close();
+        }
+
+        private void btnUpdatePhone_Click(object sender, EventArgs e) {
+            frmUpdatePhone updatePhone = new frmUpdatePhone();
+            this.Hide();
+            updatePhone.ShowDialog();
+            this.Show();
+        }
     }
 }

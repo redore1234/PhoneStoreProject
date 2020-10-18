@@ -27,13 +27,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancelPhone = new System.Windows.Forms.Button();
             this.btnUpdatePhone = new System.Windows.Forms.Button();
             this.btnDeletePhone = new System.Windows.Forms.Button();
+            this.btnCancelPhone = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbSearchPhoneBrand = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtPhoneID = new System.Windows.Forms.TextBox();
-            this.txtBrandID = new System.Windows.Forms.TextBox();
+            this.txtSearchPhone = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvListPhone = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -52,7 +52,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(5, 8);
+            this.tabControl1.Location = new System.Drawing.Point(1, 41);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1010, 704);
@@ -75,31 +75,17 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.btnUpdatePhone, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDeletePhone, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnCancelPhone, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(307, 128);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(404, 139);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(422, 55);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(275, 55);
             this.tableLayoutPanel2.TabIndex = 20;
-            // 
-            // btnCancelPhone
-            // 
-            this.btnCancelPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelPhone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancelPhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelPhone.Location = new System.Drawing.Point(283, 13);
-            this.btnCancelPhone.Name = "btnCancelPhone";
-            this.btnCancelPhone.Size = new System.Drawing.Size(136, 29);
-            this.btnCancelPhone.TabIndex = 6;
-            this.btnCancelPhone.Text = "Cancel";
-            this.btnCancelPhone.UseVisualStyleBackColor = true;
             // 
             // btnUpdatePhone
             // 
@@ -107,21 +93,35 @@
             this.btnUpdatePhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdatePhone.Location = new System.Drawing.Point(3, 13);
             this.btnUpdatePhone.Name = "btnUpdatePhone";
-            this.btnUpdatePhone.Size = new System.Drawing.Size(134, 29);
+            this.btnUpdatePhone.Size = new System.Drawing.Size(131, 29);
             this.btnUpdatePhone.TabIndex = 4;
             this.btnUpdatePhone.Text = "Update";
             this.btnUpdatePhone.UseVisualStyleBackColor = true;
+            this.btnUpdatePhone.Click += new System.EventHandler(this.btnUpdatePhone_Click);
             // 
             // btnDeletePhone
             // 
             this.btnDeletePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletePhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePhone.Location = new System.Drawing.Point(143, 13);
+            this.btnDeletePhone.Location = new System.Drawing.Point(140, 13);
             this.btnDeletePhone.Name = "btnDeletePhone";
-            this.btnDeletePhone.Size = new System.Drawing.Size(134, 29);
+            this.btnDeletePhone.Size = new System.Drawing.Size(132, 29);
             this.btnDeletePhone.TabIndex = 5;
             this.btnDeletePhone.Text = "Delete";
             this.btnDeletePhone.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelPhone
+            // 
+            this.btnCancelPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelPhone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancelPhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelPhone.Location = new System.Drawing.Point(907, 0);
+            this.btnCancelPhone.Name = "btnCancelPhone";
+            this.btnCancelPhone.Size = new System.Drawing.Size(104, 39);
+            this.btnCancelPhone.TabIndex = 6;
+            this.btnCancelPhone.Text = "Cancel";
+            this.btnCancelPhone.UseVisualStyleBackColor = true;
+            this.btnCancelPhone.Click += new System.EventHandler(this.btnCancelPhone_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -130,17 +130,28 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68917F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.31084F));
+            this.tableLayoutPanel1.Controls.Add(this.cbSearchPhoneBrand, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label28, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtPhoneID, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.txtBrandID, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearchPhone, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label27, 0, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(238, 22);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(563, 100);
             this.tableLayoutPanel1.TabIndex = 19;
+            // 
+            // cbSearchPhoneBrand
+            // 
+            this.cbSearchPhoneBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSearchPhoneBrand.Font = new System.Drawing.Font("Arial", 12F);
+            this.cbSearchPhoneBrand.FormattingEnabled = true;
+            this.cbSearchPhoneBrand.Location = new System.Drawing.Point(142, 9);
+            this.cbSearchPhoneBrand.Name = "cbSearchPhoneBrand";
+            this.cbSearchPhoneBrand.Size = new System.Drawing.Size(418, 31);
+            this.cbSearchPhoneBrand.TabIndex = 21;
             // 
             // label28
             // 
@@ -151,25 +162,16 @@
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(133, 24);
             this.label28.TabIndex = 7;
-            this.label28.Text = "BrandID:";
+            this.label28.Text = "Brand:";
             // 
-            // txtPhoneID
+            // txtSearchPhone
             // 
-            this.txtPhoneID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhoneID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtPhoneID.Location = new System.Drawing.Point(142, 60);
-            this.txtPhoneID.Name = "txtPhoneID";
-            this.txtPhoneID.Size = new System.Drawing.Size(418, 30);
-            this.txtPhoneID.TabIndex = 10;
-            // 
-            // txtBrandID
-            // 
-            this.txtBrandID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBrandID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtBrandID.Location = new System.Drawing.Point(142, 10);
-            this.txtBrandID.Name = "txtBrandID";
-            this.txtBrandID.Size = new System.Drawing.Size(418, 30);
-            this.txtBrandID.TabIndex = 8;
+            this.txtSearchPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchPhone.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtSearchPhone.Location = new System.Drawing.Point(142, 60);
+            this.txtSearchPhone.Name = "txtSearchPhone";
+            this.txtSearchPhone.Size = new System.Drawing.Size(418, 30);
+            this.txtSearchPhone.TabIndex = 10;
             // 
             // label27
             // 
@@ -180,7 +182,7 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(133, 24);
             this.label27.TabIndex = 9;
-            this.label27.Text = "PhoneID:";
+            this.label27.Text = "Phone:";
             // 
             // dgvListPhone
             // 
@@ -233,9 +235,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancelPhone;
-            this.ClientSize = new System.Drawing.Size(1014, 710);
+            this.ClientSize = new System.Drawing.Size(1014, 735);
             this.ControlBox = false;
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btnCancelPhone);
             this.Name = "frmViewPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Search Phone";
@@ -256,9 +259,8 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.FlowLayoutPanel flowPhone;
-        private System.Windows.Forms.TextBox txtPhoneID;
+        private System.Windows.Forms.TextBox txtSearchPhone;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtBrandID;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView dgvListPhone;
         private System.Windows.Forms.Button btnUpdatePhone;
@@ -268,5 +270,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ComboBox cbSearchPhoneBrand;
     }
 }
