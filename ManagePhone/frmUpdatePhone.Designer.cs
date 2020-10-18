@@ -140,6 +140,7 @@
             // 
             this.dtPhoneYear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtPhoneYear.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtPhoneYear.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtPhoneYear.Location = new System.Drawing.Point(575, 120);
             this.dtPhoneYear.Name = "dtPhoneYear";
             this.dtPhoneYear.Size = new System.Drawing.Size(357, 30);

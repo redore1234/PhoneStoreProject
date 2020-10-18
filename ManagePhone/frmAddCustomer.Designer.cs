@@ -157,7 +157,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.btnCancel);
             this.panel4.Controls.Add(this.btnAddCustomer);
-            this.panel4.Location = new System.Drawing.Point(593, 288);
+            this.panel4.Location = new System.Drawing.Point(574, 302);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(252, 55);
             this.panel4.TabIndex = 7;

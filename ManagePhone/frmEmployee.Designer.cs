@@ -105,12 +105,11 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 5;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.03347F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.86211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.52075F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.85141F));
             this.tableLayoutPanel1.Controls.Add(this.txtCustomerPhone, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCheck, 2, 0);
@@ -129,7 +128,7 @@
             this.txtCustomerPhone.Location = new System.Drawing.Point(189, 26);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(255, 30);
+            this.txtCustomerPhone.Size = new System.Drawing.Size(358, 30);
             this.txtCustomerPhone.TabIndex = 1;
             // 
             // label14
@@ -148,9 +147,9 @@
             // 
             this.btnCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCheck.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(453, 26);
+            this.btnCheck.Location = new System.Drawing.Point(553, 26);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(100, 30);
+            this.btnCheck.Size = new System.Drawing.Size(94, 30);
             this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -161,9 +160,9 @@
             this.lbState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbState.AutoSize = true;
             this.lbState.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbState.Location = new System.Drawing.Point(562, 0);
+            this.lbState.Location = new System.Drawing.Point(653, 29);
             this.lbState.Name = "lbState";
-            this.lbState.Size = new System.Drawing.Size(31, 82);
+            this.lbState.Size = new System.Drawing.Size(91, 24);
             this.lbState.TabIndex = 0;
             this.lbState.Text = "lbState";
             this.lbState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,8 +250,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.751F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.3494F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtProductName, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(131, 3);
@@ -281,7 +280,7 @@
             this.txtProductName.Font = new System.Drawing.Font("Arial", 12F);
             this.txtProductName.Location = new System.Drawing.Point(189, 20);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(255, 30);
+            this.txtProductName.Size = new System.Drawing.Size(275, 30);
             this.txtProductName.TabIndex = 3;
             // 
             // btnExit
@@ -308,7 +307,6 @@
             this.Name = "frmEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
