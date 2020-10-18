@@ -84,7 +84,7 @@
             this.lbTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalPrice.AutoSize = true;
             this.lbTotalPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalPrice.Location = new System.Drawing.Point(578, 550);
+            this.lbTotalPrice.Location = new System.Drawing.Point(643, 553);
             this.lbTotalPrice.Name = "lbTotalPrice";
             this.lbTotalPrice.Size = new System.Drawing.Size(149, 29);
             this.lbTotalPrice.TabIndex = 11;
@@ -105,11 +105,12 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.5911F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.66481F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.15994F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.46784F));
+            this.tableLayoutPanel1.ColumnCount = 5;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.txtCustomerPhone, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnCheck, 2, 0);
@@ -125,11 +126,11 @@
             // 
             this.txtCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPhone.Location = new System.Drawing.Point(194, 26);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(189, 26);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(283, 30);
-            this.txtCustomerPhone.TabIndex = 17;
+            this.txtCustomerPhone.Size = new System.Drawing.Size(255, 30);
+            this.txtCustomerPhone.TabIndex = 1;
             // 
             // label14
             // 
@@ -147,10 +148,10 @@
             // 
             this.btnCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCheck.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(486, 26);
+            this.btnCheck.Location = new System.Drawing.Point(453, 26);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(100, 30);
-            this.btnCheck.TabIndex = 3;
+            this.btnCheck.TabIndex = 2;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
@@ -160,9 +161,9 @@
             this.lbState.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbState.AutoSize = true;
             this.lbState.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbState.Location = new System.Drawing.Point(596, 29);
+            this.lbState.Location = new System.Drawing.Point(562, 0);
             this.lbState.Name = "lbState";
-            this.lbState.Size = new System.Drawing.Size(148, 24);
+            this.lbState.Size = new System.Drawing.Size(31, 82);
             this.lbState.TabIndex = 0;
             this.lbState.Text = "lbState";
             this.lbState.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -171,11 +172,11 @@
             // 
             this.btnCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.Location = new System.Drawing.Point(867, 550);
+            this.btnCheckOut.Location = new System.Drawing.Point(813, 550);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(108, 36);
-            this.btnCheckOut.TabIndex = 10;
-            this.btnCheckOut.Text = "Checkout";
+            this.btnCheckOut.Size = new System.Drawing.Size(162, 36);
+            this.btnCheckOut.TabIndex = 7;
+            this.btnCheckOut.Text = "CHECKOUT";
             this.btnCheckOut.UseVisualStyleBackColor = true;
             this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
@@ -213,11 +214,12 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.Enabled = false;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(458, 154);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(55, 55);
-            this.btnAdd.TabIndex = 11;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = ">";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
@@ -230,7 +232,7 @@
             this.dgvSearchProduct.RowHeadersWidth = 51;
             this.dgvSearchProduct.RowTemplate.Height = 24;
             this.dgvSearchProduct.Size = new System.Drawing.Size(431, 358);
-            this.dgvSearchProduct.TabIndex = 0;
+            this.dgvSearchProduct.TabIndex = 4;
             // 
             // dgvCart
             // 
@@ -241,16 +243,16 @@
             this.dgvCart.RowHeadersWidth = 51;
             this.dgvCart.RowTemplate.Height = 24;
             this.dgvCart.Size = new System.Drawing.Size(432, 358);
-            this.dgvCart.TabIndex = 1;
+            this.dgvCart.TabIndex = 6;
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.31293F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.94298F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.60501F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtProductName, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(131, 3);
@@ -275,11 +277,12 @@
             // txtProductName
             // 
             this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtProductName.Location = new System.Drawing.Point(192, 20);
+            this.txtProductName.Location = new System.Drawing.Point(189, 20);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(285, 30);
-            this.txtProductName.TabIndex = 9;
+            this.txtProductName.Size = new System.Drawing.Size(255, 30);
+            this.txtProductName.TabIndex = 3;
             // 
             // btnExit
             // 
@@ -288,8 +291,8 @@
             this.btnExit.Location = new System.Drawing.Point(925, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 31);
-            this.btnExit.TabIndex = 16;
-            this.btnExit.Text = "Exit";
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 

@@ -14,6 +14,8 @@ namespace ManagePhone.GUI {
             InitializeComponent();
             this.MinimumSize = this.Size;
             this.MaximumSize = this.Size;
+            this.dtCustomerDOB.Format = DateTimePickerFormat.Custom;
+            dtCustomerDOB.CustomFormat = "dd-MM-yyyy";
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {
