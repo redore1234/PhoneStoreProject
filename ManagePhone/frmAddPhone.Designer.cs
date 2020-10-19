@@ -210,7 +210,7 @@
             this.pbImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbImage.InitialImage = null;
-            this.pbImage.Location = new System.Drawing.Point(69, 21);
+            this.pbImage.Location = new System.Drawing.Point(75, 22);
             this.pbImage.Margin = new System.Windows.Forms.Padding(2);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(218, 174);

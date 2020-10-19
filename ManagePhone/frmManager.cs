@@ -14,11 +14,11 @@ namespace ManagePhone {
         public frmManager() {
             InitializeComponent();  
             //Set custom format for DateTimePicker
-            /*            this.dtEmployeeDOB.Format = DateTimePickerFormat.Custom;
-                        this.dtPhoneYear.Format = DateTimePickerFormat.Custom;
+            /* this.dtEmployeeDOB.Format = DateTimePickerFormat.Custom;
+            this.dtPhoneYear.Format = DateTimePickerFormat.Custom;
 
-                        this.dtEmployeeDOB.CustomFormat = "dd-MM-yyyy";
-                        this.dtPhoneYear.CustomFormat = "dd-MM-yyyy";*/
+            this.dtEmployeeDOB.CustomFormat = "dd-MM-yyyy";
+            this.dtPhoneYear.CustomFormat = "dd-MM-yyyy";*/
         }
 
         private void btnViewEmployee_Click(object sender, EventArgs e) {

@@ -111,8 +111,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.03347F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.86211F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.95699F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.51971F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.52075F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.85141F));
             this.tableLayoutPanel1.Controls.Add(this.txtCustomerPhone, 1, 0);
@@ -131,11 +131,11 @@
             // 
             this.txtCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPhone.Location = new System.Drawing.Point(141, 20);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(158, 20);
             this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(267, 26);
+            this.txtCustomerPhone.Size = new System.Drawing.Size(250, 26);
             this.txtCustomerPhone.TabIndex = 1;
             // 
             // label14
@@ -143,10 +143,10 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(2, 14);
+            this.label14.Location = new System.Drawing.Point(2, 24);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 38);
+            this.label14.Size = new System.Drawing.Size(144, 19);
             this.label14.TabIndex = 0;
             this.label14.Text = "Customer Phone:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,12 +265,12 @@
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.751F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.3494F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.85714F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.35714F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.78572F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtProductName, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(98, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(98, 1);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
@@ -296,10 +296,10 @@
             this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtProductName.Location = new System.Drawing.Point(141, 16);
+            this.txtProductName.Location = new System.Drawing.Point(158, 16);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(207, 26);
+            this.txtProductName.Size = new System.Drawing.Size(250, 26);
             this.txtProductName.TabIndex = 3;
             // 
             // btnExit

@@ -130,8 +130,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel6.ColumnCount = 4;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.10402F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.99584F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.33333F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.44444F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.33703F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.8405F));
             this.tableLayoutPanel6.Controls.Add(this.txtCustomerPhone, 1, 0);
@@ -150,11 +150,11 @@
             // 
             this.txtCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPhone.Location = new System.Drawing.Point(137, 20);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(155, 20);
             this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(227, 26);
+            this.txtCustomerPhone.Size = new System.Drawing.Size(209, 26);
             this.txtCustomerPhone.TabIndex = 17;
             // 
             // label14
@@ -162,10 +162,10 @@
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(2, 14);
+            this.label14.Location = new System.Drawing.Point(2, 24);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 38);
+            this.label14.Size = new System.Drawing.Size(144, 19);
             this.label14.TabIndex = 0;
             this.label14.Text = "Customer Phone:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,7 +201,7 @@
             this.lbTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalPrice.AutoSize = true;
             this.lbTotalPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalPrice.Location = new System.Drawing.Point(470, 406);
+            this.lbTotalPrice.Location = new System.Drawing.Point(401, 401);
             this.lbTotalPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalPrice.Name = "lbTotalPrice";
             this.lbTotalPrice.Size = new System.Drawing.Size(121, 22);
@@ -213,10 +213,10 @@
             // 
             this.btnCheckOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCheckOut.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckOut.Location = new System.Drawing.Point(595, 404);
+            this.btnCheckOut.Location = new System.Drawing.Point(582, 402);
             this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(117, 29);
+            this.btnCheckOut.Size = new System.Drawing.Size(130, 29);
             this.btnCheckOut.TabIndex = 12;
             this.btnCheckOut.Text = "CHECKOUT";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -229,7 +229,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.tableLayoutPanel5);
-            this.panel1.Location = new System.Drawing.Point(4, 75);
+            this.panel1.Location = new System.Drawing.Point(4, 74);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(712, 326);
@@ -247,7 +247,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnAdd, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgvSearchProduct, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dgvCart, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 65);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 61);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
@@ -297,12 +297,12 @@
             this.tableLayoutPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.ColumnCount = 3;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.9694F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.13491F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.20037F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 39.70316F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.28201F));
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.txtProductName, 1, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(98, 2);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(97, 2);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -328,10 +328,10 @@
             this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtProductName.Location = new System.Drawing.Point(136, 16);
+            this.txtProductName.Location = new System.Drawing.Point(153, 16);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(200, 26);
+            this.txtProductName.Size = new System.Drawing.Size(209, 26);
             this.txtProductName.TabIndex = 9;
             // 
             // tabPage1
