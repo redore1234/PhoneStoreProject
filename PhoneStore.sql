@@ -25,7 +25,7 @@ CREATE TABLE tblEmployee(
     employeeID VARCHAR(30) PRIMARY KEY,
     password VARCHAR(64) NOT NULL,
     name NVARCHAR(50) NOT NULL,
-    dob DATE NOT NULL,
+    DOB DATE NOT NULL,
     address NVARCHAR(100),
     phone VARCHAR(10),
     roleID VARCHAR(10) FOREIGN KEY REFERENCES tblRole(roleID),
@@ -35,7 +35,7 @@ CREATE TABLE tblEmployee(
 CREATE TABLE tblCustomer(
     customerID int IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    dob DATE NOT NULL,
+    DOB DATE NOT NULL,
     address NVARCHAR(100),
     phone VARCHAR(10),
     spentMoney BIGINT DEFAULT 0 NOT NULL, 
@@ -49,7 +49,7 @@ CREATE TABLE tblProducts(
     prodcutName NVARCHAR(50) NOT NULL,
     brandID VARCHAR(10) FOREIGN KEY REFERENCES tblBrand(brandID),
     description NVARCHAR(200) NOT NULL,
-    launchYear INT NOT NULL,
+    launchDate DATE NOT NULL,
     price BIGINT DEFAULT 0 NOT NULL,
     image VARCHAR(200) NOT NULL,
     quantity INT DEFAULT 0 NOT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE tblOrderDetail(
     orderID VARCHAR(100) FOREIGN KEY REFERENCES tblOrders(orderID),
     productID INT FOREIGN KEY REFERENCES tblProducts(productID),
     quantity INT DEFAULT 1 NOT NULL,
-    totalPrice BIGINT NOT NULL,
+    itemPrice BIGINT NOT NULL,
 )
 
 DROP TABLE tblEmployee
