@@ -452,7 +452,7 @@
             this.lbViewBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbViewBill.AutoSize = true;
             this.lbViewBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbViewBill.Location = new System.Drawing.Point(138, 152);
+            this.lbViewBill.Location = new System.Drawing.Point(147, 152);
             this.lbViewBill.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbViewBill.Name = "lbViewBill";
             this.lbViewBill.Size = new System.Drawing.Size(68, 18);

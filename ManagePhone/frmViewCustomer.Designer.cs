@@ -34,7 +34,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbRank = new System.Windows.Forms.ComboBox();
+            this.txtPhone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListCustomer)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -160,7 +160,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.24772F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.75228F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.cbRank, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtPhone, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(183, 65);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -179,18 +179,17 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 19);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Rank";
+            this.label1.Text = "Phone:";
             // 
-            // cbRank
+            // txtPhone
             // 
-            this.cbRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbRank.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRank.FormattingEnabled = true;
-            this.cbRank.Location = new System.Drawing.Point(151, 12);
-            this.cbRank.Margin = new System.Windows.Forms.Padding(2);
-            this.cbRank.Name = "cbRank";
-            this.cbRank.Size = new System.Drawing.Size(259, 26);
-            this.cbRank.TabIndex = 8;
+            this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(152, 14);
+            this.txtPhone.Mask = "(9999) 000-000";
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(257, 22);
+            this.txtPhone.TabIndex = 8;
             // 
             // frmViewCustomer
             // 
@@ -230,6 +229,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbRank;
+        private System.Windows.Forms.MaskedTextBox txtPhone;
     }
 }
