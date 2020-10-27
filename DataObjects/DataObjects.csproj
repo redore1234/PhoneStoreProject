@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITblBrandDAO.cs" />
     <Compile Include="ITblCustomersDAO.cs" />
     <Compile Include="ITblEmployeeDAO.cs" />
     <Compile Include="ITblOrderDAO.cs" />
+    <Compile Include="ITblOrderDetailDAO.cs" />
     <Compile Include="ITblProductsDAO.cs" />
+    <Compile Include="ITblRankDAO.cs" />
+    <Compile Include="ITblRoleDAO.cs" />
+    <Compile Include="ITblStatusDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
