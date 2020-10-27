@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ITblCustomersDAO.cs" />
     <Compile Include="ITblEmployeeDAO.cs" />
+    <Compile Include="ITblOrderDAO.cs" />
     <Compile Include="ITblProductsDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

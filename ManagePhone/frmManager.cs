@@ -75,7 +75,7 @@ namespace ManagePhone {
         }
 
         private void lbViewBill_Click(object sender, EventArgs e) {
-            frmViewBill viewBill = new frmViewBill();
+            frmViewOrder viewBill = new frmViewOrder();
             this.Hide();
             viewBill.ShowDialog();
             this.Show();

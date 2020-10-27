@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmViewBill : Form {
-        public frmViewBill() {
+    public partial class frmViewOrder : Form {
+        public frmViewOrder() {
             InitializeComponent();
         }
 

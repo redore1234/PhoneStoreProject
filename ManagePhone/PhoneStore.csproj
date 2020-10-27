@@ -108,11 +108,11 @@
     <Compile Include="frmUpdatePhone.Designer.cs">
       <DependentUpon>frmUpdatePhone.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmViewBill.cs">
+    <Compile Include="frmViewOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmViewBill.Designer.cs">
-      <DependentUpon>frmViewBill.cs</DependentUpon>
+    <Compile Include="frmViewOrder.Designer.cs">
+      <DependentUpon>frmViewOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="frmViewCustomer.cs">
       <SubType>Form</SubType>
@@ -164,8 +164,8 @@
     <EmbeddedResource Include="frmUpdatePhone.resx">
       <DependentUpon>frmUpdatePhone.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmViewBill.resx">
-      <DependentUpon>frmViewBill.cs</DependentUpon>
+    <EmbeddedResource Include="frmViewOrder.resx">
+      <DependentUpon>frmViewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewCustomer.resx">
       <DependentUpon>frmViewCustomer.cs</DependentUpon>

@@ -52,7 +52,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbViewBill = new System.Windows.Forms.Label();
+            this.lbViewOrder = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -111,7 +111,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(722, 435);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Bill";
+            this.tabPage3.Text = "Order";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // panel6
@@ -420,7 +420,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.panel5);
-            this.panel10.Controls.Add(this.lbViewBill);
+            this.panel10.Controls.Add(this.lbViewOrder);
             this.panel10.Location = new System.Drawing.Point(364, 221);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(354, 210);
@@ -440,25 +440,25 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(134, 6);
+            this.label4.Location = new System.Drawing.Point(115, 6);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 31);
+            this.label4.Size = new System.Drawing.Size(83, 31);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Bill";
+            this.label4.Text = "Order";
             // 
-            // lbViewBill
+            // lbViewOrder
             // 
-            this.lbViewBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbViewBill.AutoSize = true;
-            this.lbViewBill.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbViewBill.Location = new System.Drawing.Point(147, 152);
-            this.lbViewBill.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbViewBill.Name = "lbViewBill";
-            this.lbViewBill.Size = new System.Drawing.Size(68, 18);
-            this.lbViewBill.TabIndex = 16;
-            this.lbViewBill.Text = "View Bill";
-            this.lbViewBill.Click += new System.EventHandler(this.lbViewBill_Click);
+            this.lbViewOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbViewOrder.AutoSize = true;
+            this.lbViewOrder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbViewOrder.Location = new System.Drawing.Point(147, 152);
+            this.lbViewOrder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbViewOrder.Name = "lbViewOrder";
+            this.lbViewOrder.Size = new System.Drawing.Size(68, 18);
+            this.lbViewOrder.TabIndex = 16;
+            this.lbViewOrder.Text = "View Bill";
+            this.lbViewOrder.Click += new System.EventHandler(this.lbViewBill_Click);
             // 
             // panel7
             // 
@@ -720,7 +720,7 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label lbState;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Label lbViewBill;
+        private System.Windows.Forms.Label lbViewOrder;
         private System.Windows.Forms.Label lbViewPhone;
         private System.Windows.Forms.Label lbViewCustomer;
         private System.Windows.Forms.Label label4;

@@ -79,7 +79,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(738, 483);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Bill";
+            this.tabPage1.Text = "Order";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // lbTotalPrice
@@ -296,10 +296,10 @@
             this.txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtProductName.Enabled = false;
             this.txtProductName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtProductName.Location = new System.Drawing.Point(158, 16);
+            this.txtProductName.Location = new System.Drawing.Point(157, 16);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(250, 26);
+            this.txtProductName.Size = new System.Drawing.Size(249, 26);
             this.txtProductName.TabIndex = 3;
             // 
             // btnExit

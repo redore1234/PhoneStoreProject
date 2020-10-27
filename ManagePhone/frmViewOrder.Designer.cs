@@ -1,5 +1,5 @@
 ﻿namespace ManagePhone {
-    partial class frmViewBill {
+    partial class frmViewOrder {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,14 +23,15 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewBill));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewOrder));
             this.dgvListBill = new System.Windows.Forms.DataGridView();
-            this.txtSearchBillID = new System.Windows.Forms.TextBox();
+            this.txtOrderID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnViewDetail = new System.Windows.Forms.Button();
             this.btnDeleteBill = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -50,15 +51,15 @@
             this.dgvListBill.Size = new System.Drawing.Size(758, 408);
             this.dgvListBill.TabIndex = 31;
             // 
-            // txtSearchBillID
+            // txtOrderID
             // 
-            this.txtSearchBillID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchBillID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchBillID.Location = new System.Drawing.Point(150, 12);
-            this.txtSearchBillID.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchBillID.Name = "txtSearchBillID";
-            this.txtSearchBillID.Size = new System.Drawing.Size(260, 26);
-            this.txtSearchBillID.TabIndex = 8;
+            this.txtOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOrderID.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtOrderID.Location = new System.Drawing.Point(150, 12);
+            this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOrderID.Name = "txtOrderID";
+            this.txtOrderID.Size = new System.Drawing.Size(260, 26);
+            this.txtOrderID.TabIndex = 8;
             // 
             // label5
             // 
@@ -70,7 +71,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 19);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Bill ID:";
+            this.label5.Text = "Order ID:";
             // 
             // tableLayoutPanel1
             // 
@@ -80,7 +81,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.06557F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.93443F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtSearchBillID, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtOrderID, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(182, 21);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -89,19 +90,20 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(412, 50);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
-            // btnCancel
+            // btnViewDetail
             // 
-            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(99, 12);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(94, 24);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnViewDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnViewDetail.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnViewDetail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewDetail.Location = new System.Drawing.Point(120, 12);
+            this.btnViewDetail.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewDetail.Name = "btnViewDetail";
+            this.btnViewDetail.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnViewDetail.Size = new System.Drawing.Size(114, 24);
+            this.btnViewDetail.TabIndex = 6;
+            this.btnViewDetail.Text = "View Detail";
+            this.btnViewDetail.UseVisualStyleBackColor = true;
+            this.btnViewDetail.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnDeleteBill
             // 
@@ -110,7 +112,8 @@
             this.btnDeleteBill.Location = new System.Drawing.Point(2, 12);
             this.btnDeleteBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteBill.Name = "btnDeleteBill";
-            this.btnDeleteBill.Size = new System.Drawing.Size(93, 24);
+            this.btnDeleteBill.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnDeleteBill.Size = new System.Drawing.Size(114, 24);
             this.btnDeleteBill.TabIndex = 5;
             this.btnDeleteBill.Text = "Delete";
             this.btnDeleteBill.UseVisualStyleBackColor = true;
@@ -119,20 +122,37 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.Controls.Add(this.btnDeleteBill, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnCancel, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(304, 92);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Controls.Add(this.btnCancel, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnViewDetail, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(203, 89);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(195, 49);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(357, 49);
             this.tableLayoutPanel2.TabIndex = 33;
             // 
-            // frmViewBill
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(238, 12);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.btnCancel.Size = new System.Drawing.Size(117, 24);
+            this.btnCancel.TabIndex = 7;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // frmViewOrder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(760, 577);
@@ -144,9 +164,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "frmViewBill";
+            this.Name = "frmViewOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "View Bill";
+            this.Text = "View Order";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -158,11 +178,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvListBill;
-        private System.Windows.Forms.TextBox txtSearchBillID;
+        private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnViewDetail;
         private System.Windows.Forms.Button btnDeleteBill;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
