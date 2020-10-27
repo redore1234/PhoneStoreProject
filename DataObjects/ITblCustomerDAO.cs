@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataObjects
 {
-    public interface ITblCustomersDAO
+    public interface ITblCustomerDAO
     {
         //Search a customer by phone
         TblCustomer SearchCustomerByPhone(string PhoneNumber);
