@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,9 @@ namespace DataObjects
     public interface ITblBrandDAO
     {
         //Get List of all Brands
-        List<ITblBrandDAO> GetListBrands();
+        List<TblBrand> GetListBrands();
+
+        //Get BrandName by BrandID
+        string GetBrandByBrandID(int BrandID);
     }
 }

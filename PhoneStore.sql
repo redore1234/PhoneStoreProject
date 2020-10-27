@@ -8,12 +8,12 @@ CREATE TABLE tblRole(
 
 CREATE TABLE tblStatus(
     statusID VARCHAR(10) PRIMARY KEY,
-    status NVARCHAR(30) NOT NULL,
+    statusName NVARCHAR(30) NOT NULL,
 )
 
 CREATE TABLE tblRank(
     rankID VARCHAR(10) PRIMARY KEY,
-    rank NVARCHAR(30) NOT NULL, 
+    rankName NVARCHAR(30) NOT NULL, 
 )
 
 CREATE TABLE tblBrand(
