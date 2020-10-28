@@ -187,13 +187,14 @@
             this.dgvListPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListPhone.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListPhone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListPhone.Location = new System.Drawing.Point(-1, 170);
+            this.dgvListPhone.Location = new System.Drawing.Point(6, 170);
             this.dgvListPhone.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListPhone.Name = "dgvListPhone";
             this.dgvListPhone.RowHeadersWidth = 51;
             this.dgvListPhone.RowTemplate.Height = 24;
-            this.dgvListPhone.Size = new System.Drawing.Size(754, 376);
+            this.dgvListPhone.Size = new System.Drawing.Size(738, 361);
             this.dgvListPhone.TabIndex = 17;
             // 
             // tabPage2

@@ -42,13 +42,14 @@
             this.dgvListBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBill.Location = new System.Drawing.Point(2, 167);
+            this.dgvListBill.Location = new System.Drawing.Point(11, 167);
             this.dgvListBill.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListBill.Name = "dgvListBill";
             this.dgvListBill.RowHeadersWidth = 51;
             this.dgvListBill.RowTemplate.Height = 24;
-            this.dgvListBill.Size = new System.Drawing.Size(758, 408);
+            this.dgvListBill.Size = new System.Drawing.Size(738, 399);
             this.dgvListBill.TabIndex = 31;
             // 
             // txtOrderID
@@ -95,15 +96,15 @@
             this.btnViewDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnViewDetail.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnViewDetail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewDetail.Location = new System.Drawing.Point(120, 12);
+            this.btnViewDetail.Location = new System.Drawing.Point(121, 12);
             this.btnViewDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetail.Name = "btnViewDetail";
             this.btnViewDetail.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnViewDetail.Size = new System.Drawing.Size(114, 24);
+            this.btnViewDetail.Size = new System.Drawing.Size(115, 24);
             this.btnViewDetail.TabIndex = 6;
             this.btnViewDetail.Text = "View Detail";
             this.btnViewDetail.UseVisualStyleBackColor = true;
-            this.btnViewDetail.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnViewDetail.Click += new System.EventHandler(this.btnViewDetail_Click);
             // 
             // btnDeleteBill
             // 
@@ -113,7 +114,7 @@
             this.btnDeleteBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeleteBill.Name = "btnDeleteBill";
             this.btnDeleteBill.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnDeleteBill.Size = new System.Drawing.Size(114, 24);
+            this.btnDeleteBill.Size = new System.Drawing.Size(115, 24);
             this.btnDeleteBill.TabIndex = 5;
             this.btnDeleteBill.Text = "Delete";
             this.btnDeleteBill.UseVisualStyleBackColor = true;
@@ -142,11 +143,11 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(238, 12);
+            this.btnCancel.Location = new System.Drawing.Point(240, 12);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCancel.Size = new System.Drawing.Size(117, 24);
+            this.btnCancel.Size = new System.Drawing.Size(115, 24);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;

@@ -17,5 +17,13 @@ namespace ManagePhone {
         private void btnCancel_Click(object sender, EventArgs e) {
             this.Close();
         }
+
+        private void btnViewDetail_Click(object sender, EventArgs e)
+        {
+            frmViewOrderDetails viewOrderDetails = new frmViewOrderDetails();
+            this.Hide();
+            viewOrderDetails.ShowDialog();
+            //this.Close();
+        }
     }
 }
