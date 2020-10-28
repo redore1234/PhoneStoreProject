@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ITblBrandDAO.cs" />
-    <Compile Include="ITblCustomersDAO.cs" />
+    <Compile Include="ITblCustomerDAO.cs" />
     <Compile Include="ITblEmployeeDAO.cs" />
     <Compile Include="ITblOrderDAO.cs" />
     <Compile Include="ITblOrderDetailDAO.cs" />
