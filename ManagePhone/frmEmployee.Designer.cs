@@ -238,6 +238,7 @@
             // 
             // dgvSearchProduct
             // 
+            this.dgvSearchProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSearchProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearchProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSearchProduct.Location = new System.Drawing.Point(2, 2);
@@ -250,6 +251,7 @@
             // 
             // dgvCart
             // 
+            this.dgvCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCart.Location = new System.Drawing.Point(402, 2);

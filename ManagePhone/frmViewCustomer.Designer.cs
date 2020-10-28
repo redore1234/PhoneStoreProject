@@ -85,13 +85,14 @@
             this.dgvListCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListCustomer.Location = new System.Drawing.Point(1, 168);
+            this.dgvListCustomer.Location = new System.Drawing.Point(11, 168);
             this.dgvListCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListCustomer.Name = "dgvListCustomer";
             this.dgvListCustomer.RowHeadersWidth = 51;
             this.dgvListCustomer.RowTemplate.Height = 24;
-            this.dgvListCustomer.Size = new System.Drawing.Size(758, 408);
+            this.dgvListCustomer.Size = new System.Drawing.Size(738, 398);
             this.dgvListCustomer.TabIndex = 27;
             // 
             // txtSearchCustomerName
