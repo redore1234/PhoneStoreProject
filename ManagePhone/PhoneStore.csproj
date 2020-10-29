@@ -138,6 +138,7 @@
     <Compile Include="frmViewPhone.Designer.cs">
       <DependentUpon>frmViewPhone.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddCustomer.resx">
@@ -215,7 +216,6 @@
     <Content Include="phone.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="Presenters\" />
     <Folder Include="Views\" />
   </ItemGroup>

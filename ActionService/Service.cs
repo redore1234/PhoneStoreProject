@@ -4,11 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataObjects;
+using DataObjects.DAO;
 
 namespace ActionService
 {
     public class Service : IService
     {
+        static readonly ITblEmployeeDAO tblEmployeeDAO = new TblEmployeeDAO();
+
         public bool AddCustomer(TblCustomer Customer)
         {
             throw new NotImplementedException();
@@ -36,7 +40,7 @@ namespace ActionService
 
         public TblEmployee CheckLogin(string username, string password)
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.CheckLogin(username, password);
         }
 
         public bool DeleteCustomer(int CustomerID)

@@ -66,7 +66,7 @@
             this.lbAddPhone = new System.Windows.Forms.Label();
             this.lbViewPhone = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.tabPage3.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -637,25 +637,25 @@
             this.tabControl1.Size = new System.Drawing.Size(730, 461);
             this.tabControl1.TabIndex = 0;
             // 
-            // btnExit
+            // btnLogout
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(670, 11);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(56, 25);
-            this.btnExit.TabIndex = 15;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(633, 11);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(93, 31);
+            this.btnLogout.TabIndex = 15;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // frmManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(730, 499);
             this.ControlBox = false;
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -721,7 +721,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label lbState;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label lbViewOrder;
         private System.Windows.Forms.Label lbViewPhone;
         private System.Windows.Forms.Label lbViewCustomer;

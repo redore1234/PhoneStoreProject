@@ -29,7 +29,8 @@ namespace ManagePhone {
             this.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e) {
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

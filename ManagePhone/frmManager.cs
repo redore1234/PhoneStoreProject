@@ -35,10 +35,6 @@ namespace ManagePhone {
             this.Show();
         }
 
-        private void btnExit_Click(object sender, EventArgs e) {
-            this.Close();
-        }
-
         private void btnCheckOut_Click(object sender, EventArgs e) {
             frmCheckout checkout = new frmCheckout();
             this.Hide();
@@ -93,6 +89,11 @@ namespace ManagePhone {
             this.Hide();
             addPhone.ShowDialog();
             this.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
