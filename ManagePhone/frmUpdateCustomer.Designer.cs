@@ -31,15 +31,11 @@
             this.txtCustomerPhone = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtCustomerAddress = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtCustomerMoney = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cbCustomerRank = new System.Windows.Forms.ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.txtCustomerPoint = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtDOB = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -52,24 +48,18 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.69511F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.30489F));
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.txtCustomerName, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label23, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label22, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtCustomerPhone, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label20, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.txtCustomerAddress, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.label19, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.txtCustomerMoney, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.label26, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.cbCustomerRank, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.label25, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.txtCustomerPoint, 1, 5);
+            this.tableLayoutPanel3.Controls.Add(this.dtDOB, 1, 3);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(52, 10);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel3.RowCount = 4;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -82,7 +72,7 @@
             // 
             this.txtCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerName.Location = new System.Drawing.Point(116, 18);
+            this.txtCustomerName.Location = new System.Drawing.Point(116, 33);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(495, 26);
@@ -93,7 +83,7 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(2, 21);
+            this.label23.Location = new System.Drawing.Point(2, 37);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(110, 19);
@@ -105,7 +95,7 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(2, 83);
+            this.label22.Location = new System.Drawing.Point(2, 130);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(110, 19);
@@ -116,7 +106,7 @@
             // 
             this.txtCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPhone.Location = new System.Drawing.Point(116, 80);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(116, 126);
             this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
@@ -128,7 +118,7 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(2, 145);
+            this.label20.Location = new System.Drawing.Point(2, 223);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(110, 19);
@@ -139,78 +129,11 @@
             // 
             this.txtCustomerAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerAddress.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerAddress.Location = new System.Drawing.Point(116, 142);
+            this.txtCustomerAddress.Location = new System.Drawing.Point(116, 219);
             this.txtCustomerAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerAddress.Name = "txtCustomerAddress";
             this.txtCustomerAddress.Size = new System.Drawing.Size(495, 26);
             this.txtCustomerAddress.TabIndex = 1;
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(2, 207);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 19);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Money:";
-            // 
-            // txtCustomerMoney
-            // 
-            this.txtCustomerMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCustomerMoney.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerMoney.Location = new System.Drawing.Point(116, 204);
-            this.txtCustomerMoney.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCustomerMoney.Name = "txtCustomerMoney";
-            this.txtCustomerMoney.Size = new System.Drawing.Size(495, 26);
-            this.txtCustomerMoney.TabIndex = 1;
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(2, 269);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(110, 19);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Rank:";
-            // 
-            // cbCustomerRank
-            // 
-            this.cbCustomerRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbCustomerRank.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbCustomerRank.FormattingEnabled = true;
-            this.cbCustomerRank.Location = new System.Drawing.Point(116, 266);
-            this.cbCustomerRank.Margin = new System.Windows.Forms.Padding(2);
-            this.cbCustomerRank.Name = "cbCustomerRank";
-            this.cbCustomerRank.Size = new System.Drawing.Size(495, 26);
-            this.cbCustomerRank.TabIndex = 1;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(2, 333);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(110, 19);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Point:";
-            // 
-            // txtCustomerPoint
-            // 
-            this.txtCustomerPoint.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCustomerPoint.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPoint.Location = new System.Drawing.Point(116, 329);
-            this.txtCustomerPoint.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCustomerPoint.Name = "txtCustomerPoint";
-            this.txtCustomerPoint.Size = new System.Drawing.Size(495, 26);
-            this.txtCustomerPoint.TabIndex = 1;
             // 
             // panel4
             // 
@@ -246,6 +169,28 @@
             this.btnUpdateCustomer.Text = "UPDATE";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(2, 317);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 19);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "DOB:";
+            // 
+            // dtDOB
+            // 
+            this.dtDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtDOB.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDOB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtDOB.Location = new System.Drawing.Point(117, 316);
+            this.dtDOB.Name = "dtDOB";
+            this.dtDOB.Size = new System.Drawing.Size(493, 22);
+            this.dtDOB.TabIndex = 9;
+            // 
             // frmUpdateCustomer
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -272,18 +217,14 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtCustomerMoney;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtCustomerAddress;
         private System.Windows.Forms.MaskedTextBox txtCustomerPhone;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox txtCustomerPoint;
-        private System.Windows.Forms.ComboBox cbCustomerRank;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnUpdateCustomer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtDOB;
     }
 }

@@ -17,11 +17,6 @@ namespace ManagePhone
             InitializeComponent();
         }
 
-        private void txtOrderID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Hide();
