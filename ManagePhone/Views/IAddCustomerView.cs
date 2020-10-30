@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface IAddCustomerView
+    public interface IAddCustomerView : IView
     {
         string Name { get; }
         DateTime DOB { get; }

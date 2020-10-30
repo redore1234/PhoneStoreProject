@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface IUpdateEmployeeView
+    public interface IUpdateEmployeeView : IView
     {
         string Username { get; set; }
         string OldPassword { get; }

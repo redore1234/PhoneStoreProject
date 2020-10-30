@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface IEmployeesView
+    public interface IEmployeesView : IView
     {
         string Name { get; set; }
         //IList<EmployeeModel> Employees { set; }

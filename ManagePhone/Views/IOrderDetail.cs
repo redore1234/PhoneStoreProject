@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface IOrderDetail
+    public interface IOrderDetail : IView
     {
         string OrderID { set; }
         //IList<OrderDetailModel> OrderDetails { set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface ICheckoutView
+    public interface ICheckoutView : IView
     {
         long Price { get; set; }
         float Tax { get; set; }

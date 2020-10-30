@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface ILoginView
+    public interface ILoginView : IView
     {
         string EmpID { get; }
         string Password { get; }
