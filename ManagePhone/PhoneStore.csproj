@@ -153,6 +153,8 @@
     <Compile Include="Models\Models\OrdelModel.cs" />
     <Compile Include="Models\Models\OrderDetailModel.cs" />
     <Compile Include="Models\Models\ProductModel.cs" />
+    <Compile Include="Models\Models\RoleModel.cs" />
+    <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\Presenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -247,9 +249,7 @@
   <ItemGroup>
     <Content Include="phone.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ActionService\ActionService.csproj">
       <Project>{fd10f4f2-8ac3-4e92-a50b-1f77daff156f}</Project>

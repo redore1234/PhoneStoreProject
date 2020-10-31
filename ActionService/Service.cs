@@ -12,6 +12,8 @@ namespace ActionService
     public class Service : IService
     {
         static readonly ITblEmployeeDAO tblEmployeeDAO = new TblEmployeeDAO();
+        static readonly ITblCustomerDAO tblCustomerDAO = new TblCustomerDAO();
+        static readonly ITblRoleDAO tblRoleDAO = new TblRoleDAO();
 
         public bool AddCustomer(TblCustomer Customer)
         {
@@ -108,9 +110,9 @@ namespace ActionService
             throw new NotImplementedException();
         }
 
-        public int GetRoleIDByRole(string RoleName)
+        public TblRole GetRoleByRoleID(int RoleID)
         {
-            throw new NotImplementedException();
+            return tblRoleDAO.GetRoleByRoleID(RoleID);
         }
 
         public int GetStatusIDByStatus(string StatusName)

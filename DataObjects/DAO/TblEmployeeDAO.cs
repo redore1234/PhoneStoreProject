@@ -55,9 +55,10 @@ namespace DataObjects.DAO
 
         public TblEmployee CheckLogin(string username, string password)
         {
-            string StoreProc = "spCheckLogin";
+            //string StoreProc = "spCheckLogin";
+            string StoreProc = "SELECT * FROM tblEmployee WHERE @EmpID=employeeID AND @Pass=password";
             object[] parms = { "@EmpID", username, "@Pass", password };
-            return (TblEmployee)db.Read(StoreProc, Make, parms);
+            return db.Read(StoreProc, Make, parms).FirstOrDefault();
         }
 
         public bool AddEmployee(TblEmployee Employee)
