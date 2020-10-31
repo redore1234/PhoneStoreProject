@@ -16,7 +16,7 @@ namespace DataObjects.DAO
         static Db db = new Db();
 
         // creates query parameters list from TblEmployee object
-        object[] Take(TblEmployee Emp)
+        object[] TakeEmployee(TblEmployee Emp)
         {
             return new object[]
             {
@@ -30,7 +30,8 @@ namespace DataObjects.DAO
             };
         }
 
-        object[] TakeID(int EmployeeID)
+        // creates query parameters EmployeeID from TblEmployee object
+        object[] TakeEmployeeID(int EmployeeID)
         {
             return new object[]
             {
@@ -63,19 +64,19 @@ namespace DataObjects.DAO
         public bool AddEmployee(TblEmployee Employee)
         {
             string StoreProc = "spAddEmployee";
-            return db.Insert(StoreProc, Take(Employee)) > 0;
+            return db.Insert(StoreProc, TakeEmployee(Employee)) > 0;
         }
 
         public bool DeleteEmployee(int EmployeeID)
         {
             string StoreProc = "spDeleteEmployee";
-            return db.Delete(StoreProc, TakeID(EmployeeID)) > 0;
+            return db.Delete(StoreProc, TakeEmployeeID(EmployeeID)) > 0;
         }
 
         public bool UpdateEmployee(TblEmployee Employee)
         {
             string StoreProc = "spUpdateEmployee";
-            return db.Update(StoreProc, Take(Employee)) > 0;
+            return db.Update(StoreProc, TakeEmployee(Employee)) > 0;
         }
 
         public List<TblEmployee> GetListEmployees()

@@ -11,4 +11,6 @@
  	1. Add Presenter.cs and IView.cs
 	1. Add inheritance IView to View interfaces
  	
- 
+1. **[31/10/2020 12:06] Pham Thanh Long - @redore1234**
+ 	1. Add TblCustomerDAO 
+	1. Add StoreProcedure in file SQL: PhamThanhLong.sql

@@ -20,7 +20,7 @@ namespace ActionService
 
         public bool AddEmployee(TblEmployee Employee)
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.AddEmployee(Employee);
         }
 
         public bool AddItemsToOrder(int OrderID, List<TblOrderDetail> ItemsList)
@@ -50,7 +50,7 @@ namespace ActionService
 
         public bool DeleteEmployee(int EmployeeID)
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.DeleteEmployee(EmployeeID);
         }
 
         public bool DeleteOrder(string OrderID)
@@ -85,7 +85,7 @@ namespace ActionService
 
         public List<TblEmployee> GetListEmployees()
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.GetListEmployees();
         }
 
         public List<TblOrder> GetListOrders()
@@ -130,7 +130,7 @@ namespace ActionService
 
         public List<TblEmployee> SearchEmployeesByName(string EmployeeName)
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.SearchEmployeesByName(EmployeeName);
         }
 
         public TblOrder SearchOrder(string OrderID)
@@ -150,7 +150,7 @@ namespace ActionService
 
         public bool UpdateEmployee(TblEmployee Employee)
         {
-            throw new NotImplementedException();
+            return tblEmployeeDAO.UpdateEmployee(Employee);
         }
 
         public bool UpdateProduct(TblProducts Product)
