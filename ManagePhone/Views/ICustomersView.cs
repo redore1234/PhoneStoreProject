@@ -8,6 +8,7 @@ namespace ManagePhone.Views
 {
     public interface ICustomersView : IView
     {
+        int CustomerID { get; set; }
         string CustomerName { get; set; }
         string Phone { get; set; }
         //IList<CustomerModel> Customer { set; }

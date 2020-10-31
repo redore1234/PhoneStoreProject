@@ -12,10 +12,11 @@ namespace ActionService
     public class Service : IService
     {
         static readonly ITblEmployeeDAO tblEmployeeDAO = new TblEmployeeDAO();
+        static readonly ITblCustomerDAO tblCustomerDAO = new TblCustomerDAO();
 
         public bool AddCustomer(TblCustomer Customer)
         {
-            throw new NotImplementedException();
+            return tblCustomerDAO.AddCustomer(Customer);
         }
 
         public bool AddEmployee(TblEmployee Employee)
@@ -145,7 +146,7 @@ namespace ActionService
 
         public bool UpdateCustomer(TblCustomer Customer)
         {
-            throw new NotImplementedException();
+            return tblCustomerDAO.UpdateCustomer(Customer);
         }
 
         public bool UpdateEmployee(TblEmployee Employee)
