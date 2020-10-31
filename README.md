@@ -14,3 +14,6 @@
 1. **[31/10/2020 12:06] Pham Thanh Long - @redore1234**
  	1. Add TblCustomerDAO 
 	1. Add StoreProcedure in file SQL: PhamThanhLong.sql
+	
+1. **[31/10/2020 12:55] Dam Dong Tin - @dtin**
+	1. Do Login function
