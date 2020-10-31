@@ -22,7 +22,6 @@ namespace ActionService
             bool DeleteEmployee(int EmployeeID);
 
             bool UpdateEmployee(TblEmployee Employee);
-
         #endregion
 
         #region Customer Repository
@@ -93,7 +92,7 @@ namespace ActionService
 
         #region Role Repository
 
-            int GetRoleIDByRole(string RoleName);
+            TblRole GetRoleByRoleID(int RoleID);
 
         #endregion
 

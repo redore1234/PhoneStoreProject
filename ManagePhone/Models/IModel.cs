@@ -9,7 +9,9 @@ namespace ManagePhone.Models
 {
     public interface IModel
     {
-        public bool AddCustomer(CustomerModel customer);
+        EmployeeModel CheckLogin(string EmpID, string Password);
+        RoleModel GetRole(int roleID);
+	    public bool AddCustomer(CustomerModel customer);
         public bool UpdateCustomer(CustomerModel customer);
         public bool DeleteCustomer(int cusID);
     }

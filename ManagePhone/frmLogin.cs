@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ManagePhone.Presenters;
+using ManagePhone.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,9 +11,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmLogin : Form {
+    public partial class frmLogin : Form, ILoginView
+    {
+        public string EmpID { get { return txtUsername.Text.Trim(); } }
+
+        public string Password { get { return txtPassword.Text.Trim(); } }
+
+        //The Presenter
+        private LoginPresenter _loginPresenter; 
+
         public frmLogin() {
             InitializeComponent();
+            _loginPresenter = new LoginPresenter(this);
         }
 
         private void btnExit_Click(object sender, EventArgs e) {
@@ -25,12 +36,9 @@ namespace ManagePhone {
         }
 
         private void btnLogin_Click(object sender, EventArgs e) {
-            frmManager manager = new frmManager();
-            //frmEmployee staff = new frmEmployee();
-            this.Hide();
-            //staff.ShowDialog();
-            manager.ShowDialog();
-            this.Show();
+            Hide();
+            _loginPresenter.Login();
+            Show();
         }
     }
 }

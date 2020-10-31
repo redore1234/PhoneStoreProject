@@ -20,12 +20,25 @@ namespace ManagePhone.Models
             Mapper.CreateMap<EmployeeModel, TblEmployee>();
             Mapper.CreateMap<TblCustomer, CustomerModel>();
             Mapper.CreateMap<CustomerModel, TblCustomer>();
+            Mapper.CreateMap<TblRole, RoleModel>();
+            Mapper.CreateMap<RoleModel, TblRole>();
+
         }
 
-        #region Login / Logout
-        public bool Login(string username, string password)
+        #region Role
+        public RoleModel GetRole(int RoleID)
         {
-            return true;
+            var Role = service.GetRoleByRoleID(RoleID);
+            return Mapper.Map<TblRole, RoleModel>(Role);
+        }
+
+        #endregion
+
+        #region Login / Logout
+        public EmployeeModel CheckLogin(string EmpID, string Password)
+        {
+            var Employee = service.CheckLogin(EmpID, Password);
+            return Mapper.Map<TblEmployee, EmployeeModel>(Employee);
         }
 
         public void Logout()
