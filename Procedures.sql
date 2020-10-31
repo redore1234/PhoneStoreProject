@@ -1,9 +1,9 @@
 USE PhoneStore
 GO
 
-					-- TBLEMPLOYEE --
+-- TBLEMPLOYEE --
 
-			--CheckLogin--
+--CheckLogin--
 CREATE PROC spCheckLogin(@EmpID VARCHAR(30), @Pass VARCHAR(64))
 AS
 	BEGIN
@@ -17,7 +17,7 @@ EXEC dbo.spCheckLogin @EmpID = 'admin', -- varchar(30)
     @Pass = 'admin' -- varchar(64)
 GO 
 
-			--Add Employee--
+--Add Employee--
 CREATE PROC spAddEmployee(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
 					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10), @StatusID VARCHAR(10))
 AS
@@ -40,7 +40,7 @@ EXEC dbo.spAddEmployee @EmpID = 'tindd', -- varchar(30)
     @StatusID = '1' -- varchar(10)
 GO 
 
-			--Delete Employee--
+--Delete Employee--
 CREATE PROC spDeleteEmployee(@EmpID VARCHAR(30), @StatusID INT)
 AS
 	BEGIN
@@ -54,7 +54,7 @@ EXEC dbo.spDeleteEmployee @EmpID = 'tindd', -- varchar(30)
     @StatusID = 2 -- int
 GO 
 
-			--Update Employee--
+--Update Employee--
 CREATE PROC spUpdateEmployee(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
 					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10), @StatusID VARCHAR(10))
 AS
@@ -75,7 +75,7 @@ EXEC dbo.spUpdateEmployee @EmpID = 'tindd', -- varchar(30)
     @StatusID = '1' -- varchar(10)
 GO
 
-			--Get List Employee--
+--Get List Employee--
 CREATE PROC spGetListEmployees
 AS
 	BEGIN
@@ -87,7 +87,7 @@ GO
 EXEC dbo.spGetListEmployees 
 GO
 
-			--Search Employee by Name--
+--Search Employee by Name--
 CREATE PROC spSearchEmployeesByName(@Name VARCHAR(100))
 AS
 	BEGIN
@@ -102,9 +102,9 @@ GO
 
 
 
-					-- TBL CUSTOMER --
+-- TBLCUSTOMER --
 
-		--Add Customer--
+--Add Customer--
 CREATE PROC spAddCustomer(@Name VARCHAR(50), @DOB DATE, @Address VARCHAR(100), 
 						@Phone VARCHAR(10), @Money INT, @Point INT, @RankID  INT, @StatusID INT)
 AS 
@@ -129,7 +129,7 @@ EXEC dbo.spAddCustomer @Name = 'longpt', -- varchar(50)
     @StatusID = 1 -- int
 GO	
 
-		--Update Customer--
+--Update Customer--
 CREATE PROC spUpdateCustomer(@CustomerID INT, @Name VARCHAR(50), @DOB DATE, @Address VARCHAR(100), 
 						@Phone VARCHAR(10), @Money INT, @Point INT, @RankID  INT, @StatusID INT)
 AS 
@@ -152,7 +152,7 @@ EXEC dbo.spUpdateCustomer @CustomerID = 3, -- int
     @StatusID = 1 -- int
 GO 
 
-		--Delete Customer--
+--Delete Customer--
 CREATE PROC spDeleteCustomer(@CustomerID INT, @StatusID INT)
 AS 
 	BEGIN 
@@ -166,7 +166,7 @@ EXEC dbo.spDeleteCustomer @CustomerID = 2, -- int
     @StatusID = 2 -- int
 GO
 
-		--Get List Customer--
+--Get List Customer--
 CREATE PROC  spGetListCustomers 
 AS 
 	BEGIN
@@ -178,7 +178,7 @@ GO
 EXEC dbo.spGetListCustomers
 GO 
 
-		--Get List Customer By Phone--
+--Get List Customer By Phone--
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
 	BEGIN
@@ -191,7 +191,7 @@ GO
 EXEC dbo.spSearchCustomerByPhone @Phone = '9' -- varchar(10)
 GO
 
-		--Get List Customer By Phone--
+--Get List Customer By Phone--
 CREATE PROC spSearchCustomersByName(@Name VARCHAR(50))
 AS 
 	BEGIN
@@ -203,3 +203,16 @@ GO
 
 EXEC dbo.spSearchCustomersByName @Name = 'e' -- varchar(50)
 GO 
+
+
+-- TBLROLE --
+-- Get RoleID By RoleName
+GO
+CREATE PROCEDURE spGetRoleIDByRole @roleName nvarchar(30)
+AS
+	BEGIN
+		SELECT roleID 
+		FROM tblRole 
+		WHERE roleName=@roleName
+	END
+GO
