@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessObjects
+namespace ManagePhone.Models.Models
 {
-    public class TblBrand : BusinessObject
+    public class BrandModel
     {
         public int BrandID { get; set; }
         public string Brand { get; set; }

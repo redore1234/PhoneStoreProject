@@ -10,7 +10,7 @@ namespace BusinessObjects
     {
         // ** Enterprise Design Pattern: Identity field pattern
 
-        public string RoleID { get; set; }
+        public int RoleID { get; set; }
 
         public string RoleName { get; set; }
     }

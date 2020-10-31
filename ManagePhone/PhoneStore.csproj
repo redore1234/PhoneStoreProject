@@ -147,7 +147,12 @@
     </Compile>
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Model.cs" />
+    <Compile Include="Models\Models\BrandModel.cs" />
+    <Compile Include="Models\Models\CustomerModel.cs" />
     <Compile Include="Models\Models\EmployeeModel.cs" />
+    <Compile Include="Models\Models\OrdelModel.cs" />
+    <Compile Include="Models\Models\OrderDetailModel.cs" />
+    <Compile Include="Models\Models\ProductModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IAddCustomerView.cs" />

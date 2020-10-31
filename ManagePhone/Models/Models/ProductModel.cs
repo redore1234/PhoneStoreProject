@@ -4,22 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessObjects
+namespace ManagePhone.Models.Models
 {
-    public class TblProducts : BusinessObject
+    public class ProductModel
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-        public string BrandID { get; set; }
+        public BrandModel Brand { get; set; }
         public string Description { get; set; }
         public DateTime LaunchDate { get; set; }
         public long Price { get; set; }
         public string Image { get; set; }
         public int Quantity { get; set; }
-        public int StatusID { get; set; }
-
-        // ** Enterprise Design Pattern: Foreign Key Mapping. TblBrand, TblStatus are the parents
-        public TblBrand TblBrand { get; set; }
-        public TblStatus TblStatus { get; set; }
     }
 }

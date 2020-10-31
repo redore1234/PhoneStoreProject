@@ -8,7 +8,7 @@ namespace BusinessObjects
 {
     public class TblRank : BusinessObject
     {
-        public string RankID { get; set; }
+        public int RankID { get; set; }
         public string Rank { get; set; }
     }
 }
