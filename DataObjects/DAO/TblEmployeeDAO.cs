@@ -25,8 +25,7 @@ namespace DataObjects.DAO
                 "@Name", Emp.Name,
                 "@DOB", Emp.DOB,
                 "@Phone", Emp.Phone,
-                "@RoleID", Emp.RoleID,
-                "@StatusID", Emp.StatusID
+                "@RoleID", Emp.RoleID
             };
         }
 
@@ -50,14 +49,12 @@ namespace DataObjects.DAO
             DOB = DateTime.Parse(reader["DOB"].ToString()),
             Address = reader["address"].ToString(),
             Phone = reader["phone"].ToString(),
-            RoleID = int.Parse(reader["roleID"].ToString()),
-            StatusID = int.Parse(reader["statusID"].ToString()),
+            RoleID = int.Parse(reader["roleID"].ToString())
         };
 
         public TblEmployee CheckLogin(string username, string password)
         {
-            //string StoreProc = "spCheckLogin";
-            string StoreProc = "SELECT * FROM tblEmployee WHERE @EmpID=employeeID AND @Pass=password";
+            string StoreProc = "spCheckLogin";
             object[] parms = { "@EmpID", username, "@Pass", password };
             return db.Read(StoreProc, Make, parms).FirstOrDefault();
         }

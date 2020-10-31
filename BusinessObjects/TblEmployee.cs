@@ -13,11 +13,9 @@ namespace BusinessObjects
         public string Address { get; set; }
         public string Phone { get; set; }
         public int RoleID { get; set; }
-        public int StatusID { get; set; }
 
         // ** Enterprise Design Pattern: Foreign Key Mapping. TblRole is the parent
         public TblRole TblRole { get; set; }
-        public TblStatus TblStatus { get; set; }
 
     }
 }

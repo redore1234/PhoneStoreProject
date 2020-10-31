@@ -9,6 +9,6 @@ namespace BusinessObjects
     public class TblRank : BusinessObject
     {
         public int RankID { get; set; }
-        public string Rank { get; set; }
+        public string RankName { get; set; }
     }
 }

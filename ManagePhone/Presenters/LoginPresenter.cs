@@ -16,11 +16,12 @@ namespace ManagePhone.Presenters
             :base(view) {}
 
         //Perform login. Gets data from view and calls model.
-        public void Login()
+        public bool Login()
         {
             string EmpID = View.EmpID;
             string Password = View.Password;
             int RoleID;
+            bool IsValid = false;
 
             EmployeeModel Employee = Model.CheckLogin(EmpID, Password);
             
@@ -42,8 +43,10 @@ namespace ManagePhone.Presenters
                         frmEmployee.ShowDialog();
                         break;
                 }
-
+                IsValid = true;
             }
+
+            return IsValid;
         }
     }
 }

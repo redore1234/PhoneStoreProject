@@ -114,11 +114,6 @@ namespace ActionService
             return tblRoleDAO.GetRoleByRoleID(RoleID);
         }
 
-        public int GetStatusIDByStatus(string StatusName)
-        {
-            throw new NotImplementedException();
-        }
-
         public TblCustomer SearchCustomerByPhone(string PhoneNumber)
         {
             throw new NotImplementedException();

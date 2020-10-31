@@ -46,6 +46,7 @@
     <Compile Include="DAO\DB.cs" />
     <Compile Include="DAO\TblEmployeeDAO.cs" />
     <Compile Include="DAO\TblCustomerDAO.cs" />
+    <Compile Include="DAO\TblRankDAO.cs" />
     <Compile Include="DAO\TblRoleDAO.cs" />
     <Compile Include="ITblBrandDAO.cs" />
     <Compile Include="ITblCustomerDAO.cs" />
@@ -55,7 +56,6 @@
     <Compile Include="ITblProductsDAO.cs" />
     <Compile Include="ITblRankDAO.cs" />
     <Compile Include="ITblRoleDAO.cs" />
-    <Compile Include="ITblStatusDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

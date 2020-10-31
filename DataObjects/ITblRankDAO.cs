@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessObjects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace DataObjects
 {
     public interface ITblRankDAO
     {
-        //get RankID by name
-        int GetRankIDByName(string RankName);
+        //get Rank by RankID
+        TblRank GetRankByRankID(int RankID);
     }
 }

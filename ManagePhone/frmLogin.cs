@@ -37,8 +37,13 @@ namespace ManagePhone {
 
         private void btnLogin_Click(object sender, EventArgs e) {
             Hide();
-            _loginPresenter.Login();
+            bool isValid = _loginPresenter.Login();
             Show();
+
+            if(!isValid)
+            {
+                MessageBox.Show("Username or Password is not correct.", "Invalid Account", MessageBoxButtons.OK);
+            }
         }
     }
 }

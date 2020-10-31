@@ -52,7 +52,6 @@
     <Compile Include="TblProducts.cs" />
     <Compile Include="TblRank.cs" />
     <Compile Include="TblRole.cs" />
-    <Compile Include="TblStatus.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

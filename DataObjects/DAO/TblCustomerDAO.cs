@@ -26,7 +26,6 @@ namespace DataObjects.DAO
                 "@Money", Cus.SpentMoney,
                 "@Point", Cus.Point,
                 "@RankID", Cus.RankID,
-                "@StatusID", Cus.StatusID,
             };
         }
 
@@ -50,8 +49,7 @@ namespace DataObjects.DAO
             Phone = reader["phone"].ToString(),
             SpentMoney = long.Parse(reader["spentMoney"].ToString()),
             Point = int.Parse(reader["point"].ToString()),
-            RankID = int.Parse(reader["rankID"].ToString()),
-            StatusID = int.Parse(reader["statusID"].ToString()),
+            RankID = int.Parse(reader["rankID"].ToString())
         };
 
         public bool AddCustomer(TblCustomer Customer)

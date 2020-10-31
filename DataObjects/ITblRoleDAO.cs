@@ -9,7 +9,7 @@ namespace DataObjects
 {
     public interface ITblRoleDAO
     {
-        //get RoleID by Name
+        //get Role by RoleID
         TblRole GetRoleByRoleID(int RoleID);
     }
 }

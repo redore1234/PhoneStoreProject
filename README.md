@@ -17,3 +17,12 @@
 	
 1. **[31/10/2020 12:55] Dam Dong Tin - @dtin**
 	1. Do Login function
+
+1. **[31/10/2020 21:08] Pham Minh Tan**
+	1. Add TblRankDAO
+
+1. **[31/10/2020 21:10] Dam Dong Tin - @dtin**
+	1. Update show MessageBox when account try to login is invalid
+	1. Add and Update some Store procedure for tblRole and tblRank
+	1. Modified application to use Store Procedure to process SQL query
+

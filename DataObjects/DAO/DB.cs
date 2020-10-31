@@ -47,6 +47,8 @@ namespace DataObjects.AdoNet
 
             var command = factory.CreateCommand();
             command.Connection = conn;
+            //Set type of SQL to StoreProcedure
+            command.CommandType = CommandType.StoredProcedure;            
             command.CommandText = sql;
             command.AddParameters(parms);
             return command;

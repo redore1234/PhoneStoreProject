@@ -17,10 +17,8 @@ namespace BusinessObjects
         public long SpentMoney { get; set; }
         public int Point { get; set; }
         public int RankID { get; set; }
-        public int StatusID { get; set; }
 
         // ** Enterprise Design Pattern: Foreign Key Mapping. TblRank, TblStatus are the parents
         public TblRank TblRank { get; set; }
-        public TblStatus TblStatus { get; set; }
     }
 }

@@ -206,13 +206,23 @@ GO
 
 
 -- TBLROLE --
--- Get RoleID By RoleName
-GO
-CREATE PROCEDURE spGetRoleIDByRole @roleName nvarchar(30)
+-- Get RoleName By RoleID
+CREATE PROCEDURE spGetRole(@RoleID INT)
 AS
 	BEGIN
-		SELECT roleID 
+		SELECT roleName
 		FROM tblRole 
-		WHERE roleName=@roleName
+		WHERE roleID=@RoleID
+	END
+GO
+
+-- TBLRANK --
+-- Get RankName By RankID
+CREATE PROCEDURE spGetRank(@RankID INT)
+AS
+	BEGIN
+		SELECT rankName
+		FROM tblRank
+		WHERE rankID=@RankID
 	END
 GO

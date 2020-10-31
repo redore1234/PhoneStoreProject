@@ -95,11 +95,5 @@ namespace ActionService
             TblRole GetRoleByRoleID(int RoleID);
 
         #endregion
-
-        #region Status Repository
-
-            int GetStatusIDByStatus(string StatusName);
-
-        #endregion
     }
 }
