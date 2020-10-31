@@ -8,7 +8,7 @@ namespace BusinessObjects
 {
     public class TblStatus : BusinessObject
     {
-        public string StatusID { get; set; }
+        public int StatusID { get; set; }
         public string Status { get; set; }
     }
 }

@@ -49,8 +49,8 @@ namespace DataObjects.DAO
             DOB = DateTime.Parse(reader["DOB"].ToString()),
             Address = reader["address"].ToString(),
             Phone = reader["phone"].ToString(),
-            RoleID = reader["roleID"].ToString(),
-            StatusID = reader["statusID"].ToString(),
+            RoleID = int.Parse(reader["roleID"].ToString()),
+            StatusID = int.Parse(reader["statusID"].ToString()),
         };
 
         public TblEmployee CheckLogin(string username, string password)
