@@ -29,7 +29,7 @@ CREATE TABLE tblEmployee(
     address NVARCHAR(100),
     phone VARCHAR(10),
     roleID INT FOREIGN KEY REFERENCES tblRole(roleID),
-    statusID INT FOREIGN KEY REFERENCES tblStatus(statusID)
+    statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblCustomer(
@@ -40,8 +40,8 @@ CREATE TABLE tblCustomer(
     phone VARCHAR(10),
     spentMoney BIGINT DEFAULT 0 NOT NULL, 
     point INT DEFAULT 0 NOT NULL,
-    rankID INT FOREIGN KEY REFERENCES tblRank(rankID),
-    statusID INT FOREIGN KEY REFERENCES tblStatus(statusID)
+    rankID INT DEFAULT 1 FOREIGN KEY REFERENCES tblRank(rankID),
+    statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblProducts(

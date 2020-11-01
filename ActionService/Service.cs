@@ -46,12 +46,17 @@ namespace ActionService
 
         public bool DeleteCustomer(int CustomerID)
         {
-            throw new NotImplementedException();
+            return tblCustomerDAO.DeleteCustomer(CustomerID);
         }
 
         public bool DeleteEmployee(string EmployeeID)
         {
             return tblEmployeeDAO.DeleteEmployee(EmployeeID);
+        }
+
+        public bool DeleteEmployee(int EmployeeID)
+        {
+            throw new NotImplementedException();
         }
 
         public bool DeleteOrder(string OrderID)
@@ -81,7 +86,7 @@ namespace ActionService
 
         public List<TblCustomer> GetListCustomers()
         {
-            throw new NotImplementedException();
+            return tblCustomerDAO.GetListCustomers();
         }
 
         public List<TblEmployee> GetListEmployees()

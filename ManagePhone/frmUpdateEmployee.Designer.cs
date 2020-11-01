@@ -276,6 +276,7 @@
             this.txtEmployeePhone.Name = "txtEmployeePhone";
             this.txtEmployeePhone.Size = new System.Drawing.Size(431, 26);
             this.txtEmployeePhone.TabIndex = 16;
+            this.txtEmployeePhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label17
             // 

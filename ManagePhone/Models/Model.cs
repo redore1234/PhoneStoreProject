@@ -48,6 +48,16 @@ namespace ManagePhone.Models
         #endregion
 
         #region Customer
+        public List<CustomerModel> LoadCustomerList()
+        {
+            var TblCustomerList = service.GetListCustomers();
+            List<CustomerModel> CustomerModelList = new List<CustomerModel>();
+            foreach (var item in TblCustomerList)
+            {
+                CustomerModelList.Add(Mapper.Map<TblCustomer, CustomerModel>(item));
+            }
+            return CustomerModelList;
+        }
         public bool AddCustomer(CustomerModel model)
         {
             var customer = Mapper.Map<CustomerModel, TblCustomer>(model);
@@ -82,6 +92,11 @@ namespace ManagePhone.Models
         public bool DeleteEmployee(int EmpID)
         {
             return service.DeleteEmployee(EmpID);
+        }
+
+        public bool DeleteEmployee(string empID)
+        {
+            throw new NotImplementedException();
         }
         #endregion
     }

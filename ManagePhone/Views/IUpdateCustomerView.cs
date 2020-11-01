@@ -8,7 +8,8 @@ namespace ManagePhone.Views
 {
     public interface IUpdateCustomerView : IView
     {
-        string Name { get; set; }
+        string CustomerID { get; }
+        string CustomerName { get; set; }
         DateTime DOB { get; set; }
         string Phone { get; set; }
         string Address { get; set; }

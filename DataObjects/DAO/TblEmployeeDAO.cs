@@ -29,16 +29,6 @@ namespace DataObjects.DAO
             };
         }
 
-        // creates query parameters EmployeeID from TblEmployee object
-        object[] TakeEmployeeID(string EmployeeID)
-        {
-            return new object[]
-            {
-                "@EmpID", EmployeeID,
-            };
-        }
-
-
         // creates a TblEmployee object based on DataReader
         static Func<IDataReader, TblEmployee> Make = reader =>
         new TblEmployee
@@ -68,7 +58,8 @@ namespace DataObjects.DAO
         public bool DeleteEmployee(string EmployeeID)
         {
             string StoreProc = "spDeleteEmployee";
-            return db.Delete(StoreProc, TakeEmployeeID(EmployeeID)) > 0;
+            object[] parms = { "@EmpID", EmployeeID };
+            return db.Delete(StoreProc, parms) > 0;
         }
 
         public bool UpdateEmployee(TblEmployee Employee)

@@ -47,6 +47,7 @@ namespace DataObjects.AdoNet
 
             var command = factory.CreateCommand();
             command.Connection = conn;
+
             //Set type of SQL to StoreProcedure
             command.CommandType = CommandType.StoredProcedure;            
             command.CommandText = sql;
@@ -106,7 +107,7 @@ namespace DataObjects.AdoNet
 
             using (var connection = CreateConnection())
             {
-                using (var command = CreateCommand(sql + ";SELECT SCOPE_IDENTITY();", connection, parms))
+                using (var command = CreateCommand(sql, connection, parms))
                 {
                     return int.Parse(command.ExecuteScalar().ToString());
                 }

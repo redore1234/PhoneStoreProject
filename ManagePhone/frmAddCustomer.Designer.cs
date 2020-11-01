@@ -160,6 +160,7 @@
             this.txtCustomerPhone.Name = "txtCustomerPhone";
             this.txtCustomerPhone.Size = new System.Drawing.Size(401, 26);
             this.txtCustomerPhone.TabIndex = 3;
+            this.txtCustomerPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // panel4
             // 
@@ -195,6 +196,7 @@
             this.btnAddCustomer.TabIndex = 8;
             this.btnAddCustomer.Text = "ADD";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // frmAddCustomer
             // 

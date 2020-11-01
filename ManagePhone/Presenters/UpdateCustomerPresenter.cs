@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ManagePhone.Presenters
 {
@@ -18,20 +19,30 @@ namespace ManagePhone.Presenters
         //Update a customer
         public void UpdateCustomer()
         {
-            string CusName = View.Name;
+            string CusID = View.CustomerID;
+            string CusName = View.CustomerName;
             DateTime CusDOB = View.DOB;
             string CusPhone = View.Phone;
             string CusAddress = View.Address;
 
             CustomerModel customer = new CustomerModel()
             {
+                CustomerID = CusID,
                 Name = CusName,
                 DOB = CusDOB,
                 Phone = CusPhone,
                 Address = CusAddress
             };
 
-            bool result = Model.UpdateCustomer(customer);
+            bool UpdateSucessfully = Model.UpdateCustomer(customer);
+            if (UpdateSucessfully)
+            {
+                MessageBox.Show("Customer Updated!", "Notify");
+            } 
+            else
+            {
+                MessageBox.Show("Update Failed", "Error");
+            }
         }
     }
 }

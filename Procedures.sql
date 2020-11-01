@@ -9,7 +9,7 @@ AS
 	BEGIN
 		SELECT employeeID, password, name, DOB, address, phone, roleID, statusID
 		FROM dbo.tblEmployee
-		WHERE employeeID=@EmpID AND password=@Pass
+		WHERE employeeID=@EmpID AND password=@Pass AND statusID = 1
 	END
 GO
 
@@ -106,16 +106,15 @@ GO
 
 --Add Customer--
 CREATE PROC spAddCustomer(@Name VARCHAR(50), @DOB DATE, @Address VARCHAR(100), 
-						@Phone VARCHAR(10), @Money INT, @Point INT, @RankID  INT, @StatusID INT)
+						@Phone VARCHAR(10))
 AS 
 	BEGIN 
 		INSERT dbo.tblCustomer
-		        ( name, DOB, address, phone, 
-					spentMoney, point, rankID, statusID
+		        ( name, DOB, address, phone
 		        )
-		VALUES  ( @Name, @DOB, @Address, @Phone, @Money, 
-					@Point, @RankID, @StatusID
+		VALUES  ( @Name, @DOB, @Address, @Phone
 		        )
+		;SELECT SCOPE_IDENTITY();
 	END 
 GO 
 
@@ -124,46 +123,37 @@ EXEC dbo.spAddCustomer @Name = 'longpt', -- varchar(50)
     @Address = '123PXL', -- varchar(100)
     @Phone = '0808', -- varchar(10)
     @Money = 0, -- int
-    @Point = 0, -- int
-    @RankID = 1, -- int
-    @StatusID = 1 -- int
+    @Point = 0 -- int
 GO	
 
 --Update Customer--
 CREATE PROC spUpdateCustomer(@CustomerID INT, @Name VARCHAR(50), @DOB DATE, @Address VARCHAR(100), 
-						@Phone VARCHAR(10), @Money INT, @Point INT, @RankID  INT, @StatusID INT)
+						@Phone VARCHAR(10))
 AS 
 	BEGIN
 		UPDATE dbo.tblCustomer
-		SET name=@Name, DOB=@DOB, address=@Address, phone=@Phone, 
-					spentMoney=@Money, point=@Point, rankID=@RankID, statusID=@StatusID
+		SET name=@Name, DOB=@DOB, address=@Address, phone=@Phone
 		WHERE customerID=@CustomerID
 	END
 GO 
 
-EXEC dbo.spUpdateCustomer @CustomerID = 3, -- int
+EXEC dbo.spUpdateCustomer @CustomerID = 5, -- int
     @Name = 'longpt', -- varchar(50)
     @DOB = '2000-10-31 ', -- date
     @Address = '123PXL', -- varchar(100)
-    @Phone = '0808', -- varchar(10)
-    @Money = 50000, -- int
-    @Point = 50, -- int
-    @RankID = 2, -- int
-    @StatusID = 1 -- int
+    @Phone = '0808' -- varchar(10)
 GO 
 
 --Delete Customer--
-CREATE PROC spDeleteCustomer(@CustomerID INT, @StatusID INT)
+CREATE PROC spDeleteCustomer(@CustomerID INT)
 AS 
 	BEGIN 
 		UPDATE dbo.tblCustomer
-		SET statusID=@StatusID
+		SET statusID=2
 		WHERE customerID=@CustomerID
 	END
-GO 
-
+GO
 EXEC dbo.spDeleteCustomer @CustomerID = 2, -- int
-    @StatusID = 2 -- int
 GO
 
 --Get List Customer--
@@ -171,7 +161,7 @@ CREATE PROC  spGetListCustomers
 AS 
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
-		FROM dbo.tblCustomer 
+		FROM dbo.tblCustomer WHERE statusID = 1
 	END 
 GO 
 

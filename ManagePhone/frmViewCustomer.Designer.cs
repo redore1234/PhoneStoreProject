@@ -79,6 +79,7 @@
             this.btnDeleteCustomer.TabIndex = 5;
             this.btnDeleteCustomer.Text = "Delete";
             this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // dgvListCustomer
             // 
@@ -94,6 +95,7 @@
             this.dgvListCustomer.RowTemplate.Height = 24;
             this.dgvListCustomer.Size = new System.Drawing.Size(738, 398);
             this.dgvListCustomer.TabIndex = 27;
+            this.dgvListCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCustomer_CellClick);
             // 
             // txtSearchCustomerName
             // 

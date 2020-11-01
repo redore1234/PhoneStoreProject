@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ManagePhone.Presenters
 {
@@ -18,7 +19,7 @@ namespace ManagePhone.Presenters
         //perform add customer
         public void AddCustomer()
         {
-            string CusName = View.Name;
+            string CusName = View.CustomerName;
             DateTime CusDOB = View.DOB;
             string CusPhone = View.Phone;
             string CusAddress = View.Address;
@@ -31,7 +32,16 @@ namespace ManagePhone.Presenters
                 Address = CusAddress
             };
 
-            bool result = Model.AddCustomer(customer);
+            bool addedSuccessfully = Model.AddCustomer(customer);
+
+            if (addedSuccessfully)
+            {
+                MessageBox.Show("Customer Added!", "Notify");
+            }
+            else
+            {
+                MessageBox.Show("Add Failed!", "Error");
+            }
         }
     }
 }

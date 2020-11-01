@@ -18,23 +18,10 @@ namespace DataObjects.DAO
         {
             return new object[]
             {
-                "@CustomerID", Cus.CustomerID,
                 "@Name", Cus.Name,
                 "@DOB", Cus.DOB,
                 "@Address", Cus.Address,
-                "@Phone", Cus.Phone,
-                "@Money", Cus.SpentMoney,
-                "@Point", Cus.Point,
-                "@RankID", Cus.RankID,
-            };
-        }
-
-        // creates query parameters CustomerID from TblCustomer object
-        object[] TakeCustomerID(int CustomerID)
-        {
-            return new object[]
-            {
-                "@CustomerID", CustomerID
+                "@Phone", Cus.Phone
             };
         }
 
@@ -55,19 +42,27 @@ namespace DataObjects.DAO
         public bool AddCustomer(TblCustomer Customer)
         {
             string StoreProc = "spAddCustomer";
-            return db.Insert(StoreProc, TakeCustomer(Customer)) > 0;
+            object[] parms =
+            {
+                "@Name", Customer.Name,
+                "@DOB", Customer.DOB,
+                "@Address", Customer.Address,
+                "@Phone", Customer.Phone
+            };
+            return db.Insert(StoreProc, parms) > 0;
         }
 
         public bool DeleteCustomer(int CustomerID)
         {
             string StoreProc = "spDeleteCustomer";
-            return db.Delete(StoreProc, TakeCustomerID(CustomerID)) > 0;
+            object[] parms = { "@CustomerID", CustomerID };
+            return db.Delete(StoreProc, parms) > 0;
         }
 
         public List<TblCustomer> GetListCustomers()
         {
             string StoreProc = "spGetListCustomers";
-            return (List<TblCustomer>)db.Read(StoreProc, Make);
+            return (List<TblCustomer>)db.Read(StoreProc, Make).ToList();
         }
 
         public TblCustomer SearchCustomerByPhone(string PhoneNumber)
@@ -87,7 +82,13 @@ namespace DataObjects.DAO
         public bool UpdateCustomer(TblCustomer Customer)
         {
             string StoreProc = "spUpdateCustomer";
-            return db.Update(StoreProc, TakeCustomer(Customer)) > 0;
+            object[] parms =
+                { "@CustomerID", Customer.CustomerID,
+                "@Name", Customer.Name,
+                "@DOB", Customer.DOB,
+                "@Address", Customer.Address,
+                "@Phone", Customer.Phone };
+            return db.Update(StoreProc, parms) > 0;
         }
     }
 }
