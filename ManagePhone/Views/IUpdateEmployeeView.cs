@@ -16,6 +16,6 @@ namespace ManagePhone.Views
         string Address { get; set; }
         DateTime DOB { get; set; }
         string Phone { get; set; }
-        bool IsManager { get; set; }
+        int IsManager { get; set; }
     }
 }

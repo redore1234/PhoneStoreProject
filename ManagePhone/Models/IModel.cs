@@ -14,5 +14,8 @@ namespace ManagePhone.Models
 	    public bool AddCustomer(CustomerModel customer);
         public bool UpdateCustomer(CustomerModel customer);
         public bool DeleteCustomer(int cusID);
+        public bool AddEmployee(EmployeeModel employee);
+        public bool UpdateEmployee(EmployeeModel employee);
+        public bool DeleteEmployee(string empID);
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace ManagePhone.Views
 {
     public interface IEmployeesView : IView
     {
+        string EmployeeID { get; set; }
         string Name { get; set; }
-        //IList<EmployeeModel> Employees { set; }
+        IList<EmployeeModel> Employees { set; }
     }
 }

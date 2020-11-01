@@ -22,7 +22,7 @@ namespace DataObjects
         bool AddEmployee(TblEmployee Employee);
 
         //Delete an employee
-        bool DeleteEmployee(int EmployeeID);
+        bool DeleteEmployee(string EmployeeID);
 
         //Update an employee
         bool UpdateEmployee(TblEmployee Employee);

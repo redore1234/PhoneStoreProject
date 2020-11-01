@@ -30,7 +30,7 @@ namespace DataObjects.DAO
         }
 
         // creates query parameters EmployeeID from TblEmployee object
-        object[] TakeEmployeeID(int EmployeeID)
+        object[] TakeEmployeeID(string EmployeeID)
         {
             return new object[]
             {
@@ -65,7 +65,7 @@ namespace DataObjects.DAO
             return db.Insert(StoreProc, TakeEmployee(Employee)) > 0;
         }
 
-        public bool DeleteEmployee(int EmployeeID)
+        public bool DeleteEmployee(string EmployeeID)
         {
             string StoreProc = "spDeleteEmployee";
             return db.Delete(StoreProc, TakeEmployeeID(EmployeeID)) > 0;

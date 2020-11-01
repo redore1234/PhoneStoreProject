@@ -65,5 +65,24 @@ namespace ManagePhone.Models
             return service.DeleteCustomer(cusID);
         }
         #endregion
+
+        #region Employee
+        public bool AddEmployee(EmployeeModel model)
+        {
+            var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
+            return service.AddEmployee(employee);
+        }
+
+        public bool UpdateEmployee(EmployeeModel model)
+        {
+            var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
+            return service.UpdateEmployee(employee);
+        }
+
+        public bool DeleteEmployee(int EmpID)
+        {
+            return service.DeleteEmployee(EmpID);
+        }
+        #endregion
     }
 }

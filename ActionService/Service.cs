@@ -49,7 +49,7 @@ namespace ActionService
             throw new NotImplementedException();
         }
 
-        public bool DeleteEmployee(int EmployeeID)
+        public bool DeleteEmployee(string EmployeeID)
         {
             return tblEmployeeDAO.DeleteEmployee(EmployeeID);
         }
