@@ -38,11 +38,11 @@
 		1. bool IsManager --> int IsManager in IUpdateEmployeeView
 	1. Add in Presenters in Presentation Layer: AddEmployeePresenter, UpdateEmployeePresenter, ViewEmployeePresenter
 	
-1. **[1/11/2020 23:04] Le Bao Long -** @longlb88
+1. **[1/11/2020 23:04] Le Bao Long - @longlb88**
+	1. Implement Add, Update, Delete and Load List customers
 	1. Change in Data Layer:
 		1. Change numbers of argument for AddCustomer and UpdateCustomer in TblCustomerDAO
 		1. Remove ;SELECT SCOPE_IDENTITY(); from CreateCommand method in Insert function in Db.cs
-	1. Implement Add, Update, Delete and Load List customers on Presentation Layer
 	1. Edit spAddCustomer, spUpdateCustomer in Procedure.sql
 	1. Edit default value for some fields in Customer table in PhoneStore.sql
 
