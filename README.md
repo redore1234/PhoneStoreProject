@@ -26,4 +26,15 @@
 	1. Add and Update some Store procedure for tblRole and tblRank
 	1. Modified application to use Store Procedure to process SQL query
 
+1. **[1/11/2020 18:33] Pham Thanh Long - @redore1234**
+	1. Change in Data Layer:
+		1. ITblEmployeeDAO(int EmpID) --> ITblEmployeeDAO(string EmpID)
+		1. DeleteEmployee(int EmpID) --> DeleteEmployee(string EmpID)
+	1. Change in Service Layer:
+		1. DeleteEmployee(int EmpID) --> DeleteEmployee(string EmpID)
+	1. Change in Views in Presentation Layer:
+		1. bool IsManager --> int IsManager in IAddEmployeeView
+		1. Add string EmpID in IEmployeesView
+		1. bool IsManager --> int IsManager in IUpdateEmployeeView
+	1. Add in Presenters in Presentation Layer: AddEmployeePresenter, UpdateEmployeePresenter, ViewEmployeePresenter
 
