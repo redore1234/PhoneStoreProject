@@ -46,3 +46,5 @@
 	1. Edit spAddCustomer, spUpdateCustomer in Procedure.sql
 	1. Edit default value for some fields in Customer table in PhoneStore.sql
 
+1. **[1/11/2020 18:33] Pham Thanh Long - @redore1234**
+	1. Edit default value for field statusID in Products table in PhoneStore.sql

@@ -53,7 +53,7 @@ CREATE TABLE tblProducts(
     price BIGINT DEFAULT 0 NOT NULL,
     image VARCHAR(200) NOT NULL,
     quantity INT DEFAULT 0 NOT NULL,
-    statusID INT FOREIGN KEY REFERENCES tblStatus(statusID)
+    statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblOrders(
