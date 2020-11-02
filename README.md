@@ -46,5 +46,9 @@
 	1. Edit spAddCustomer, spUpdateCustomer in Procedure.sql
 	1. Edit default value for some fields in Customer table in PhoneStore.sql
 
-1. **[1/11/2020 18:33] Pham Thanh Long - @redore1234**
+1. **[2/11/2020 8:20] Pham Thanh Long - @redore1234**
 	1. Edit default value for field statusID in Products table in PhoneStore.sql
+
+1. **[2/11/2020 13:33] Pham Thanh Long - @redore1234**
+	1. Edit store procedured spDeleteEmployee Procedures.sql
+	1. Edit something in CustomerModel and UpdateCustomerPresenter in Presentation Layer

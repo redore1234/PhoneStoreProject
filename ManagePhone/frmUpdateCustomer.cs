@@ -15,7 +15,7 @@ namespace ManagePhone {
     public partial class frmUpdateCustomer : Form, IUpdateCustomerView
     {
         public CustomerModel customer { get; set; }
-        public string CustomerID
+        public int CustomerID
         {
             get => customer.CustomerID;
         }

@@ -19,7 +19,7 @@ namespace ManagePhone.Presenters
         //Update a customer
         public void UpdateCustomer()
         {
-            string CusID = View.CustomerID;
+            int CusID = View.CustomerID;
             string CusName = View.CustomerName;
             DateTime CusDOB = View.DOB;
             string CusPhone = View.Phone;

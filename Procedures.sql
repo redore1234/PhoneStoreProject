@@ -41,17 +41,17 @@ EXEC dbo.spAddEmployee @EmpID = 'tindd', -- varchar(30)
 GO 
 
 --Delete Employee--
-CREATE PROC spDeleteEmployee(@EmpID VARCHAR(30), @StatusID INT)
+CREATE PROC spDeleteEmployee(@EmpID VARCHAR(30))
 AS
 	BEGIN
 		UPDATE dbo.tblEmployee
-		SET statusID = @StatusID
+		SET statusID = 2
 		WHERE employeeID = @EmpID
 	END
 GO
 
+
 EXEC dbo.spDeleteEmployee @EmpID = 'tindd', -- varchar(30)
-    @StatusID = 2 -- int
 GO 
 
 --Update Employee--
@@ -122,8 +122,6 @@ EXEC dbo.spAddCustomer @Name = 'longpt', -- varchar(50)
     @DOB = '2000-10-31 ', -- date
     @Address = '123PXL', -- varchar(100)
     @Phone = '0808', -- varchar(10)
-    @Money = 0, -- int
-    @Point = 0 -- int
 GO	
 
 --Update Customer--
