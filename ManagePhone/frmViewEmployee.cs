@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ManagePhone.Models.Models;
+using ManagePhone.Presenters;
+using ManagePhone.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +12,29 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmViewEmployee : Form {
-        public frmViewEmployee() {
-            InitializeComponent();
+    public partial class frmViewEmployee : Form, IEmployeesView {
+        public string EmployeeID { get; set; }
+
+        public string EmployeeName
+        {
+            get => txtSearchEmployeeName.Text;
         }
 
-        private void btnSearchEmployee_Click(object sender, EventArgs e) {
+        public IList<EmployeeModel> EmployeeList
+        {
+            set
+            {
+                var EmployeeList = value;
+                BindingData(EmployeeList);
+            }
+        }
 
+        //The presenter
+        ViewEmployeePresenter _viewEmployeePresenter;
+
+        public frmViewEmployee() {
+            InitializeComponent();
+            _viewEmployeePresenter = new ViewEmployeePresenter(this);
         }
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e) {
@@ -26,11 +45,23 @@ namespace ManagePhone {
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e) {
-
+            _viewEmployeePresenter.DeleteEmployee();
+            _viewEmployeePresenter.LoadEmployees();
         }
 
         private void btnCancelEmployee_Click(object sender, EventArgs e) {
             this.Close();
+        }
+
+        private void BindingData(IList<EmployeeModel> EmployeeList)
+        {
+            dgvListEmployee.DataSource = EmployeeList;
+
+            //Clear Binding data textbox
+            txtSearchEmployeeName.DataBindings.Clear();
+
+            //Binding data to textbox
+            txtSearchEmployeeName.DataBindings.Add("Text", EmployeeList, "Name");
         }
     }
 }

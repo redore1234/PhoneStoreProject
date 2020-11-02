@@ -58,6 +58,7 @@ namespace ManagePhone.Models
             }
             return CustomerModelList;
         }
+
         public bool AddCustomer(CustomerModel model)
         {
             var customer = Mapper.Map<CustomerModel, TblCustomer>(model);
@@ -89,14 +90,21 @@ namespace ManagePhone.Models
             return service.UpdateEmployee(employee);
         }
 
-        public bool DeleteEmployee(int EmpID)
-        {
-            return service.DeleteEmployee(EmpID);
-        }
-
         public bool DeleteEmployee(string empID)
         {
-            throw new NotImplementedException();
+            return service.DeleteEmployee(empID);
+        }
+
+        public List<EmployeeModel> LoadEmployeeList()
+        {
+            var TblEmployeeList = service.GetListEmployees();
+            List<EmployeeModel> EmployeeModelList = new List<EmployeeModel>();
+            foreach (var item in TblEmployeeList)
+            {
+                EmployeeModelList.Add(Mapper.Map<TblEmployee, EmployeeModel>(item));
+            }
+
+            return EmployeeModelList;
         }
         #endregion
     }

@@ -52,3 +52,7 @@
 1. **[2/11/2020 13:33] Pham Thanh Long - @redore1234**
 	1. Edit store procedured spDeleteEmployee Procedures.sql
 	1. Edit something in CustomerModel and UpdateCustomerPresenter in Presentation Layer
+
+1. **[2/11/2020 21:45] Pham Thanh Long - @redore1234**
+	1. Edit store procedured spGetListEmployees Procedures.sql
+	1. Implement Delete and Load List employees

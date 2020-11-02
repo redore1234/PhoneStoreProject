@@ -71,7 +71,7 @@ namespace DataObjects.DAO
         public List<TblEmployee> GetListEmployees()
         {
             string StoreProc = "spGetListEmployees";
-            return (List<TblEmployee>)db.Read(StoreProc, Make);
+            return (List<TblEmployee>)db.Read(StoreProc, Make).ToList();
         }
 
         public List<TblEmployee> SearchEmployeesByName(string EmployeeName)

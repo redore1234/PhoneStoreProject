@@ -81,6 +81,7 @@ AS
 	BEGIN
 		SELECT employeeID, password, name, DOB, address, phone, roleID, statusID
 		FROM dbo.tblEmployee
+		WHERE statusID=1
 	END
 GO
 
@@ -159,7 +160,8 @@ CREATE PROC  spGetListCustomers
 AS 
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
-		FROM dbo.tblCustomer WHERE statusID = 1
+		FROM dbo.tblCustomer 
+		WHERE statusID = 1
 	END 
 GO 
 

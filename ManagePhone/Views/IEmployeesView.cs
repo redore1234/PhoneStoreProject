@@ -11,6 +11,6 @@ namespace ManagePhone.Views
     {
         string EmployeeID { get; set; }
         string Name { get; set; }
-        IList<EmployeeModel> Employees { set; }
+        IList<EmployeeModel> EmployeeList { set; }
     }
 }
