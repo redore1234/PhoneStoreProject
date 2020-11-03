@@ -18,17 +18,20 @@ namespace ManagePhone.Presenters
         }
 
         //Delete the employee
-        public void DeleteEmployee(EmployeeModel emp)
+        public void DeleteEmployee(EmployeeModel SelectedEmployee)
         {
-            string EmpID = View.EmployeeID;
-
-            bool result = Model.DeleteEmployee(EmpID);
-            if (!EmpID.Equals(emp.EmployeeID))
+            string EmpID = SelectedEmployee.EmployeeID;
+            if (SelectedEmployee.RoleID != 1)
             {
+                bool result = Model.DeleteEmployee(EmpID);
+
                 if (result)
                 {
                     MessageBox.Show("Employee Deleted!", "Notify");
-                }
+                } 
+            } else
+            {
+                MessageBox.Show("Delete Employee Fail!", "Notify");
             }
         }
 

@@ -9,7 +9,6 @@ namespace ManagePhone.Views
 {
     public interface IEmployeesView : IView
     {
-        string EmployeeID { get; set; }
         string Name { get; set; }
         IList<EmployeeModel> EmployeeList { set; }
     }

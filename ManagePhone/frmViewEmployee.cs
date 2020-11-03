@@ -13,7 +13,6 @@ using System.Windows.Forms;
 
 namespace ManagePhone {
     public partial class frmViewEmployee : Form, IEmployeesView {
-        public string EmployeeID { get; set; }
 
         public string EmployeeName
         {
@@ -53,7 +52,9 @@ namespace ManagePhone {
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e) {
-            _viewEmployeePresenter.DeleteEmployee(CurEmployeeModel);
+            EmployeeModel EmployeeModel = (EmployeeModel)dgvListEmployee.CurrentRow.DataBoundItem;
+
+            _viewEmployeePresenter.DeleteEmployee(EmployeeModel);
             _viewEmployeePresenter.LoadEmployees();
             
         }

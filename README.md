@@ -60,3 +60,7 @@
 1. **[3/11/2020 15:27] Dam Dong Tin - @dtin**
 	1. Add 2 new store procedures for update employee function
 	1. Do Update employee function
+
+1. **[3/11/2020 15:50] Pham Thanh Long - @redore1234**
+	1. Do Delete Employee function in Presentation Layer
+	
