@@ -24,6 +24,7 @@ namespace DataObjects.DAO
                 "@Pass", Emp.Password,
                 "@Name", Emp.Name,
                 "@DOB", Emp.DOB,
+                "@Address", Emp.Address,
                 "@Phone", Emp.Phone,
                 "@RoleID", Emp.RoleID
             };
@@ -62,12 +63,6 @@ namespace DataObjects.DAO
             return db.Delete(StoreProc, parms) > 0;
         }
 
-        public bool UpdateEmployee(TblEmployee Employee)
-        {
-            string StoreProc = "spUpdateEmployee";
-            return db.Update(StoreProc, TakeEmployee(Employee)) > 0;
-        }
-
         public List<TblEmployee> GetListEmployees()
         {
             string StoreProc = "spGetListEmployees";
@@ -79,6 +74,27 @@ namespace DataObjects.DAO
             string StoreProc = "spSearchEmployeesByName";
             object[] parms = { "@Name", EmployeeName };
             return (List<TblEmployee>)db.Read(StoreProc, Make, parms);
+        }
+
+        public bool UpdateEmployeeWithoutPassword(TblEmployee Employee)
+        {
+            string StoreProc = "spUpdateEmployeeWithoutPass";
+            object[] parms = new object[]
+            {
+                "@EmpID", Employee.EmployeeID,
+                "@Name", Employee.Name,
+                "@DOB", Employee.DOB,
+                "@Address", Employee.Address,
+                "@Phone", Employee.Phone,
+                "@RoleID", Employee.RoleID
+            };
+            return db.Update(StoreProc, parms) > 0;
+        }
+
+        public bool UpdateEmployeeWithPassword(TblEmployee Employee)
+        {
+            string StoreProc = "spUpdateEmployeeWithPass";
+            return db.Update(StoreProc, TakeEmployee(Employee)) > 0;
         }
     }
 }

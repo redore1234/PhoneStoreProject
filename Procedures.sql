@@ -54,13 +54,13 @@ GO
 EXEC dbo.spDeleteEmployee @EmpID = 'tindd', -- varchar(30)
 GO 
 
---Update Employee--
-CREATE PROC spUpdateEmployee(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
-					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10), @StatusID VARCHAR(10))
+--Update Employee With Update Password--
+CREATE PROC spUpdateEmployeeWithPass(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
+					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10))
 AS
 	BEGIN
 		UPDATE dbo.tblEmployee
-		SET password=@Pass, name=@Name, phone=@Phone, roleID=@RoleID, statusID=@StatusID
+		SET password=@Pass, name=@Name, phone=@Phone, roleID=@RoleID, DOB=@DOB, address=@Address
 		WHERE employeeID=@EmpID
 	END
 GO
@@ -73,6 +73,17 @@ EXEC dbo.spUpdateEmployee @EmpID = 'tindd', -- varchar(30)
     @Phone = '234', -- varchar(10)
     @RoleID = '2', -- varchar(10)
     @StatusID = '1' -- varchar(10)
+GO
+
+--Update Employee Without Update Password--
+CREATE PROC spUpdateEmployeeWithoutPass(@EmpID VARCHAR(30), @Name VARCHAR(50), 
+					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10))
+AS
+	BEGIN
+		UPDATE dbo.tblEmployee
+		SET name=@Name, phone=@Phone, roleID=@RoleID, DOB=@DOB, address=@Address
+		WHERE employeeID=@EmpID
+	END
 GO
 
 --Get List Employee--

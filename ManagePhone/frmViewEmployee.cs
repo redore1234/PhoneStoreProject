@@ -46,9 +46,9 @@ namespace ManagePhone {
         }
 
         private void btnUpdateEmployee_Click(object sender, EventArgs e) {
-            frmUpdateEmployee updateEmployee = new frmUpdateEmployee();
             this.Hide();
-            updateEmployee.ShowDialog();
+            EmployeeModel EmployeeModel = (EmployeeModel) dgvListEmployee.CurrentRow.DataBoundItem;
+            _viewEmployeePresenter.UpdateEmployee(EmployeeModel);
             this.Show();
         }
 

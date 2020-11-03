@@ -24,7 +24,10 @@ namespace DataObjects
         //Delete an employee
         bool DeleteEmployee(string EmployeeID);
 
-        //Update an employee
-        bool UpdateEmployee(TblEmployee Employee);
+        //Update an employee without update password
+        bool UpdateEmployeeWithoutPassword(TblEmployee Employee);
+
+        //Update an employee with password
+        bool UpdateEmployeeWithPassword(TblEmployee Employee);
     }
 }

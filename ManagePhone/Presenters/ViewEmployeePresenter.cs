@@ -32,6 +32,14 @@ namespace ManagePhone.Presenters
             }
         }
 
+        //Show Update Employee Dialog
+        public void UpdateEmployee(EmployeeModel Model)
+        {
+            frmUpdateEmployee frmUpdateEmployee = new frmUpdateEmployee(Model);
+            frmUpdateEmployee.ShowDialog();
+            //After form closed, reload employee list
+            LoadEmployees();
+        }
 
         //Load list employee
         public void LoadEmployees()
