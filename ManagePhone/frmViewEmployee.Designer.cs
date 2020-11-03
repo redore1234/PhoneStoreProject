@@ -80,6 +80,8 @@
             // 
             // dgvListEmployee
             // 
+            this.dgvListEmployee.AllowUserToAddRows = false;
+            this.dgvListEmployee.AllowUserToDeleteRows = false;
             this.dgvListEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -88,6 +90,7 @@
             this.dgvListEmployee.Location = new System.Drawing.Point(11, 193);
             this.dgvListEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.dgvListEmployee.Name = "dgvListEmployee";
+            this.dgvListEmployee.ReadOnly = true;
             this.dgvListEmployee.RowHeadersWidth = 51;
             this.dgvListEmployee.RowTemplate.Height = 24;
             this.dgvListEmployee.Size = new System.Drawing.Size(738, 373);

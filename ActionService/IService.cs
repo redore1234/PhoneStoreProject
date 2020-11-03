@@ -21,7 +21,9 @@ namespace ActionService
 
             bool DeleteEmployee(int EmployeeID);
 
-            bool UpdateEmployee(TblEmployee Employee);
+            bool UpdateEmployeeWithoutPassword(TblEmployee Employee);
+
+            bool UpdateEmployeeWithPassword(TblEmployee Employee);
         #endregion
 
         #region Customer Repository

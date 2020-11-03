@@ -9,13 +9,12 @@ namespace ManagePhone.Views
     public interface IUpdateEmployeeView : IView
     {
         string Username { get; set; }
-        string OldPassword { get; }
         string NewPassword { get; }
         string ConfirmPassword { get; }
-        string Name { get; set; }
+        string EmployeeName { get; set; }
         string Address { get; set; }
         DateTime DOB { get; set; }
         string Phone { get; set; }
-        int IsManager { get; set; }
+        bool IsManager { get; set; }
     }
 }

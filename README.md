@@ -57,3 +57,6 @@
 	1. Edit store procedured spGetListEmployees Procedures.sql
 	1. Implement Delete and Load List employees to datagridview in Presentation Layer
 	
+1. **[3/11/2020 15:27] Dam Dong Tin - @dtin**
+	1. Add 2 new store procedures for update employee function
+	1. Do Update employee function

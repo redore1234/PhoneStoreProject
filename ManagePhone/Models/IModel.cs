@@ -15,7 +15,8 @@ namespace ManagePhone.Models
         public bool UpdateCustomer(CustomerModel customer);
         public bool DeleteCustomer(int cusID);
         public bool AddEmployee(EmployeeModel employee);
-        public bool UpdateEmployee(EmployeeModel employee);
+        public bool UpdateEmployeeWithoutPassword(EmployeeModel employee);
+        public bool UpdateEmployeeWithPassword(EmployeeModel employee);
         public bool DeleteEmployee(string empID);
         public List<CustomerModel> LoadCustomerList();
         public List<EmployeeModel> LoadEmployeeList();

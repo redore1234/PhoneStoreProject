@@ -149,9 +149,14 @@ namespace ActionService
             return tblCustomerDAO.UpdateCustomer(Customer);
         }
 
-        public bool UpdateEmployee(TblEmployee Employee)
+        public bool UpdateEmployeeWithoutPassword(TblEmployee Employee)
         {
-            return tblEmployeeDAO.UpdateEmployee(Employee);
+            return tblEmployeeDAO.UpdateEmployeeWithoutPassword(Employee);
+        }
+
+        public bool UpdateEmployeeWithPassword(TblEmployee Employee)
+        {
+            return tblEmployeeDAO.UpdateEmployeeWithPassword(Employee);
         }
 
         public bool UpdateProduct(TblProducts Product)

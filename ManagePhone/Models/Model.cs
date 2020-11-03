@@ -84,12 +84,6 @@ namespace ManagePhone.Models
             return service.AddEmployee(employee);
         }
 
-        public bool UpdateEmployee(EmployeeModel model)
-        {
-            var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
-            return service.UpdateEmployee(employee);
-        }
-
         public bool DeleteEmployee(string empID)
         {
             return service.DeleteEmployee(empID);
@@ -105,6 +99,18 @@ namespace ManagePhone.Models
             }
 
             return EmployeeModelList;
+        }
+
+        public bool UpdateEmployeeWithoutPassword(EmployeeModel model)
+        {
+            var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
+            return service.UpdateEmployeeWithoutPassword(employee);
+        }
+
+        public bool UpdateEmployeeWithPassword(EmployeeModel model)
+        {
+            var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
+            return service.UpdateEmployeeWithPassword(employee);
         }
         #endregion
     }
