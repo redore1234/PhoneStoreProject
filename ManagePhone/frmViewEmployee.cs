@@ -20,6 +20,9 @@ namespace ManagePhone {
             get => txtSearchEmployeeName.Text;
         }
 
+        public int RoleID { get; set; }
+
+        public EmployeeModel CurEmployeeModel;
         public IList<EmployeeModel> EmployeeList
         {
             set
@@ -37,6 +40,11 @@ namespace ManagePhone {
             _viewEmployeePresenter = new ViewEmployeePresenter(this);
         }
 
+        public frmViewEmployee(EmployeeModel emp):this() 
+        {
+            CurEmployeeModel = emp;
+        }
+
         private void btnUpdateEmployee_Click(object sender, EventArgs e) {
             frmUpdateEmployee updateEmployee = new frmUpdateEmployee();
             this.Hide();
@@ -45,8 +53,9 @@ namespace ManagePhone {
         }
 
         private void btnDeleteEmployee_Click(object sender, EventArgs e) {
-            _viewEmployeePresenter.DeleteEmployee();
+            _viewEmployeePresenter.DeleteEmployee(CurEmployeeModel);
             _viewEmployeePresenter.LoadEmployees();
+            
         }
 
         private void btnCancelEmployee_Click(object sender, EventArgs e) {
@@ -58,10 +67,10 @@ namespace ManagePhone {
             dgvListEmployee.DataSource = EmployeeList;
 
             //Clear Binding data textbox
-            txtSearchEmployeeName.DataBindings.Clear();
+            //txtSearchEmployeeName.DataBindings.Clear();
 
             //Binding data to textbox
-            txtSearchEmployeeName.DataBindings.Add("Text", EmployeeList, "Name");
+            //txtSearchEmployeeName.DataBindings.Add("Text", EmployeeList, "Name");
         }
     }
 }

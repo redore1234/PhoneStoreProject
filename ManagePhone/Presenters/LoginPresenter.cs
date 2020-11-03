@@ -35,7 +35,7 @@ namespace ManagePhone.Presenters
                 switch (RoleName)
                 {
                     case "Manager":
-                        frmManager frmManager = new frmManager();
+                        frmManager frmManager = new frmManager(Employee);
                         frmManager.ShowDialog();
                         break;
                     case "Employee":

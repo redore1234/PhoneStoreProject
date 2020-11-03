@@ -1,4 +1,6 @@
 ﻿using ManagePhone.GUI;
+using ManagePhone.Models.Models;
+using ManagePhone.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +12,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmManager : Form {
+    public partial class frmManager : Form, IManagerView {
+        public EmployeeModel CurEmployeeModel;
+
+        public string CustomerPhone 
+        {
+            get => txtCustomerPhone.Text.Trim();
+        }
+
+        public string ProductName { get; set; }
         public frmManager() {
             InitializeComponent();  
             //Set custom format for DateTimePicker
@@ -21,18 +31,9 @@ namespace ManagePhone {
             this.dtPhoneYear.CustomFormat = "dd-MM-yyyy";*/
         }
 
-        private void btnViewEmployee_Click(object sender, EventArgs e) {
-            frmViewEmployee viewEmployee = new frmViewEmployee();
-            this.Hide();
-            viewEmployee.ShowDialog();
-            this.Show();
-        }
-
-        private void btnViewPhoneDetails_Click(object sender, EventArgs e) {
-            frmViewPhone viewPhone = new frmViewPhone();
-            this.Hide();
-            viewPhone.ShowDialog();
-            this.Show();
+        public frmManager(EmployeeModel emp):this()
+        {
+            CurEmployeeModel = emp;
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e) {
@@ -57,7 +58,7 @@ namespace ManagePhone {
         }
 
         private void lbViewEmployee_Click(object sender, EventArgs e) {
-            frmViewEmployee viewEmployee = new frmViewEmployee();
+            frmViewEmployee viewEmployee = new frmViewEmployee(CurEmployeeModel);
             this.Hide();
             viewEmployee.ShowDialog();
             this.Show();
