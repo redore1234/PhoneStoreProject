@@ -100,21 +100,22 @@
             // 
             this.txtSearchEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchEmployeeName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchEmployeeName.Location = new System.Drawing.Point(145, 22);
+            this.txtSearchEmployeeName.Location = new System.Drawing.Point(145, 20);
             this.txtSearchEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchEmployeeName.Name = "txtSearchEmployeeName";
-            this.txtSearchEmployeeName.Size = new System.Drawing.Size(251, 26);
+            this.txtSearchEmployeeName.Size = new System.Drawing.Size(251, 30);
             this.txtSearchEmployeeName.TabIndex = 8;
+            this.txtSearchEmployeeName.TextChanged += new System.EventHandler(this.txtSearchEmployeeName_TextChanged);
             // 
             // label29
             // 
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(2, 25);
+            this.label29.Location = new System.Drawing.Point(2, 11);
             this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(139, 19);
+            this.label29.Size = new System.Drawing.Size(139, 48);
             this.label29.TabIndex = 7;
             this.label29.Text = "Employee Name:";
             // 

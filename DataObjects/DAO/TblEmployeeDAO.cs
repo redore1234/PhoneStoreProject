@@ -66,14 +66,14 @@ namespace DataObjects.DAO
         public List<TblEmployee> GetListEmployees()
         {
             string StoreProc = "spGetListEmployees";
-            return (List<TblEmployee>)db.Read(StoreProc, Make).ToList();
+            return db.Read(StoreProc, Make).ToList();
         }
 
         public List<TblEmployee> SearchEmployeesByName(string EmployeeName)
         {
             string StoreProc = "spSearchEmployeesByName";
             object[] parms = { "@Name", EmployeeName };
-            return (List<TblEmployee>)db.Read(StoreProc, Make, parms);
+            return db.Read(StoreProc, Make, parms).ToList();
         }
 
         public bool UpdateEmployeeWithoutPassword(TblEmployee Employee)

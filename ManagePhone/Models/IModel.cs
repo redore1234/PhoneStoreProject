@@ -9,16 +9,26 @@ namespace ManagePhone.Models
 {
     public interface IModel
     {
-        EmployeeModel CheckLogin(string EmpID, string Password);
-        RoleModel GetRole(int roleID);
-	    public bool AddCustomer(CustomerModel customer);
-        public bool UpdateCustomer(CustomerModel customer);
-        public bool DeleteCustomer(int cusID);
-        public bool AddEmployee(EmployeeModel employee);
-        public bool UpdateEmployeeWithoutPassword(EmployeeModel employee);
-        public bool UpdateEmployeeWithPassword(EmployeeModel employee);
-        public bool DeleteEmployee(string empID);
-        public List<CustomerModel> LoadCustomerList();
-        public List<EmployeeModel> LoadEmployeeList();
+        #region Login
+            EmployeeModel CheckLogin(string EmpID, string Password);
+            RoleModel GetRole(int roleID);
+        #endregion
+
+        #region Employee
+            public bool AddEmployee(EmployeeModel employee);
+            public bool UpdateEmployeeWithoutPassword(EmployeeModel employee);
+            public bool UpdateEmployeeWithPassword(EmployeeModel employee);
+            public bool DeleteEmployee(string empID);
+            public List<EmployeeModel> SearchEmployeesByName(string EmployeeName);
+            public List<EmployeeModel> LoadEmployeeList();
+        #endregion
+
+        #region Customer
+            public bool AddCustomer(CustomerModel customer);
+            public bool UpdateCustomer(CustomerModel customer);
+            public bool DeleteCustomer(int cusID);
+            public List<CustomerModel> LoadCustomerList();
+        #endregion
+
     }
 }

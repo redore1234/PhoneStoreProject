@@ -73,5 +73,16 @@ namespace ManagePhone {
             //Binding data to textbox
             //txtSearchEmployeeName.DataBindings.Add("Text", EmployeeList, "Name");
         }
+
+        private void txtSearchEmployeeName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearchEmployeeName.Text.Length > 0 || !txtSearchEmployeeName.Text.Equals(""))
+            {
+                _viewEmployeePresenter.SearchEmployee(txtSearchEmployeeName.Text);
+            } else
+            {
+                _viewEmployeePresenter.LoadEmployees();
+            }
+        }
     }
 }

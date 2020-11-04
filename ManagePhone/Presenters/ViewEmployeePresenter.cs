@@ -44,6 +44,12 @@ namespace ManagePhone.Presenters
             LoadEmployees();
         }
 
+        //Search Employee
+        public void SearchEmployee(string name)
+        {
+            View.EmployeeList = Model.SearchEmployeesByName(name);
+        }
+
         //Load list employee
         public void LoadEmployees()
         {

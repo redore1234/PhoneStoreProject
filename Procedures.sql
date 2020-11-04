@@ -105,7 +105,7 @@ AS
 	BEGIN
 		SELECT employeeID, password, name, DOB, address, phone, roleID, statusID
 		FROM dbo.tblEmployee
-		WHERE name LIKE '%' + @Name + '%'
+		WHERE name LIKE '%' + @Name + '%' AND statusID=1
 	END
 GO 
 
@@ -185,7 +185,8 @@ AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
 		FROM dbo.tblCustomer
-		WHERE phone LIKE '%' + @Phone + '%'
+		WHERE phone LIKE '%' + @Phone + '%' AND	statusID=1
+        
 	END
 GO 
 
@@ -198,7 +199,7 @@ AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
 		FROM dbo.tblCustomer
-		WHERE name LIKE '%' + @Name + '%'
+		WHERE name LIKE '%' + @Name + '%' AND statusID=1
 	END	
 GO
 

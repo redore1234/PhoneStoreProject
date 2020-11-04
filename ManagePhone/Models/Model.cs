@@ -101,6 +101,17 @@ namespace ManagePhone.Models
             return EmployeeModelList;
         }
 
+        public List<EmployeeModel> SearchEmployeesByName(string EmployeeName)
+        {
+            var TblEmployeesNameList = service.SearchEmployeesByName(EmployeeName);
+            List<EmployeeModel> EmployeeModelList = new List<EmployeeModel>();
+            foreach (var item in TblEmployeesNameList)
+            {
+                EmployeeModelList.Add(Mapper.Map<TblEmployee, EmployeeModel>(item));
+            }
+            return EmployeeModelList;
+        }
+
         public bool UpdateEmployeeWithoutPassword(EmployeeModel model)
         {
             var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
