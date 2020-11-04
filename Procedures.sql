@@ -19,14 +19,11 @@ GO
 
 --Add Employee--
 CREATE PROC spAddEmployee(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
-					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID VARCHAR(10), @StatusID VARCHAR(10))
+					@DOB DATE, @Address VARCHAR(100), @Phone VARCHAR(10), @RoleID INT)
 AS
 	BEGIN
-		INSERT dbo.tblEmployee
-		        ( employeeID , password , name , DOB , address , phone , roleID , statusID
-		        )
-		VALUES  ( @EmpID, @Pass, @Name, @DOB, @Address, @Phone, @RoleID, @StatusID
-		        )
+		INSERT dbo.tblEmployee(employeeID , password , name , DOB , address , phone , roleID , statusID)
+		VALUES (@EmpID, @Pass, @Name, @DOB, @Address, @Phone, @RoleID, 1)
 	END
 GO
 
