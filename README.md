@@ -72,7 +72,7 @@
 	1. Do Add Employee function in Presentation Layer
 	1. Modified store procedure to fit with current Add Employee function
 
-1. **[5/11/2020 22:30] Le Bao Long - @longlb88**
+1. **[5/11/2020 14:30] Le Bao Long - @longlb88**
 	1. Do Search Customer by Name and Phone
 	1. Delete spSearchCustomerByPhone and spSearchCustomersByName
 	1. Delete all methods that use to search customers seperately by phone or name
