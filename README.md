@@ -66,7 +66,7 @@
 	
 1. **[3/11/2020 15:50] Pham Thanh Long - @redore1234**
 	1. Do Search Employee by Name in Presentation Layer
-	1. Edit sotre procedured spSearchEmployeesByName, spSearchCustomerByPhone, spSearchCustomerByName (add statusId=1) in Procedures.sql
+	1. Edit store procedured spSearchEmployeesByName, spSearchCustomerByPhone, spSearchCustomerByName (add statusId=1) in Procedures.sql
 
 1. **[4/11/2020 22:30] Dam Dong Tin - @dtin**
 	1. Do Add Employee function in Presentation Layer
