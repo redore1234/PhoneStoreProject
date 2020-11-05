@@ -34,7 +34,6 @@ EXEC dbo.spAddEmployee @EmpID = 'tindd', -- varchar(30)
     @Address = '234TQD', -- varchar(100)
     @Phone = '234', -- varchar(10)
     @RoleID = '1', -- varchar(10)
-    @StatusID = '1' -- varchar(10)
 GO 
 
 --Delete Employee--
