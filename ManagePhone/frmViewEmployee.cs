@@ -19,8 +19,6 @@ namespace ManagePhone {
             get => txtSearchEmployeeName.Text;
         }
 
-        public int RoleID { get; set; }
-
         public EmployeeModel CurEmployeeModel;
         public IList<EmployeeModel> EmployeeList
         {
@@ -66,19 +64,13 @@ namespace ManagePhone {
         private void BindingData(IList<EmployeeModel> EmployeeList)
         {
             dgvListEmployee.DataSource = EmployeeList;
-
-            //Clear Binding data textbox
-            //txtSearchEmployeeName.DataBindings.Clear();
-
-            //Binding data to textbox
-            //txtSearchEmployeeName.DataBindings.Add("Text", EmployeeList, "Name");
         }
 
         private void txtSearchEmployeeName_TextChanged(object sender, EventArgs e)
         {
-            if (txtSearchEmployeeName.Text.Length > 0 || !txtSearchEmployeeName.Text.Equals(""))
+            if (EmployeeName.Length > 0 || !EmployeeName.Equals(""))
             {
-                _viewEmployeePresenter.SearchEmployee(txtSearchEmployeeName.Text);
+                _viewEmployeePresenter.SearchEmployee(EmployeeName);
             } else
             {
                 _viewEmployeePresenter.LoadEmployees();

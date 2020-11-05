@@ -76,3 +76,7 @@
 	1. Do Search Customer by Name and Phone
 	1. Delete spSearchCustomerByPhone and spSearchCustomersByName
 	1. Delete all methods that use to search customers seperately by phone or name
+
+1. **[3/11/2020 14:50] Pham Thanh Long - @redore1234**
+	1. Edit Search Employee by Name in Presentation Layer	
+	1. Add Pictures
