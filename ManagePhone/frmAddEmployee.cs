@@ -24,6 +24,12 @@ namespace ManagePhone
             _addEmployeePresenter = new AddEmployeePresenter(this);
         }
 
+        private void frmAddEmployee_Load(object sender, EventArgs e)
+        {
+            dtEmployeeDOB.Format = DateTimePickerFormat.Custom;
+            dtEmployeeDOB.CustomFormat = "dd-MM-yyyy";
+        }
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
