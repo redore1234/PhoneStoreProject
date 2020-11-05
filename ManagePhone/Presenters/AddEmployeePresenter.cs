@@ -55,7 +55,6 @@ namespace ManagePhone.Presenters
                 if (ex.Message.Contains("duplicate key"))
                 {
                     MessageBox.Show("This username is already existed!\nTry to use different username", "Error");
-                    return IsAddSuccess;
                 }
             }
 

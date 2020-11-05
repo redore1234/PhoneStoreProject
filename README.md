@@ -77,6 +77,10 @@
 	1. Delete spSearchCustomerByPhone and spSearchCustomersByName
 	1. Delete all methods that use to search customers seperately by phone or name
 
-1. **[3/11/2020 14:50] Pham Thanh Long - @redore1234**
+1. **[5/11/2020 14:50] Pham Thanh Long - @redore1234**
 	1. Edit Search Employee by Name in Presentation Layer	
 	1. Add Pictures
+
+1. **[5/11/2020 15:17] Dam Dong Tin - @dtin**
+	1. Fix bug close form Add Employee unexpected
+	1. Fix date format in Add Employee form 

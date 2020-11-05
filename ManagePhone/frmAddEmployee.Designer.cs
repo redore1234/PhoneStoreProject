@@ -282,7 +282,6 @@
             // btnAddEmployee
             // 
             this.btnAddEmployee.AutoSize = true;
-            this.btnAddEmployee.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnAddEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmployee.Location = new System.Drawing.Point(136, 0);
             this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
@@ -324,6 +323,7 @@
             this.Name = "frmAddEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Employee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
