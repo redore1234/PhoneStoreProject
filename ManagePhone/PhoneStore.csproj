@@ -254,6 +254,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="phone.ico" />
+    <None Include="Resources\addemployee.png" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
