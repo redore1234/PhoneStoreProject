@@ -13,18 +13,6 @@ namespace DataObjects.DAO
     {
         static Db db = new Db();
 
-        // creates query parameters list from TblCustomer object
-        object[] TakeCustomer (TblCustomer Cus)
-        {
-            return new object[]
-            {
-                "@Name", Cus.Name,
-                "@DOB", Cus.DOB,
-                "@Address", Cus.Address,
-                "@Phone", Cus.Phone
-            };
-        }
-
         // creates a TblCustomer object based on DataReader
         static Func<IDataReader, TblCustomer> Make = reader =>
         new TblCustomer
@@ -65,18 +53,11 @@ namespace DataObjects.DAO
             return (List<TblCustomer>)db.Read(StoreProc, Make).ToList();
         }
 
-        public TblCustomer SearchCustomerByPhone(string PhoneNumber)
+        public List<TblCustomer> SearchCustomers(string CustomerName, string Phone)
         {
-            string StoreProc = "spSearchCustomerByPhone";
-            object[] parms = { "@Phone", PhoneNumber };
-            return db.Read(StoreProc, Make, parms).FirstOrDefault();
-        }
-
-        public List<TblCustomer> SearchCustomersByName(string CustomerName)
-        {
-            string StoreProc = "spSearchCustomerByName";
-            object[] parms = { "@Name", CustomerName };
-            return (List<TblCustomer>)db.Read(StoreProc, Make, parms);
+            string StoreProc = "spSearchCustomers";
+            object[] parms = { "@Name", CustomerName, "@Phone", Phone };
+            return (List<TblCustomer>)db.Read(StoreProc, Make, parms).ToList();
         }
 
         public bool UpdateCustomer(TblCustomer Customer)

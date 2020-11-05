@@ -1,22 +1,18 @@
 ﻿using BusinessObjects;
 using DataObjects.AdoNet;
 using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataObjects.DAO
 {
     public class TblEmployeeDAO : ITblEmployeeDAO
     {
-
-        static Db db = new Db();
+        private static Db db = new Db();
 
         // creates query parameters list from TblEmployee object
-        object[] TakeEmployee(TblEmployee Emp)
+        private object[] TakeEmployee(TblEmployee Emp)
         {
             return new object[]
             {
@@ -31,17 +27,17 @@ namespace DataObjects.DAO
         }
 
         // creates a TblEmployee object based on DataReader
-        static Func<IDataReader, TblEmployee> Make = reader =>
-        new TblEmployee
-        {
-            EmployeeID = reader["employeeID"].ToString(),
-            Password = reader["password"].ToString(),
-            Name = reader["name"].ToString(),
-            DOB = DateTime.Parse(reader["DOB"].ToString()),
-            Address = reader["address"].ToString(),
-            Phone = reader["phone"].ToString(),
-            RoleID = int.Parse(reader["roleID"].ToString())
-        };
+        private static Func<IDataReader, TblEmployee> Make = reader =>
+          new TblEmployee
+          {
+              EmployeeID = reader["employeeID"].ToString(),
+              Password = reader["password"].ToString(),
+              Name = reader["name"].ToString(),
+              DOB = DateTime.Parse(reader["DOB"].ToString()),
+              Address = reader["address"].ToString(),
+              Phone = reader["phone"].ToString(),
+              RoleID = int.Parse(reader["roleID"].ToString())
+          };
 
         public TblEmployee CheckLogin(string username, string password)
         {
@@ -53,7 +49,7 @@ namespace DataObjects.DAO
         public bool AddEmployee(TblEmployee Employee)
         {
             string StoreProc = "spAddEmployee";
-            return db.Insert(StoreProc, TakeEmployee(Employee)) > 0;
+            return db.Update(StoreProc, TakeEmployee(Employee)) > 0;
         }
 
         public bool DeleteEmployee(string EmployeeID)

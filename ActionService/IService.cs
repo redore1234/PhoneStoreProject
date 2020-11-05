@@ -27,10 +27,7 @@ namespace ActionService
         #endregion
 
         #region Customer Repository
-
-            TblCustomer SearchCustomerByPhone(string PhoneNumber);
-
-            List<TblCustomer> SearchCustomersByName(string CustomerName);
+            List<TblCustomer> SearchCustomers(string CustomerName, string Phone);
 
             List<TblCustomer> GetListCustomers();
 

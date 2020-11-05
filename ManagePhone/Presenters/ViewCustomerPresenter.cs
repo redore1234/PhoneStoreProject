@@ -18,11 +18,9 @@ namespace ManagePhone.Presenters
         }
 
         //Delete a customer
-        public void DeleteCustomer()
+        public void DeleteCustomer(int CustomerID)
         {
-            int CusID = View.CustomerID;
-
-            bool DeletedSuccessfully = Model.DeleteCustomer(CusID);
+            bool DeletedSuccessfully = Model.DeleteCustomer(CustomerID);
             if (DeletedSuccessfully)
             {
                 MessageBox.Show("Customer Deleted!", "Notify");
@@ -33,6 +31,24 @@ namespace ManagePhone.Presenters
         public void LoadCustomers()
         {
             View.CustomerList = Model.LoadCustomerList();
+        }
+
+        public void UpdateCustomer(CustomerModel customer)
+        {
+            (new frmUpdateCustomer(customer)).ShowDialog();
+        }
+
+        public void SearchCustomer()
+        {
+            string Name = View.CustomerName;
+            string Phone = View.Phone;
+
+            if (Name.Length == 0 && Phone.Length == 0)
+            {
+                LoadCustomers();
+                return;
+            }
+            View.CustomerList = Model.SearchCustomer(Name, Phone);
         }
     }
 }

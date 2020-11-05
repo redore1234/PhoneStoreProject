@@ -9,11 +9,9 @@ namespace DataObjects
 {
     public interface ITblCustomerDAO
     {
-        //Search a customer by phone
-        TblCustomer SearchCustomerByPhone(string PhoneNumber);
 
         //Search customers by name
-        List<TblCustomer> SearchCustomersByName(string CustomerName);
+        List<TblCustomer> SearchCustomers(string CustomerName, string Phone);
 
         //Get all customers
         List<TblCustomer> GetListCustomers();

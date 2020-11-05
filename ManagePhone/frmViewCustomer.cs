@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ManagePhone {
     public partial class frmViewCustomer : Form, ICustomersView {
-        public int CustomerID { get; set; }
+        public int CustomerID;
         public string CustomerName 
         { 
             get => txtSearchCustomerName.Text;
@@ -37,19 +37,12 @@ namespace ManagePhone {
         {
             InitializeComponent();
             _viewCustomerPresenter = new ViewCustomerPresenter(this);
-        }
+            CustomerID = int.Parse(dgvListCustomer[0, 0].Value.ToString());
+        } 
 
         private void BindingData(IList<CustomerModel> CustomerList)
         {
             dgvListCustomer.DataSource = CustomerList;
-
-            //clear binding data textboxes
-            txtPhone.DataBindings.Clear();
-            txtSearchCustomerName.DataBindings.Clear();
-
-            //binding data to textboxes
-            txtPhone.DataBindings.Add("Text", CustomerList, "Phone");
-            txtSearchCustomerName.DataBindings.Add("Text", CustomerList, "Name");
         }
 
 
@@ -58,21 +51,40 @@ namespace ManagePhone {
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e) {
-            CustomerModel customer = (CustomerModel) dgvListCustomer.CurrentRow.DataBoundItem;
-            (new frmUpdateCustomer(customer)).ShowDialog();
-            _viewCustomerPresenter.LoadCustomers();
+            if (dgvListCustomer.Rows.Count != 0)
+            {
+                CustomerModel customer = (CustomerModel)dgvListCustomer.CurrentRow.DataBoundItem;
+                _viewCustomerPresenter.UpdateCustomer(customer);
+                _viewCustomerPresenter.LoadCustomers();
+            }
         }
 
         private void btnDeleteCustomer_Click(object sender, EventArgs e)
         {
-            _viewCustomerPresenter.DeleteCustomer();
-            _viewCustomerPresenter.LoadCustomers();
+            if (dgvListCustomer.Rows.Count != 0)
+            {
+                _viewCustomerPresenter.DeleteCustomer(CustomerID);
+                _viewCustomerPresenter.LoadCustomers();
+            }
         }
 
         private void dgvListCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;
-            CustomerID = int.Parse(dgvListCustomer[0, row].Value.ToString());
+            if (row >= 0)
+            {
+                CustomerID = int.Parse(dgvListCustomer[0, row].Value.ToString());
+            }
+        }
+
+        private void txtSearchCustomerName_TextChanged(object sender, EventArgs e)
+        {
+            _viewCustomerPresenter.SearchCustomer();
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            _viewCustomerPresenter.SearchCustomer();
         }
     }
 }

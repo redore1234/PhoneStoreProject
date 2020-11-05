@@ -14,7 +14,7 @@ using System.Windows.Forms;
 namespace ManagePhone {
     public partial class frmUpdateCustomer : Form, IUpdateCustomerView
     {
-        public CustomerModel customer { get; set; }
+        public CustomerModel customer;
         public int CustomerID
         {
             get => customer.CustomerID;
@@ -42,11 +42,15 @@ namespace ManagePhone {
 
         //the presenter 
         UpdateCustomerPresenter _updateCustomerPresenter;
-        public frmUpdateCustomer(CustomerModel customer) {
+        public frmUpdateCustomer() {
             InitializeComponent();
-            this.customer = customer;
             _updateCustomerPresenter = new UpdateCustomerPresenter(this);
+  
+        }
 
+        public frmUpdateCustomer(CustomerModel customer) : this()
+        {
+            this.customer = customer;
             //display data to textboxes
             DOB = customer.DOB;
             CustomerName = customer.Name;

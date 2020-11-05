@@ -10,10 +10,10 @@ namespace ManagePhone.Views
     {
         string Username { get; }
         string Password { get; }
-        string Name { get; }
+        string EmployeeName { get; }
         string Address { get; }
         DateTime DOB { get; }
         string Phone { get; }
-        int IsManager { get; }
+        bool IsManager { get; }
     }
 }

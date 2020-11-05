@@ -83,6 +83,7 @@
             // 
             // dgvListCustomer
             // 
+            this.dgvListCustomer.AllowUserToOrderColumns = true;
             this.dgvListCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -90,9 +91,12 @@
             this.dgvListCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListCustomer.Location = new System.Drawing.Point(11, 168);
             this.dgvListCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListCustomer.MultiSelect = false;
             this.dgvListCustomer.Name = "dgvListCustomer";
+            this.dgvListCustomer.ReadOnly = true;
             this.dgvListCustomer.RowHeadersWidth = 51;
             this.dgvListCustomer.RowTemplate.Height = 24;
+            this.dgvListCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListCustomer.Size = new System.Drawing.Size(738, 398);
             this.dgvListCustomer.TabIndex = 27;
             this.dgvListCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCustomer_CellClick);
@@ -106,6 +110,7 @@
             this.txtSearchCustomerName.Name = "txtSearchCustomerName";
             this.txtSearchCustomerName.Size = new System.Drawing.Size(260, 26);
             this.txtSearchCustomerName.TabIndex = 8;
+            this.txtSearchCustomerName.TextChanged += new System.EventHandler(this.txtSearchCustomerName_TextChanged);
             // 
             // label5
             // 
@@ -193,6 +198,8 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(257, 22);
             this.txtPhone.TabIndex = 8;
+            this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // frmViewCustomer
             // 

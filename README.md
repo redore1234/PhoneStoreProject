@@ -59,11 +59,20 @@
 	
 1. **[3/11/2020 15:27] Dam Dong Tin - @dtin**
 	1. Add 2 new store procedures for update employee function
-	1. Do Update employee function
+	1. Do Update Employee function in Presentation Layer
 
 1. **[3/11/2020 15:50] Pham Thanh Long - @redore1234**
 	1. Do Delete Employee function in Presentation Layer
 	
 1. **[4/11/2020 20:50] Pham Thanh Long - @redore1234**
 	1. Do Search Employee by Name in Presentation Layer
-	1. Edit sotre procedured spSearchEmployeesByName, spSearchCustomerByPhone, spSearchCustomerByName (add statusId=1) in Procedures.sql
+	1. Edit store procedured spSearchEmployeesByName, spSearchCustomerByPhone, spSearchCustomerByName (add statusId=1) in Procedures.sql
+
+1. **[4/11/2020 22:30] Dam Dong Tin - @dtin**
+	1. Do Add Employee function in Presentation Layer
+	1. Modified store procedure to fit with current Add Employee function
+
+1. **[5/11/2020 14:30] Le Bao Long - @longlb88**
+	1. Do Search Customer by Name and Phone
+	1. Delete spSearchCustomerByPhone and spSearchCustomersByName
+	1. Delete all methods that use to search customers seperately by phone or name

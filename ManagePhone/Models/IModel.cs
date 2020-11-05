@@ -28,6 +28,7 @@ namespace ManagePhone.Models
             public bool UpdateCustomer(CustomerModel customer);
             public bool DeleteCustomer(int cusID);
             public List<CustomerModel> LoadCustomerList();
+            public List<CustomerModel> SearchCustomer(string name, string phone);
         #endregion
 
     }
