@@ -176,33 +176,15 @@ GO
 EXEC dbo.spGetListCustomers
 GO 
 
---Get List Customer By Phone--
-CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
-AS 
+--Search Customers By Phone Or Name
+CREATE PROC spSearchCustomers(@Name VARCHAR(50), @Phone VARCHAR(10))
+AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
 		FROM dbo.tblCustomer
-		WHERE phone LIKE '%' + @Phone + '%' AND	statusID=1
-        
+		WHERE (name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%') AND statusID=1
 	END
-GO 
-
-EXEC dbo.spSearchCustomerByPhone @Phone = '9' -- varchar(10)
 GO
-
---Get List Customer By Phone--
-CREATE PROC spSearchCustomersByName(@Name VARCHAR(50))
-AS 
-	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
-		FROM dbo.tblCustomer
-		WHERE name LIKE '%' + @Name + '%' AND statusID=1
-	END	
-GO
-
-EXEC dbo.spSearchCustomersByName @Name = 'e' -- varchar(50)
-GO 
-
 
 -- TBLROLE --
 -- Get RoleName By RoleID

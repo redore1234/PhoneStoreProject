@@ -120,14 +120,9 @@ namespace ActionService
             return tblRoleDAO.GetRoleByRoleID(RoleID);
         }
 
-        public TblCustomer SearchCustomerByPhone(string PhoneNumber)
+        public List<TblCustomer> SearchCustomers(string CustomerName, string Phone)
         {
-            throw new NotImplementedException();
-        }
-
-        public List<TblCustomer> SearchCustomersByName(string CustomerName)
-        {
-            throw new NotImplementedException();
+            return tblCustomerDAO.SearchCustomers(CustomerName, Phone);
         }
 
         public List<TblEmployee> SearchEmployeesByName(string EmployeeName)

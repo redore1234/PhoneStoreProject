@@ -75,6 +75,19 @@ namespace ManagePhone.Models
         {
             return service.DeleteCustomer(cusID);
         }
+
+        public List<CustomerModel> SearchCustomer(string Name, string Phone)
+        {
+            var TblCustomerList = service.SearchCustomers(Name, Phone);
+
+            //mapping TblCustomer to CustomerModel
+            List<CustomerModel> CustomerModelList = new List<CustomerModel>();
+            foreach (var item in TblCustomerList)
+            {
+                CustomerModelList.Add(Mapper.Map<TblCustomer, CustomerModel>(item));
+            }
+            return CustomerModelList;
+        }
         #endregion
 
         #region Employee
