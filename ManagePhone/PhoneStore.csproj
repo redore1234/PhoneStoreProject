@@ -253,13 +253,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="phone.ico" />
+    <None Include="Resources\viewemployee.png" />
+    <None Include="Resources\viewcustomer.png" />
+    <None Include="Resources\addphone.png" />
+    <None Include="Resources\addordericon.png" />
+    <None Include="Resources\viewphone.png" />
     <None Include="Resources\vieworder.png" />
     <None Include="Resources\addorder.png" />
     <None Include="Resources\tick.png" />
-    <None Include="Resources\viewcustomer.png" />
-    <None Include="Resources\viewphone.png" />
-    <None Include="Resources\addphone.png" />
-    <None Include="Resources\viewemployee.png" />
     <None Include="Resources\addemployee.png" />
   </ItemGroup>
   <ItemGroup />

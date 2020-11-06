@@ -121,20 +121,8 @@
   <data name="tick" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="viewcustomer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\viewcustomer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="viewphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\viewphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="addemployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addemployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="viewemployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\viewemployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="addphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employeeinformation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employeeinformation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +130,22 @@
   <data name="addorder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addorder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="addordericon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addordericon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="addphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\addphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viewcustomer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewcustomer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viewemployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewemployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="vieworder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vieworder.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="viewphone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewphone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

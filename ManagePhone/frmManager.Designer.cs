@@ -36,13 +36,13 @@
             this.pbViewEmployee = new System.Windows.Forms.PictureBox();
             this.pbAddEmployee = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.pbAddOrder = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pbViewOrder = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pbViewCustomer = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pbAddOrder = new System.Windows.Forms.PictureBox();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddPhone)).BeginInit();
@@ -50,11 +50,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbViewEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddEmployee)).BeginInit();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewOrder)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewCustomer)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddOrder)).BeginInit();
             this.SuspendLayout();
             // 
             // toolTip1
@@ -107,10 +107,10 @@
             // pbViewPhone
             // 
             this.pbViewPhone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbViewPhone.Image = global::ManagePhone.Properties.Resources.viewphone;
-            this.pbViewPhone.Location = new System.Drawing.Point(242, 108);
+            this.pbViewPhone.Image = ((System.Drawing.Image)(resources.GetObject("pbViewPhone.Image")));
+            this.pbViewPhone.Location = new System.Drawing.Point(221, 98);
             this.pbViewPhone.Name = "pbViewPhone";
-            this.pbViewPhone.Size = new System.Drawing.Size(82, 77);
+            this.pbViewPhone.Size = new System.Drawing.Size(98, 91);
             this.pbViewPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewPhone.TabIndex = 23;
             this.pbViewPhone.TabStop = false;
@@ -119,8 +119,8 @@
             // pbAddPhone
             // 
             this.pbAddPhone.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbAddPhone.Image = global::ManagePhone.Properties.Resources.addphone;
-            this.pbAddPhone.Location = new System.Drawing.Point(37, 94);
+            this.pbAddPhone.Image = ((System.Drawing.Image)(resources.GetObject("pbAddPhone.Image")));
+            this.pbAddPhone.Location = new System.Drawing.Point(33, 94);
             this.pbAddPhone.Name = "pbAddPhone";
             this.pbAddPhone.Size = new System.Drawing.Size(100, 99);
             this.pbAddPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +157,7 @@
             // pbViewEmployee
             // 
             this.pbViewEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbViewEmployee.Image = global::ManagePhone.Properties.Resources.viewemployee;
+            this.pbViewEmployee.Image = ((System.Drawing.Image)(resources.GetObject("pbViewEmployee.Image")));
             this.pbViewEmployee.Location = new System.Drawing.Point(207, 94);
             this.pbViewEmployee.Name = "pbViewEmployee";
             this.pbViewEmployee.Size = new System.Drawing.Size(108, 119);
@@ -191,6 +191,17 @@
             this.panel10.Size = new System.Drawing.Size(342, 254);
             this.panel10.TabIndex = 27;
             // 
+            // pbAddOrder
+            // 
+            this.pbAddOrder.Image = global::ManagePhone.Properties.Resources.addordericon;
+            this.pbAddOrder.Location = new System.Drawing.Point(39, 110);
+            this.pbAddOrder.Name = "pbAddOrder";
+            this.pbAddOrder.Size = new System.Drawing.Size(89, 89);
+            this.pbAddOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAddOrder.TabIndex = 25;
+            this.pbAddOrder.TabStop = false;
+            this.pbAddOrder.Click += new System.EventHandler(this.pbAddOrder_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -204,8 +215,8 @@
             // 
             // pbViewOrder
             // 
-            this.pbViewOrder.Image = ((System.Drawing.Image)(resources.GetObject("pbViewOrder.Image")));
-            this.pbViewOrder.Location = new System.Drawing.Point(237, 110);
+            this.pbViewOrder.Image = global::ManagePhone.Properties.Resources.vieworder;
+            this.pbViewOrder.Location = new System.Drawing.Point(229, 110);
             this.pbViewOrder.Name = "pbViewOrder";
             this.pbViewOrder.Size = new System.Drawing.Size(91, 89);
             this.pbViewOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -239,8 +250,8 @@
             // pbViewCustomer
             // 
             this.pbViewCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbViewCustomer.Image = global::ManagePhone.Properties.Resources.viewcustomer;
-            this.pbViewCustomer.Location = new System.Drawing.Point(114, 110);
+            this.pbViewCustomer.Image = ((System.Drawing.Image)(resources.GetObject("pbViewCustomer.Image")));
+            this.pbViewCustomer.Location = new System.Drawing.Point(113, 110);
             this.pbViewCustomer.Name = "pbViewCustomer";
             this.pbViewCustomer.Size = new System.Drawing.Size(102, 89);
             this.pbViewCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -266,15 +277,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(702, 525);
             this.tableLayoutPanel1.TabIndex = 28;
             // 
-            // pbAddOrder
-            // 
-            this.pbAddOrder.Location = new System.Drawing.Point(37, 110);
-            this.pbAddOrder.Name = "pbAddOrder";
-            this.pbAddOrder.Size = new System.Drawing.Size(100, 89);
-            this.pbAddOrder.TabIndex = 25;
-            this.pbAddOrder.TabStop = false;
-            this.pbAddOrder.Click += new System.EventHandler(this.pbAddOrder_Click);
-            // 
             // frmManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -299,12 +301,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAddEmployee)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAddOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewOrder)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbViewCustomer)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAddOrder)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -322,11 +324,11 @@
         private System.Windows.Forms.PictureBox pbAddEmployee;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pbViewOrder;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbViewCustomer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pbAddOrder;
+        private System.Windows.Forms.PictureBox pbViewOrder;
     }
 }

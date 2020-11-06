@@ -83,6 +83,16 @@ namespace ManagePhone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap addordericon {
+            get {
+                object obj = ResourceManager.GetObject("addordericon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addphone {
             get {
                 object obj = ResourceManager.GetObject("addphone", resourceCulture);
