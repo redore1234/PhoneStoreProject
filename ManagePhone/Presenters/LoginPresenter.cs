@@ -39,8 +39,8 @@ namespace ManagePhone.Presenters
                         frmManager.ShowDialog();
                         break;
                     case "Employee":
-                        frmEmployee frmEmployee = new frmEmployee();
-                        frmEmployee.ShowDialog();
+                        frmAddOrder frmAddOrder = new frmAddOrder();
+                        frmAddOrder.ShowDialog();
                         break;
                 }
                 IsValid = true;

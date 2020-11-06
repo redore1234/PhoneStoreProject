@@ -185,6 +185,16 @@ AS
 	END
 GO
 
+--Get List Customer By Phone--
+CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
+AS 
+	BEGIN
+		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
+		FROM dbo.tblCustomer
+		WHERE phone LIKE '%' + @Phone + '%' AND statusID=1
+	END 
+GO 
+
 -- TBLROLE --
 -- Get RoleName By RoleID
 CREATE PROCEDURE spGetRole(@RoleID INT)

@@ -84,3 +84,8 @@
 1. **[5/11/2020 15:17] Dam Dong Tin - @dtin**
 	1. Fix bug close form Add Employee unexpected
 	1. Fix date format in Add Employee form 
+
+1. **[6/11/2020 10:09] Pham Thanh Long - @redore1234**
+	1. Add Search Customer by Phone in Presentation Layer
+	1. Add Pictures and gather all Pictures in Image folder
+	1. Add new frmOrder, edit frmManger

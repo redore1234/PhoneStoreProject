@@ -73,9 +73,9 @@ namespace ManagePhone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap addemployee1 {
+        internal static System.Drawing.Bitmap addorder {
             get {
-                object obj = ResourceManager.GetObject("addemployee1", resourceCulture);
+                object obj = ResourceManager.GetObject("addorder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,29 +103,9 @@ namespace ManagePhone.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap employeeinformation1 {
+        internal static System.Drawing.Bitmap tick {
             get {
-                object obj = ResourceManager.GetObject("employeeinformation1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap phone {
-            get {
-                object obj = ResourceManager.GetObject("phone", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap viewbill {
-            get {
-                object obj = ResourceManager.GetObject("viewbill", resourceCulture);
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -146,6 +126,16 @@ namespace ManagePhone.Properties {
         internal static System.Drawing.Bitmap viewemployee {
             get {
                 object obj = ResourceManager.GetObject("viewemployee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vieworder {
+            get {
+                object obj = ResourceManager.GetObject("vieworder", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

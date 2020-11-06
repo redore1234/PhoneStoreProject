@@ -12,15 +12,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmManager : Form, IManagerView {
+    public partial class frmManager : Form{
         public EmployeeModel CurEmployeeModel;
 
-        public string CustomerPhone 
-        {
-            get => txtCustomerPhone.Text.Trim();
-        }
-
-        public string ProductName { get; set; }
         public frmManager() {
             InitializeComponent();  
             //Set custom format for DateTimePicker
@@ -50,51 +44,65 @@ namespace ManagePhone {
             this.Show();
         }
 
-        private void lbAddEmployee_Click(object sender, EventArgs e) {
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pbAddEmployee_Click(object sender, EventArgs e)
+        {
             frmAddEmployee addEmployee = new frmAddEmployee();
             this.Hide();
             addEmployee.ShowDialog();
             this.Show();
         }
 
-        private void lbViewEmployee_Click(object sender, EventArgs e) {
+        private void pbViewEmployee_Click(object sender, EventArgs e)
+        {
             frmViewEmployee viewEmployee = new frmViewEmployee(CurEmployeeModel);
             this.Hide();
             viewEmployee.ShowDialog();
             this.Show();
         }
 
-        private void lbViewPhone_Click(object sender, EventArgs e) {
-            frmViewPhone viewPhone = new frmViewPhone();
-            this.Hide();
-            viewPhone.ShowDialog();
-            this.Show();
-        }
-
-        private void lbViewBill_Click(object sender, EventArgs e) {
-            frmViewOrder viewBill = new frmViewOrder();
-            this.Hide();
-            viewBill.ShowDialog();
-            this.Show();
-        }
-
-        private void lbViewCustomer_Click(object sender, EventArgs e) {
-            frmViewCustomer viewCustomer = new frmViewCustomer();
-            this.Hide();
-            viewCustomer.ShowDialog();
-            this.Show();
-        }
-
-        private void lbAddPhone_Click(object sender, EventArgs e) {
+        private void pbAddPhone_Click(object sender, EventArgs e)
+        {
             frmAddPhone addPhone = new frmAddPhone();
             this.Hide();
             addPhone.ShowDialog();
             this.Show();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void pbViewPhone_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmViewPhone viewPhone = new frmViewPhone();
+            this.Hide();
+            viewPhone.ShowDialog();
+            this.Show();
+        }
+
+        private void pbViewCustomer_Click(object sender, EventArgs e)
+        {
+            frmViewCustomer viewCustomer = new frmViewCustomer();
+            this.Hide();
+            viewCustomer.ShowDialog();
+            this.Show();
+        }
+
+        private void pbViewOrder_Click(object sender, EventArgs e)
+        {
+            frmViewOrder viewOrder = new frmViewOrder();
+            this.Hide();
+            viewOrder.ShowDialog();
+            this.Show();
+        }
+
+        private void pbAddOrder_Click(object sender, EventArgs e)
+        {
+            frmAddOrder addOrder = new frmAddOrder();
+            this.Hide();
+            addOrder.ShowDialog();
+            this.Show();
         }
     }
 }

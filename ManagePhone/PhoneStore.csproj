@@ -67,6 +67,12 @@
     <Compile Include="frmAddEmployee.Designer.cs">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddOrder.Designer.cs">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddPhone.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,12 +96,6 @@
     </Compile>
     <Compile Include="frmManager.Designer.cs">
       <DependentUpon>frmManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEmployee.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEmployee.Designer.cs">
-      <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUpdateCustomer.cs">
       <SubType>Form</SubType>
@@ -164,15 +164,19 @@
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Views\IAddCustomerView.cs" />
     <Compile Include="Views\IAddEmployeeView.cs" />
+    <Compile Include="Views\IAddOrder.cs" />
     <Compile Include="Views\IAddPhone.cs" />
     <Compile Include="Views\ICheckoutView.cs" />
     <Compile Include="Views\ICustomersView.cs" />
     <Compile Include="Views\IEmployeesView.cs" />
-    <Compile Include="Views\IEmployeeMainView.cs" />
     <Compile Include="Views\ILoginView.cs" />
-    <Compile Include="Views\IManagerView.cs" />
     <Compile Include="Views\IOrderDetail.cs" />
     <Compile Include="Views\IOrderView.cs" />
     <Compile Include="Views\IPhonesView.cs" />
@@ -186,6 +190,9 @@
     <EmbeddedResource Include="frmAddEmployee.resx">
       <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddOrder.resx">
+      <DependentUpon>frmAddOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddPhone.resx">
       <DependentUpon>frmAddPhone.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmManager.resx">
       <DependentUpon>frmManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEmployee.resx">
-      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateCustomer.resx">
       <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
@@ -227,14 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,6 +253,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="phone.ico" />
+    <None Include="Resources\vieworder.png" />
+    <None Include="Resources\addorder.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\viewcustomer.png" />
+    <None Include="Resources\viewphone.png" />
+    <None Include="Resources\addphone.png" />
+    <None Include="Resources\viewemployee.png" />
     <None Include="Resources\addemployee.png" />
   </ItemGroup>
   <ItemGroup />
