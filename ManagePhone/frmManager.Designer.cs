@@ -69,6 +69,7 @@
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(618, 11);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
@@ -100,7 +101,7 @@
             this.label3.Location = new System.Drawing.Point(138, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 31);
+            this.label3.Size = new System.Drawing.Size(113, 40);
             this.label3.TabIndex = 16;
             this.label3.Text = "Phone";
             // 
@@ -150,7 +151,7 @@
             this.label1.Location = new System.Drawing.Point(100, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 31);
+            this.label1.Size = new System.Drawing.Size(167, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee";
             // 
@@ -209,7 +210,7 @@
             this.label4.Location = new System.Drawing.Point(133, 43);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 31);
+            this.label4.Size = new System.Drawing.Size(103, 40);
             this.label4.TabIndex = 17;
             this.label4.Text = "Order";
             // 
@@ -243,7 +244,7 @@
             this.label2.Location = new System.Drawing.Point(98, 43);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 31);
+            this.label2.Size = new System.Drawing.Size(165, 40);
             this.label2.TabIndex = 15;
             this.label2.Text = "Customer";
             // 
@@ -280,6 +281,7 @@
             // frmManager
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnLogout;
             this.ClientSize = new System.Drawing.Size(727, 584);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel1);
