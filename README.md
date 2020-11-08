@@ -99,4 +99,4 @@
 	1. Fix date format in Add Customer form
 
 1. **[8/11/2020 11:30] Pham Thanh Long - @redore1234**
- 	1. Add Acceptbutton and Cancelbutton in frmManager
+ 	1. Add Cancelbutton in frmManager
