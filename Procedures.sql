@@ -47,7 +47,7 @@ AS
 GO
 
 
-EXEC dbo.spDeleteEmployee @EmpID = 'tindd', -- varchar(30)
+EXEC dbo.spDeleteEmployee @EmpID = 'tindd' -- varchar(30)
 GO 
 
 --Update Employee With Update Password--
@@ -59,16 +59,6 @@ AS
 		SET password=@Pass, name=@Name, phone=@Phone, roleID=@RoleID, DOB=@DOB, address=@Address
 		WHERE employeeID=@EmpID
 	END
-GO
-
-EXEC dbo.spUpdateEmployee @EmpID = 'tindd', -- varchar(30)
-    @Pass = '234', -- varchar(64)
-    @Name = 'DongTin', -- varchar(50)
-    @DOB = '2000-10-20', -- date
-    @Address = '234TQD', -- varchar(100)
-    @Phone = '234', -- varchar(10)
-    @RoleID = '2', -- varchar(10)
-    @StatusID = '1' -- varchar(10)
 GO
 
 --Update Employee Without Update Password--

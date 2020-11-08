@@ -93,3 +93,7 @@
 1. **[6/11/2020 11:35] Le Bao Long - @longlb88**
 	1. Add add order icon
 	1. Edit icons, make them in same style
+
+1. **[8/11/2020 11:22] Pham Thanh Long - @redore1234**
+	1. Add Acceptbutton and Cancelbutton in each form	
+	1. Fix date format in Add Customer form

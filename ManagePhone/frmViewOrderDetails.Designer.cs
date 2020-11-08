@@ -40,12 +40,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBill.Location = new System.Drawing.Point(11, 11);
-            this.dgvListBill.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListBill.Location = new System.Drawing.Point(15, 14);
+            this.dgvListBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvListBill.Name = "dgvListBill";
             this.dgvListBill.RowHeadersWidth = 51;
             this.dgvListBill.RowTemplate.Height = 24;
-            this.dgvListBill.Size = new System.Drawing.Size(834, 426);
+            this.dgvListBill.Size = new System.Drawing.Size(1112, 524);
             this.dgvListBill.TabIndex = 34;
             // 
             // btnCancel
@@ -53,11 +53,11 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(748, 441);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(997, 543);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.btnCancel.Size = new System.Drawing.Size(97, 26);
+            this.btnCancel.Padding = new System.Windows.Forms.Padding(13, 0, 13, 0);
+            this.btnCancel.Size = new System.Drawing.Size(129, 32);
             this.btnCancel.TabIndex = 35;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -65,13 +65,14 @@
             // 
             // frmViewOrderDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(856, 469);
+            this.CancelButton = this.btnCancel;
+            this.ClientSize = new System.Drawing.Size(1141, 577);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.dgvListBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frmViewOrderDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

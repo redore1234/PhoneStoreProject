@@ -48,7 +48,7 @@
             this.label1.Location = new System.Drawing.Point(73, 80);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.Size = new System.Drawing.Size(61, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Price:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +61,7 @@
             this.label2.Location = new System.Drawing.Point(73, 232);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.Size = new System.Drawing.Size(85, 24);
             this.label2.TabIndex = 4;
             this.label2.Text = "Charge:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -74,7 +74,7 @@
             this.label3.Location = new System.Drawing.Point(73, 193);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 19);
+            this.label3.Size = new System.Drawing.Size(65, 24);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cash:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -87,7 +87,7 @@
             this.lbTotalItems.Location = new System.Drawing.Point(366, 36);
             this.lbTotalItems.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTotalItems.Name = "lbTotalItems";
-            this.lbTotalItems.Size = new System.Drawing.Size(30, 21);
+            this.lbTotalItems.Size = new System.Drawing.Size(36, 26);
             this.lbTotalItems.TabIndex = 6;
             this.lbTotalItems.Text = "12";
             this.lbTotalItems.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,7 +100,7 @@
             this.label5.Location = new System.Drawing.Point(70, 154);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 19);
+            this.label5.Size = new System.Drawing.Size(64, 24);
             this.label5.TabIndex = 7;
             this.label5.Text = "Total:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,7 +113,7 @@
             this.label6.Location = new System.Drawing.Point(73, 119);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 18);
+            this.label6.Size = new System.Drawing.Size(46, 23);
             this.label6.TabIndex = 8;
             this.label6.Text = "Tax:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -125,7 +125,7 @@
             this.txtCash.Location = new System.Drawing.Point(199, 191);
             this.txtCash.Margin = new System.Windows.Forms.Padding(2);
             this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(195, 26);
+            this.txtCash.Size = new System.Drawing.Size(195, 30);
             this.txtCash.TabIndex = 10;
             this.txtCash.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -137,7 +137,7 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(2);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.ReadOnly = true;
-            this.txtTotal.Size = new System.Drawing.Size(195, 26);
+            this.txtTotal.Size = new System.Drawing.Size(195, 30);
             this.txtTotal.TabIndex = 11;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -149,7 +149,7 @@
             this.txtTax.Margin = new System.Windows.Forms.Padding(2);
             this.txtTax.Name = "txtTax";
             this.txtTax.ReadOnly = true;
-            this.txtTax.Size = new System.Drawing.Size(195, 26);
+            this.txtTax.Size = new System.Drawing.Size(195, 30);
             this.txtTax.TabIndex = 12;
             this.txtTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -161,7 +161,7 @@
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ReadOnly = true;
-            this.txtPrice.Size = new System.Drawing.Size(195, 26);
+            this.txtPrice.Size = new System.Drawing.Size(195, 30);
             this.txtPrice.TabIndex = 13;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -173,7 +173,7 @@
             this.txtCharge.Margin = new System.Windows.Forms.Padding(2);
             this.txtCharge.Name = "txtCharge";
             this.txtCharge.ReadOnly = true;
-            this.txtCharge.Size = new System.Drawing.Size(195, 26);
+            this.txtCharge.Size = new System.Drawing.Size(195, 30);
             this.txtCharge.TabIndex = 14;
             this.txtCharge.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -193,6 +193,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(76, 291);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -210,13 +211,15 @@
             this.label4.Location = new System.Drawing.Point(277, 38);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 18);
+            this.label4.Size = new System.Drawing.Size(113, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "Total Items:";
             // 
             // frmCheckout
             // 
+            this.AcceptButton = this.btnFinish;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(473, 344);
             this.ControlBox = false;
             this.Controls.Add(this.label4);

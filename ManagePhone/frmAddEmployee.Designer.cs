@@ -113,10 +113,10 @@
             this.cbManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbManager.AutoSize = true;
             this.cbManager.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbManager.Location = new System.Drawing.Point(119, 249);
+            this.cbManager.Location = new System.Drawing.Point(119, 247);
             this.cbManager.Margin = new System.Windows.Forms.Padding(2);
             this.cbManager.Name = "cbManager";
-            this.cbManager.Size = new System.Drawing.Size(519, 14);
+            this.cbManager.Size = new System.Drawing.Size(519, 17);
             this.cbManager.TabIndex = 7;
             this.cbManager.UseVisualStyleBackColor = true;
             // 
@@ -125,10 +125,10 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(2, 246);
+            this.label17.Location = new System.Drawing.Point(2, 244);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(113, 19);
+            this.label17.Size = new System.Drawing.Size(113, 24);
             this.label17.TabIndex = 16;
             this.label17.Text = "Manager:";
             // 
@@ -137,10 +137,10 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 204);
+            this.label2.Location = new System.Drawing.Point(2, 201);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 19);
+            this.label2.Size = new System.Drawing.Size(113, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Phone:";
             // 
@@ -148,11 +148,11 @@
             // 
             this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtEmployeePhone.Location = new System.Drawing.Point(119, 200);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(119, 198);
             this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeePhone.Mask = "(9999) 000-000";
             this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(519, 26);
+            this.txtEmployeePhone.Size = new System.Drawing.Size(519, 30);
             this.txtEmployeePhone.TabIndex = 6;
             this.txtEmployeePhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -161,10 +161,10 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 159);
+            this.label4.Location = new System.Drawing.Point(2, 148);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 19);
+            this.label4.Size = new System.Drawing.Size(113, 42);
             this.label4.TabIndex = 0;
             this.label4.Text = "Date of Birth:";
             // 
@@ -173,10 +173,10 @@
             this.dtEmployeeDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtEmployeeDOB.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtEmployeeDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtEmployeeDOB.Location = new System.Drawing.Point(119, 156);
+            this.dtEmployeeDOB.Location = new System.Drawing.Point(119, 154);
             this.dtEmployeeDOB.Margin = new System.Windows.Forms.Padding(2);
             this.dtEmployeeDOB.Name = "dtEmployeeDOB";
-            this.dtEmployeeDOB.Size = new System.Drawing.Size(519, 26);
+            this.dtEmployeeDOB.Size = new System.Drawing.Size(519, 30);
             this.dtEmployeeDOB.TabIndex = 5;
             // 
             // label13
@@ -184,10 +184,10 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(2, 38);
+            this.label13.Location = new System.Drawing.Point(2, 36);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(113, 19);
+            this.label13.Size = new System.Drawing.Size(113, 24);
             this.label13.TabIndex = 16;
             this.label13.Text = "Password:";
             // 
@@ -196,10 +196,10 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 115);
+            this.label3.Location = new System.Drawing.Point(2, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 19);
+            this.label3.Size = new System.Drawing.Size(113, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "Address:";
             // 
@@ -207,11 +207,11 @@
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(119, 35);
+            this.txtPassword.Location = new System.Drawing.Point(119, 34);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(519, 26);
+            this.txtPassword.Size = new System.Drawing.Size(519, 30);
             this.txtPassword.TabIndex = 2;
             // 
             // label15
@@ -219,10 +219,10 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(2, 6);
+            this.label15.Location = new System.Drawing.Point(2, 4);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(113, 19);
+            this.label15.Size = new System.Drawing.Size(113, 24);
             this.label15.TabIndex = 17;
             this.label15.Text = "Username:";
             // 
@@ -231,10 +231,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 73);
+            this.label1.Location = new System.Drawing.Point(2, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 19);
+            this.label1.Size = new System.Drawing.Size(113, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
@@ -242,30 +242,30 @@
             // 
             this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(119, 3);
+            this.txtUsername.Location = new System.Drawing.Point(119, 2);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(519, 26);
+            this.txtUsername.Size = new System.Drawing.Size(519, 30);
             this.txtUsername.TabIndex = 1;
             // 
             // txtEmployeeName
             // 
             this.txtEmployeeName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeeName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeName.Location = new System.Drawing.Point(119, 70);
+            this.txtEmployeeName.Location = new System.Drawing.Point(119, 68);
             this.txtEmployeeName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeName.Name = "txtEmployeeName";
-            this.txtEmployeeName.Size = new System.Drawing.Size(519, 26);
+            this.txtEmployeeName.Size = new System.Drawing.Size(519, 30);
             this.txtEmployeeName.TabIndex = 3;
             // 
             // txtEmployeeAddress
             // 
             this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(119, 112);
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(119, 110);
             this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(519, 26);
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(519, 30);
             this.txtEmployeeAddress.TabIndex = 4;
             // 
             // panel2

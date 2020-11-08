@@ -73,10 +73,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 317);
+            this.label1.Location = new System.Drawing.Point(2, 315);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 19);
+            this.label1.Size = new System.Drawing.Size(110, 24);
             this.label1.TabIndex = 8;
             this.label1.Text = "DOB:";
             // 
@@ -84,10 +84,10 @@
             // 
             this.txtCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerName.Location = new System.Drawing.Point(116, 33);
+            this.txtCustomerName.Location = new System.Drawing.Point(116, 31);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(495, 26);
+            this.txtCustomerName.Size = new System.Drawing.Size(495, 30);
             this.txtCustomerName.TabIndex = 1;
             // 
             // label23
@@ -95,10 +95,10 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(2, 37);
+            this.label23.Location = new System.Drawing.Point(2, 34);
             this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(110, 19);
+            this.label23.Size = new System.Drawing.Size(110, 24);
             this.label23.TabIndex = 0;
             this.label23.Text = "Name:";
             // 
@@ -107,10 +107,10 @@
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(2, 130);
+            this.label22.Location = new System.Drawing.Point(2, 127);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 19);
+            this.label22.Size = new System.Drawing.Size(110, 24);
             this.label22.TabIndex = 0;
             this.label22.Text = "Phone:";
             // 
@@ -118,11 +118,11 @@
             // 
             this.txtCustomerPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerPhone.Location = new System.Drawing.Point(116, 126);
+            this.txtCustomerPhone.Location = new System.Drawing.Point(116, 124);
             this.txtCustomerPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerPhone.Mask = "(9999) 000-000";
             this.txtCustomerPhone.Name = "txtCustomerPhone";
-            this.txtCustomerPhone.Size = new System.Drawing.Size(495, 26);
+            this.txtCustomerPhone.Size = new System.Drawing.Size(495, 30);
             this.txtCustomerPhone.TabIndex = 7;
             this.txtCustomerPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -131,10 +131,10 @@
             this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(2, 223);
+            this.label20.Location = new System.Drawing.Point(2, 220);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 19);
+            this.label20.Size = new System.Drawing.Size(110, 24);
             this.label20.TabIndex = 0;
             this.label20.Text = "Address:";
             // 
@@ -142,10 +142,10 @@
             // 
             this.txtCustomerAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCustomerAddress.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtCustomerAddress.Location = new System.Drawing.Point(116, 219);
+            this.txtCustomerAddress.Location = new System.Drawing.Point(116, 217);
             this.txtCustomerAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerAddress.Name = "txtCustomerAddress";
-            this.txtCustomerAddress.Size = new System.Drawing.Size(495, 26);
+            this.txtCustomerAddress.Size = new System.Drawing.Size(495, 30);
             this.txtCustomerAddress.TabIndex = 1;
             // 
             // dtDOB
@@ -153,9 +153,10 @@
             this.dtDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtDOB.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDOB.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtDOB.Location = new System.Drawing.Point(117, 316);
+            this.dtDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDOB.Location = new System.Drawing.Point(117, 314);
             this.dtDOB.Name = "dtDOB";
-            this.dtDOB.Size = new System.Drawing.Size(493, 22);
+            this.dtDOB.Size = new System.Drawing.Size(493, 26);
             this.dtDOB.TabIndex = 9;
             // 
             // panel4
@@ -171,6 +172,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(19, 13);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -195,7 +197,9 @@
             // 
             // frmUpdateCustomer
             // 
+            this.AcceptButton = this.btnUpdateCustomer;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(717, 453);
             this.ControlBox = false;
             this.Controls.Add(this.panel4);
@@ -207,6 +211,7 @@
             this.Name = "frmUpdateCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update Customer";
+            this.Load += new System.EventHandler(this.frmUpdateCustomer_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.panel4.ResumeLayout(false);

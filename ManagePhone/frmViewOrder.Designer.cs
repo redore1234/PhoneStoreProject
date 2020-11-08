@@ -56,10 +56,10 @@
             // 
             this.txtOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOrderID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtOrderID.Location = new System.Drawing.Point(150, 12);
+            this.txtOrderID.Location = new System.Drawing.Point(150, 10);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(260, 26);
+            this.txtOrderID.Size = new System.Drawing.Size(260, 30);
             this.txtOrderID.TabIndex = 8;
             // 
             // label5
@@ -67,10 +67,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 15);
+            this.label5.Location = new System.Drawing.Point(2, 13);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 19);
+            this.label5.Size = new System.Drawing.Size(144, 24);
             this.label5.TabIndex = 7;
             this.label5.Text = "Order ID:";
             // 
@@ -156,6 +156,7 @@
             // frmViewOrder
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(760, 577);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);

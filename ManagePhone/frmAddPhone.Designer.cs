@@ -53,7 +53,7 @@
             this.txtPhoneName.Location = new System.Drawing.Point(432, 20);
             this.txtPhoneName.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneName.Name = "txtPhoneName";
-            this.txtPhoneName.Size = new System.Drawing.Size(269, 26);
+            this.txtPhoneName.Size = new System.Drawing.Size(269, 30);
             this.txtPhoneName.TabIndex = 13;
             // 
             // label6
@@ -64,7 +64,7 @@
             this.label6.Location = new System.Drawing.Point(311, 22);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 19);
+            this.label6.Size = new System.Drawing.Size(70, 24);
             this.label6.TabIndex = 7;
             this.label6.Text = "Name:";
             // 
@@ -76,7 +76,7 @@
             this.cbPhoneBrand.Location = new System.Drawing.Point(432, 62);
             this.cbPhoneBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cbPhoneBrand.Name = "cbPhoneBrand";
-            this.cbPhoneBrand.Size = new System.Drawing.Size(269, 26);
+            this.cbPhoneBrand.Size = new System.Drawing.Size(269, 31);
             this.cbPhoneBrand.TabIndex = 14;
             // 
             // label8
@@ -87,7 +87,7 @@
             this.label8.Location = new System.Drawing.Point(311, 64);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 19);
+            this.label8.Size = new System.Drawing.Size(74, 24);
             this.label8.TabIndex = 8;
             this.label8.Text = "Brand:";
             // 
@@ -112,7 +112,7 @@
             this.dtPhoneYear.Location = new System.Drawing.Point(432, 109);
             this.dtPhoneYear.Margin = new System.Windows.Forms.Padding(2);
             this.dtPhoneYear.Name = "dtPhoneYear";
-            this.dtPhoneYear.Size = new System.Drawing.Size(269, 26);
+            this.dtPhoneYear.Size = new System.Drawing.Size(269, 30);
             this.dtPhoneYear.TabIndex = 15;
             // 
             // label9
@@ -123,7 +123,7 @@
             this.label9.Location = new System.Drawing.Point(308, 113);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(113, 19);
+            this.label9.Size = new System.Drawing.Size(139, 24);
             this.label9.TabIndex = 9;
             this.label9.Text = "Release Year:";
             // 
@@ -139,7 +139,7 @@
             0,
             0});
             this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(268, 26);
+            this.numQuantity.Size = new System.Drawing.Size(268, 30);
             this.numQuantity.TabIndex = 17;
             this.numQuantity.Value = new decimal(new int[] {
             500,
@@ -155,7 +155,7 @@
             this.label10.Location = new System.Drawing.Point(308, 203);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(79, 19);
+            this.label10.Size = new System.Drawing.Size(98, 24);
             this.label10.TabIndex = 10;
             this.label10.Text = "Quantity:";
             // 
@@ -166,7 +166,7 @@
             this.txtPrice.Location = new System.Drawing.Point(432, 158);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(269, 26);
+            this.txtPrice.Size = new System.Drawing.Size(269, 30);
             this.txtPrice.TabIndex = 18;
             // 
             // label7
@@ -177,7 +177,7 @@
             this.label7.Location = new System.Drawing.Point(308, 310);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(103, 19);
+            this.label7.Size = new System.Drawing.Size(125, 24);
             this.label7.TabIndex = 11;
             this.label7.Text = "Description:";
             // 
@@ -189,7 +189,7 @@
             this.label12.Location = new System.Drawing.Point(10, 91);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 19);
+            this.label12.Size = new System.Drawing.Size(73, 24);
             this.label12.TabIndex = 19;
             this.label12.Text = "Image:";
             // 
@@ -201,7 +201,7 @@
             this.label11.Location = new System.Drawing.Point(308, 161);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 19);
+            this.label11.Size = new System.Drawing.Size(65, 24);
             this.label11.TabIndex = 12;
             this.label11.Text = "Price:";
             // 
@@ -231,6 +231,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F);
             this.btnCancel.Location = new System.Drawing.Point(24, 15);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
@@ -254,7 +255,9 @@
             // 
             // frmAddPhone
             // 
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(716, 470);
             this.ControlBox = false;
             this.Controls.Add(this.panel5);

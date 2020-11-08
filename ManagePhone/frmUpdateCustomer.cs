@@ -67,5 +67,11 @@ namespace ManagePhone {
             _updateCustomerPresenter.UpdateCustomer();
             Close();
         }
+
+        private void frmUpdateCustomer_Load(object sender, EventArgs e)
+        {
+            dtDOB.Format = DateTimePickerFormat.Custom;
+            dtDOB.CustomFormat = "dd-MM-yyyy";
+        }
     }
 }
