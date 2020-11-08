@@ -107,6 +107,8 @@
 1. **[8/11/2020 14:18] Le Bao Long - @longlb88**
  	1. Correct column name in tblProduct: prodcutName -> productName
 
-1. **[8/11/2020 13:47] Pham Minh Tan - @tanpm77
-	1. Do Load Products				
-	1. Do Delete Product
+1. **[8/11/2020 13:47] Pham Minh Tan - @tanpm77**
+	1. Do Load Products and Delete Product function 
+	1. Add spSearchProducts and spDeleteProduct in Procedures.sql
+	
+	
