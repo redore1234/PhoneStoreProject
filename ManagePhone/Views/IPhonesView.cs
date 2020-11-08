@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace ManagePhone.Views
     {
         string Brand { get; set; }
         //IList<BrandModel> Brands { set; }
-        string PhoneName { get; set; }
-        //IList<PhoneModel> Phones { set; }
+        string Phone { get;}
+        IList<ProductModel> ProductList { set; }
     }
 }

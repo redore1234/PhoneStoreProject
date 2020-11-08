@@ -162,6 +162,7 @@
     <Compile Include="Presenters\UpdateEmployeePresenter.cs" />
     <Compile Include="Presenters\ViewCustomerPresenter.cs" />
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ViewProductPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

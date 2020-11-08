@@ -22,7 +22,8 @@ namespace ManagePhone.Models
             Mapper.CreateMap<CustomerModel, TblCustomer>();
             Mapper.CreateMap<TblRole, RoleModel>();
             Mapper.CreateMap<RoleModel, TblRole>();
-
+            Mapper.CreateMap<TblProducts, ProductModel>();
+            Mapper.CreateMap<ProductModel, TblProducts>();
         }
 
         #region Role
@@ -136,6 +137,38 @@ namespace ManagePhone.Models
             var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
             return service.UpdateEmployeeWithPassword(employee);
         }
+        #endregion
+
+        #region Products
+            public bool DeleteProduct(int proID)
+            {
+                return service.DeleteProduct(proID);
+            }
+
+            public List<ProductModel> SearchProducts(string ProductName)
+            {
+                var TblProductNameList = service.SearchProducts(ProductName);
+                List<ProductModel> ProductModelList = new List<ProductModel>();
+                foreach (var item in TblProductNameList)
+                {
+                    //ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+                ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+            }
+                return ProductModelList;
+            }
+
+            public List<ProductModel> LoadProductList()
+            {
+                var TblProductList = service.GetListProducts();
+                List<ProductModel> ProductModelList = new List<ProductModel>();
+                foreach (var item in TblProductList)
+                {
+                    //ProductsModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+                ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+                }
+                return ProductModelList;
+            }
+
         #endregion
     }
 }

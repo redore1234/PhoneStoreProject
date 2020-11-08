@@ -24,6 +24,9 @@ namespace ManagePhone.Presenters
             if (DeletedSuccessfully)
             {
                 MessageBox.Show("Customer Deleted!", "Notify");
+            } else
+            {
+                MessageBox.Show("Delete Customer Fail!", "Notify");
             }
         }
 

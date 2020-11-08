@@ -15,6 +15,8 @@ namespace ActionService
         static readonly ITblEmployeeDAO tblEmployeeDAO = new TblEmployeeDAO();
         static readonly ITblCustomerDAO tblCustomerDAO = new TblCustomerDAO();
         static readonly ITblRoleDAO tblRoleDAO = new TblRoleDAO();
+        static readonly ITblProductsDAO tblProductsDAO = new TblProductsDAO();
+
         public bool AddCustomer(TblCustomer Customer)
         {
             return tblCustomerDAO.AddCustomer(Customer);
@@ -67,7 +69,7 @@ namespace ActionService
 
         public bool DeleteProduct(int ProductID)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.DeleteProduct(ProductID);
         }
 
         public string GetBrandByBrandID(int BrandID)
@@ -102,12 +104,12 @@ namespace ActionService
 
         public List<TblProducts> GetListProducts()
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.GetListProducts();
         }
 
         public TblProducts GetProduct(int ProductID)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.GetProduct(ProductID);
         }
 
         public int GetRankIDByName(string RankName)
@@ -137,7 +139,7 @@ namespace ActionService
 
         public List<TblProducts> SearchProducts(string ProductName)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.SearchProducts(ProductName);
         }
 
         public bool UpdateCustomer(TblCustomer Customer)

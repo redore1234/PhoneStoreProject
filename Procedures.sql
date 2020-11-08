@@ -149,6 +149,7 @@ AS
 		WHERE customerID=@CustomerID
 	END
 GO
+
 EXEC dbo.spDeleteCustomer @CustomerID = 2, -- int
 GO
 
@@ -184,6 +185,61 @@ AS
 		WHERE phone LIKE '%' + @Phone + '%' AND statusID=1
 	END 
 GO 
+
+--TBLPRODUCTS 
+
+--Get List Products--
+CREATE PROC  spGetListProducts 
+AS 
+	BEGIN
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		FROM dbo.tblProducts 
+		WHERE statusID = 1
+	END 
+GO
+
+EXEC dbo.spGetListProducts
+GO 
+
+--Search Product Name
+CREATE PROC spSearchProducts(@ProductName NVARCHAR(50))
+AS
+	BEGIN
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		FROM dbo.tblProducts 
+		WHERE productName LIKE '%' + @ProductName + '%' AND statusID=1
+	END
+GO
+
+EXEC dbo.spSearchProducts a
+GO 
+
+--Delete Product
+CREATE PROC spDeleteProduct(@ProductID INT)
+AS 
+	BEGIN 
+		UPDATE dbo.tblProducts
+		SET statusID=2
+		WHERE productID=@ProductID
+	END
+GO
+
+EXEC dbo.spDeleteProduct @ProductID = 1 -- int
+GO
+
+--Get Product by ID
+CREATE PROC spGetProduct(@ProductID INT)
+AS 
+	BEGIN 
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		FROM dbo.tblProducts 
+		WHERE productID=@ProductID
+	END
+GO
+
+EXEC dbo.spGetProduct @ProductID = 5 -- int
+GO
+
 
 -- TBLROLE --
 -- Get RoleName By RoleID

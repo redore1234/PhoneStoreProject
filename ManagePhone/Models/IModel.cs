@@ -31,5 +31,11 @@ namespace ManagePhone.Models
             public List<CustomerModel> SearchCustomer(string name, string phone);
         #endregion
 
+        #region Products
+            public bool DeleteProduct(int ProductID);
+            public List<ProductModel> SearchProducts(string ProductName);
+            public List<ProductModel> LoadProductList();
+        #endregion
+
     }
 }
