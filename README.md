@@ -100,3 +100,6 @@
 
 1. **[8/11/2020 11:30] Pham Thanh Long - @redore1234**
  	1. Add Cancelbutton in frmManager
+
+1. **[8/11/2020 11:37] Pham Thanh Long - @redore1234**
+ 	1. Change the title in frmViewCustomer, frmViewEmployee and frmViewProduct

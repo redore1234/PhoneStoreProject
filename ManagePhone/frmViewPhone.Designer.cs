@@ -65,11 +65,11 @@
             this.tabPage1.Controls.Add(this.tableLayoutPanel2);
             this.tabPage1.Controls.Add(this.tableLayoutPanel1);
             this.tabPage1.Controls.Add(this.dgvListPhone);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(750, 546);
+            this.tabPage1.Size = new System.Drawing.Size(750, 543);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "List Phone";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -142,10 +142,10 @@
             this.cbSearchPhoneBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSearchPhoneBrand.Font = new System.Drawing.Font("Arial", 12F);
             this.cbSearchPhoneBrand.FormattingEnabled = true;
-            this.cbSearchPhoneBrand.Location = new System.Drawing.Point(106, 7);
+            this.cbSearchPhoneBrand.Location = new System.Drawing.Point(106, 4);
             this.cbSearchPhoneBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cbSearchPhoneBrand.Name = "cbSearchPhoneBrand";
-            this.cbSearchPhoneBrand.Size = new System.Drawing.Size(314, 26);
+            this.cbSearchPhoneBrand.Size = new System.Drawing.Size(314, 31);
             this.cbSearchPhoneBrand.TabIndex = 21;
             // 
             // label28
@@ -153,10 +153,10 @@
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(2, 10);
+            this.label28.Location = new System.Drawing.Point(2, 8);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(100, 19);
+            this.label28.Size = new System.Drawing.Size(100, 24);
             this.label28.TabIndex = 7;
             this.label28.Text = "Brand:";
             // 
@@ -164,10 +164,10 @@
             // 
             this.txtSearchPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchPhone.Location = new System.Drawing.Point(106, 47);
+            this.txtSearchPhone.Location = new System.Drawing.Point(106, 45);
             this.txtSearchPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchPhone.Name = "txtSearchPhone";
-            this.txtSearchPhone.Size = new System.Drawing.Size(314, 26);
+            this.txtSearchPhone.Size = new System.Drawing.Size(314, 30);
             this.txtSearchPhone.TabIndex = 10;
             // 
             // label27
@@ -175,10 +175,10 @@
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(2, 51);
+            this.label27.Location = new System.Drawing.Point(2, 48);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(100, 19);
+            this.label27.Size = new System.Drawing.Size(100, 24);
             this.label27.TabIndex = 9;
             this.label27.Text = "Phone:";
             // 
@@ -194,17 +194,17 @@
             this.dgvListPhone.Name = "dgvListPhone";
             this.dgvListPhone.RowHeadersWidth = 51;
             this.dgvListPhone.RowTemplate.Height = 24;
-            this.dgvListPhone.Size = new System.Drawing.Size(738, 361);
+            this.dgvListPhone.Size = new System.Drawing.Size(738, 358);
             this.dgvListPhone.TabIndex = 17;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flowPhone);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(750, 546);
+            this.tabPage2.Size = new System.Drawing.Size(750, 543);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "List Phone\'s Image";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.flowPhone.Location = new System.Drawing.Point(2, 2);
             this.flowPhone.Margin = new System.Windows.Forms.Padding(2);
             this.flowPhone.Name = "flowPhone";
-            this.flowPhone.Size = new System.Drawing.Size(747, 544);
+            this.flowPhone.Size = new System.Drawing.Size(747, 541);
             this.flowPhone.TabIndex = 0;
             // 
             // btnCancelPhone
@@ -260,7 +260,7 @@
             this.MaximizeBox = false;
             this.Name = "frmViewPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Phone";
+            this.Text = "View Phone";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

@@ -170,7 +170,7 @@
             this.MaximizeBox = false;
             this.Name = "frmViewEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Employee";
+            this.Text = "View Employee";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListEmployee)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
