@@ -90,6 +90,6 @@
 	1. Add Pictures and gather all Pictures in Image folder
 	1. Add new frmOrder, edit frmManger
 
-. **[6/11/2020 11:35] Le Bao Long - @longlb88**
+1. **[6/11/2020 11:35] Le Bao Long - @longlb88**
 	1. Add add order icon
 	1. Edit icons, make them in same style
