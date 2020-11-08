@@ -109,6 +109,6 @@
 
 1. **[8/11/2020 13:47] Pham Minh Tan - @tanpm77**
 	1. Do Load Products and Delete Product function 
-	1. Add spSearchProducts and spDeleteProduct in Procedures.sql
+	1. Add spGetProducts and spDeleteProduct in Procedures.sql
 	
 	
