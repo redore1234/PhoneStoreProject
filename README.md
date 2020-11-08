@@ -103,3 +103,6 @@
 
 1. **[8/11/2020 11:37] Pham Thanh Long - @redore1234**
  	1. Change the title in frmViewCustomer, frmViewEmployee and frmViewProduct
+
+1. **[8/11/2020 14:18] Le Bao Long - @longlb88**
+ 	1. Correct column name in tblProduct: prodcutName -> productName

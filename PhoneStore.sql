@@ -46,7 +46,7 @@ CREATE TABLE tblCustomer(
 
 CREATE TABLE tblProducts(
     productID INT IDENTITY(1,1) PRIMARY KEY,
-    prodcutName NVARCHAR(50) NOT NULL,
+    productName NVARCHAR(50) NOT NULL,
     brandID INT FOREIGN KEY REFERENCES tblBrand(brandID),
     description NVARCHAR(200) NOT NULL,
     launchDate DATE NOT NULL,
