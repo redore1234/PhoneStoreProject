@@ -174,6 +174,16 @@ GO
 
 --TBLPRODUCTS 
 
+-- Add New Product --
+CREATE PROC spAddProduct(@ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
+ @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
+AS 
+	BEGIN
+		INSERT tblProducts(productName, brand, description, launchDate, price, image, quantity, statusId)
+		VALUES (@ProductName, @Brand, @Description, @LaunchDate, @Price, @Image, @Quantity, 1)
+	END
+GO
+
 --Get List Products--
 CREATE PROC  spGetListProducts 
 AS 

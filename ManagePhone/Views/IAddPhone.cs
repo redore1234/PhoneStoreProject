@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
     public interface IAddPhone : IView
     {
-        string Name { get; }
+        string PhoneName { get; }
         string Brand { get; }
-        //IList<BrandModel> Brands { set; }
-        string ReleaseYear { get; }
+        DateTime LaunchDate { get; }
         long Price { get; }
         int Quantity { get; }
         string Description { get; }

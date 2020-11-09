@@ -155,6 +155,7 @@
     <Compile Include="Models\Models\ProductModel.cs" />
     <Compile Include="Models\Models\RoleModel.cs" />
     <Compile Include="Presenters\AddEmployeePresenter.cs" />
+    <Compile Include="Presenters\AddPhonePresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\AddCustomerPresenter.cs" />
     <Compile Include="Presenters\Presenter.cs" />

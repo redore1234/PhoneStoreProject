@@ -120,3 +120,7 @@
  	1. Remove DeleteCustomer function
 	1. Edit database (remove statusId in tblCustomer) and edit Procedure.sql
 	1. Edit UI in frmViewCustomer (remove Delete button)
+
+1. **[9/11/2020 23:42] Dam Dong Tin - @dtin**
+	1. Do add new phone
+	1. Add procedure to fit with add new phone

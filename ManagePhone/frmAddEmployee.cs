@@ -37,31 +37,31 @@ namespace ManagePhone
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsername.Text))
+            if (string.IsNullOrEmpty(Username))
             {
                 MessageBox.Show("Field username can not empty!");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtPassword.Text))
+            if (string.IsNullOrEmpty(Password))
             {
                 MessageBox.Show("Field password can not empty!");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtEmployeePhone.Text))
+            if (string.IsNullOrEmpty(Phone))
             {
                 MessageBox.Show("Field phone can not empty!");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtEmployeeName.Text))
+            if (string.IsNullOrEmpty(EmployeeName))
             {
                 MessageBox.Show("Field name can not empty!");
                 return;
             }
 
-            if (string.IsNullOrEmpty(txtEmployeeAddress.Text))
+            if (string.IsNullOrEmpty(Address))
             {
                 MessageBox.Show("Field address can not empty!");
                 return;
