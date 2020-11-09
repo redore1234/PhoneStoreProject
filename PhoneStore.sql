@@ -16,11 +16,6 @@ CREATE TABLE tblRank(
     rankName NVARCHAR(30) NOT NULL, 
 )
 
-CREATE TABLE tblBrand(
-    brandID INT IDENTITY(1,1) PRIMARY KEY,
-    brandName NVARCHAR(50) NOT NULL
-)
-
 CREATE TABLE tblEmployee(
     employeeID VARCHAR(30) PRIMARY KEY,
     password VARCHAR(64) NOT NULL,
@@ -47,7 +42,7 @@ CREATE TABLE tblCustomer(
 CREATE TABLE tblProducts(
     productID INT IDENTITY(1,1) PRIMARY KEY,
     productName NVARCHAR(50) NOT NULL,
-    brandID INT FOREIGN KEY REFERENCES tblBrand(brandID),
+    brand VARCHAR(20) NOT NULL,
     description NVARCHAR(200) NOT NULL,
     launchDate DATE NOT NULL,
     price BIGINT DEFAULT 0 NOT NULL,
@@ -76,6 +71,5 @@ DROP TABLE tblEmployee
 DROP TABLE tblRole
 DROP TABLE tblStatus
 DROP TABLE tblRank
-DROP TABLE tblBrand
 DROP TABLE tblCustomer
 DROP TABLE tblProducts
