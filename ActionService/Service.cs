@@ -47,11 +47,6 @@ namespace ActionService
             return tblEmployeeDAO.CheckLogin(username, password);
         }
 
-        public bool DeleteCustomer(int CustomerID)
-        {
-            return tblCustomerDAO.DeleteCustomer(CustomerID);
-        }
-
         public bool DeleteEmployee(string EmployeeID)
         {
             return tblEmployeeDAO.DeleteEmployee(EmployeeID);

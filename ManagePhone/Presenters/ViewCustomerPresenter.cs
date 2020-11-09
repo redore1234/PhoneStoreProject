@@ -17,19 +17,6 @@ namespace ManagePhone.Presenters
             LoadCustomers();
         }
 
-        //Delete a customer
-        public void DeleteCustomer(int CustomerID)
-        {
-            bool DeletedSuccessfully = Model.DeleteCustomer(CustomerID);
-            if (DeletedSuccessfully)
-            {
-                MessageBox.Show("Customer Deleted!", "Notify");
-            } else
-            {
-                MessageBox.Show("Delete Customer Fail!", "Notify");
-            }
-        }
-
         //Load customer list
         public void LoadCustomers()
         {

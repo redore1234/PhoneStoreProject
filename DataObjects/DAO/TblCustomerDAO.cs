@@ -38,13 +38,6 @@ namespace DataObjects.DAO
             return db.Insert(StoreProc, parms) > 0;
         }
 
-        public bool DeleteCustomer(int CustomerID)
-        {
-            string StoreProc = "spDeleteCustomer";
-            object[] parms = { "@CustomerID", CustomerID };
-            return db.Delete(StoreProc, parms) > 0;
-        }
-
         public List<TblCustomer> GetListCustomers()
         {
             string StoreProc = "spGetListCustomers";

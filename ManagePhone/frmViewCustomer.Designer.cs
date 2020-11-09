@@ -26,7 +26,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewCustomer));
             this.btnCancelCustomer = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
-            this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.dgvListCustomer = new System.Windows.Forms.DataGridView();
             this.txtSearchCustomerName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,10 +45,10 @@
             this.btnCancelCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelCustomer.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelCustomer.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelCustomer.Location = new System.Drawing.Point(234, 12);
+            this.btnCancelCustomer.Location = new System.Drawing.Point(148, 12);
             this.btnCancelCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelCustomer.Name = "btnCancelCustomer";
-            this.btnCancelCustomer.Size = new System.Drawing.Size(114, 24);
+            this.btnCancelCustomer.Size = new System.Drawing.Size(142, 24);
             this.btnCancelCustomer.TabIndex = 6;
             this.btnCancelCustomer.Text = "Cancel";
             this.btnCancelCustomer.UseVisualStyleBackColor = true;
@@ -62,24 +61,11 @@
             this.btnUpdateCustomer.Location = new System.Drawing.Point(2, 12);
             this.btnUpdateCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
-            this.btnUpdateCustomer.Size = new System.Drawing.Size(112, 24);
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(142, 24);
             this.btnUpdateCustomer.TabIndex = 4;
             this.btnUpdateCustomer.Text = "Update";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
-            // 
-            // btnDeleteCustomer
-            // 
-            this.btnDeleteCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteCustomer.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(118, 12);
-            this.btnDeleteCustomer.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(112, 24);
-            this.btnDeleteCustomer.TabIndex = 5;
-            this.btnDeleteCustomer.Text = "Delete";
-            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
-            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // dgvListCustomer
             // 
@@ -145,19 +131,17 @@
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.btnUpdateCustomer, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDeleteCustomer, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnCancelCustomer, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(216, 115);
+            this.tableLayoutPanel2.Controls.Add(this.btnCancelCustomer, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(245, 115);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(350, 49);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(292, 49);
             this.tableLayoutPanel2.TabIndex = 29;
             // 
             // tableLayoutPanel3
@@ -230,7 +214,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnUpdateCustomer;
-        private System.Windows.Forms.Button btnDeleteCustomer;
         private System.Windows.Forms.DataGridView dgvListCustomer;
         private System.Windows.Forms.TextBox txtSearchCustomerName;
         private System.Windows.Forms.Label label5;

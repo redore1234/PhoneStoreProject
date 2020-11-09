@@ -119,7 +119,7 @@ GO
 EXEC dbo.spAddCustomer @Name = 'longpt', -- varchar(50)
     @DOB = '2000-10-31 ', -- date
     @Address = '123PXL', -- varchar(100)
-    @Phone = '0808', -- varchar(10)
+    @Phone = '0808' -- varchar(10)
 GO	
 
 --Update Customer--
@@ -140,26 +140,12 @@ EXEC dbo.spUpdateCustomer @CustomerID = 5, -- int
     @Phone = '0808' -- varchar(10)
 GO 
 
---Delete Customer--
-CREATE PROC spDeleteCustomer(@CustomerID INT)
-AS 
-	BEGIN 
-		UPDATE dbo.tblCustomer
-		SET statusID=2
-		WHERE customerID=@CustomerID
-	END
-GO
-
-EXEC dbo.spDeleteCustomer @CustomerID = 2, -- int
-GO
-
 --Get List Customer--
 CREATE PROC  spGetListCustomers 
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer 
-		WHERE statusID = 1
 	END 
 GO 
 
@@ -170,9 +156,9 @@ GO
 CREATE PROC spSearchCustomers(@Name VARCHAR(50), @Phone VARCHAR(10))
 AS
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer
-		WHERE (name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%') AND statusID=1
+		WHERE name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%'
 	END
 GO
 
@@ -180,9 +166,9 @@ GO
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer
-		WHERE phone LIKE '%' + @Phone + '%' AND statusID=1
+		WHERE phone LIKE '%' + @Phone + '%'
 	END 
 GO 
 
@@ -192,7 +178,7 @@ GO
 CREATE PROC  spGetListProducts 
 AS 
 	BEGIN
-		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
 		WHERE statusID = 1
 	END 
@@ -205,7 +191,7 @@ GO
 CREATE PROC spSearchProducts(@ProductName NVARCHAR(50))
 AS
 	BEGIN
-		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
 		WHERE productName LIKE '%' + @ProductName + '%' AND statusID=1
 	END
@@ -231,7 +217,7 @@ GO
 CREATE PROC spGetProduct(@ProductID INT)
 AS 
 	BEGIN 
-		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
 		WHERE productID=@ProductID
 	END
@@ -249,16 +235,5 @@ AS
 		SELECT roleName
 		FROM tblRole 
 		WHERE roleID=@RoleID
-	END
-GO
-
--- TBLRANK --
--- Get RankName By RankID
-CREATE PROCEDURE spGetRank(@RankID INT)
-AS
-	BEGIN
-		SELECT rankName
-		FROM tblRank
-		WHERE rankID=@RankID
 	END
 GO

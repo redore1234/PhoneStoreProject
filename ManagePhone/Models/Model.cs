@@ -72,11 +72,6 @@ namespace ManagePhone.Models
             return service.UpdateCustomer(customer);
         }
 
-        public bool DeleteCustomer(int cusID)
-        {
-            return service.DeleteCustomer(cusID);
-        }
-
         public List<CustomerModel> SearchCustomer(string Name, string Phone)
         {
             var TblCustomerList = service.SearchCustomers(Name, Phone);

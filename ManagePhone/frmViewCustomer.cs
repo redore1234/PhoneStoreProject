@@ -59,15 +59,6 @@ namespace ManagePhone {
             }
         }
 
-        private void btnDeleteCustomer_Click(object sender, EventArgs e)
-        {
-            if (dgvListCustomer.Rows.Count != 0)
-            {
-                _viewCustomerPresenter.DeleteCustomer(CustomerID);
-                _viewCustomerPresenter.LoadCustomers();
-            }
-        }
-
         private void dgvListCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int row = e.RowIndex;

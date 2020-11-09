@@ -116,4 +116,7 @@
 	1. Edit database and edit Procedure.sql
 	1. Edit UI
 	
-	
+1. **[9/11/2020 20:33] Pham Thanh Long - @redore1234**
+ 	1. Remove DeleteCustomer function
+	1. Edit database (remove statusId in tblCustomer) and edit Procedure.sql
+	1. Edit UI in frmViewCustomer (remove Delete button)

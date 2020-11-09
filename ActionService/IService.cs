@@ -35,8 +35,6 @@ namespace ActionService
 
             bool UpdateCustomer(TblCustomer Customer);
 
-            bool DeleteCustomer(int CustomerID);
-
         #endregion
 
         #region Products Repository

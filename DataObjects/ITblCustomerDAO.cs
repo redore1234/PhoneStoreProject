@@ -21,8 +21,5 @@ namespace DataObjects
 
         //Update a customer
         bool UpdateCustomer(TblCustomer Customer);
-
-        //Delete a customer
-        bool DeleteCustomer(int CustomerID);
     }
 }

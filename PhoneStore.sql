@@ -29,7 +29,6 @@ CREATE TABLE tblCustomer(
     address NVARCHAR(100),
     phone VARCHAR(10),
     spentMoney BIGINT DEFAULT 0 NOT NULL, 
-    statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblProducts(
