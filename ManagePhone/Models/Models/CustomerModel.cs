@@ -14,7 +14,5 @@ namespace ManagePhone.Models.Models
         public string Address { get; set; }
         public string Phone { get; set; }
         public long SpentMoney { get; set; }
-        public int Point { get; set; }
-        public int RankID { get; set; }
     }
 }

@@ -10,7 +10,6 @@ namespace ManagePhone.Views
     public interface IPhonesView : IView
     {
         string Brand { get; set; }
-        //IList<BrandModel> Brands { set; }
         string Phone { get;}
         IList<ProductModel> ProductList { set; }
     }

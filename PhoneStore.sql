@@ -11,11 +11,6 @@ CREATE TABLE tblStatus(
     statusName NVARCHAR(30) NOT NULL,
 )
 
-CREATE TABLE tblRank(
-    rankID INT IDENTITY(1,1) PRIMARY KEY,
-    rankName NVARCHAR(30) NOT NULL, 
-)
-
 CREATE TABLE tblEmployee(
     employeeID VARCHAR(30) PRIMARY KEY,
     password VARCHAR(64) NOT NULL,
@@ -34,8 +29,6 @@ CREATE TABLE tblCustomer(
     address NVARCHAR(100),
     phone VARCHAR(10),
     spentMoney BIGINT DEFAULT 0 NOT NULL, 
-    point INT DEFAULT 0 NOT NULL,
-    rankID INT DEFAULT 1 FOREIGN KEY REFERENCES tblRank(rankID),
     statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 

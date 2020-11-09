@@ -75,20 +75,6 @@ namespace ActionService
 
         #endregion
 
-        #region Brand Repository
-
-            List<TblBrand> GetListBrands();
-
-            string GetBrandByBrandID(int BrandID);
-
-        #endregion
-
-        #region Rank Repository
-
-            int GetRankIDByName(string RankName);
-
-        #endregion
-
         #region Role Repository
 
             TblRole GetRoleByRoleID(int RoleID);

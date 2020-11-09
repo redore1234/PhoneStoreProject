@@ -157,7 +157,7 @@ GO
 CREATE PROC  spGetListCustomers 
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
 		FROM dbo.tblCustomer 
 		WHERE statusID = 1
 	END 
@@ -170,7 +170,7 @@ GO
 CREATE PROC spSearchCustomers(@Name VARCHAR(50), @Phone VARCHAR(10))
 AS
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
 		FROM dbo.tblCustomer
 		WHERE (name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%') AND statusID=1
 	END
@@ -180,7 +180,7 @@ GO
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney, point, rankID, statusID
+		SELECT customerID, name, DOB, address, phone, spentMoney, statusID
 		FROM dbo.tblCustomer
 		WHERE phone LIKE '%' + @Phone + '%' AND statusID=1
 	END 
@@ -192,7 +192,7 @@ GO
 CREATE PROC  spGetListProducts 
 AS 
 	BEGIN
-		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
 		WHERE statusID = 1
 	END 
@@ -202,12 +202,12 @@ EXEC dbo.spGetListProducts
 GO 
 
 --Search Product Name
-CREATE PROC spSearchProducts(@ProductName NVARCHAR(50), @Brand VARCHAR(20))
+CREATE PROC spSearchProducts(@ProductName NVARCHAR(50))
 AS
 	BEGIN
-		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
-		WHERE ((productName LIKE '%' + @ProductName + '%') OR (brand LIKE '%' + @Brand + '%')) AND statusID=1
+		WHERE productName LIKE '%' + @ProductName + '%' AND statusID=1
 	END
 GO
 
@@ -231,7 +231,7 @@ GO
 CREATE PROC spGetProduct(@ProductID INT)
 AS 
 	BEGIN 
-		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
+		SELECT productID, productName, brandID, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
 		WHERE productID=@ProductID
 	END

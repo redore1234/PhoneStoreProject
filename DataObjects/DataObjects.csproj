@@ -47,15 +47,12 @@
     <Compile Include="DAO\TblEmployeeDAO.cs" />
     <Compile Include="DAO\TblCustomerDAO.cs" />
     <Compile Include="DAO\TblProductsDAO.cs" />
-    <Compile Include="DAO\TblRankDAO.cs" />
     <Compile Include="DAO\TblRoleDAO.cs" />
-    <Compile Include="ITblBrandDAO.cs" />
     <Compile Include="ITblCustomerDAO.cs" />
     <Compile Include="ITblEmployeeDAO.cs" />
     <Compile Include="ITblOrderDAO.cs" />
     <Compile Include="ITblOrderDetailDAO.cs" />
     <Compile Include="ITblProductsDAO.cs" />
-    <Compile Include="ITblRankDAO.cs" />
     <Compile Include="ITblRoleDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

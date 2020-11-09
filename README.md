@@ -111,4 +111,9 @@
 	1. Do Load Products and Delete Product function 
 	1. Add spGetProducts and spDeleteProduct in Procedures.sql
 	
+1. **[9/11/2020 16:09] Pham Thanh Long - @redore1234**
+ 	1. Delete tblBrand, tblRank
+	1. Edit database and edit Procedure.sql
+	1. Edit UI
+	
 	

@@ -10,7 +10,7 @@ namespace ManagePhone.Models.Models
     {
         public int ProductID { get; set; }
         public string ProductName { get; set; }
-        public BrandModel Brand { get; set; }
+        public int BrandID { get; set; }
         public string Description { get; set; }
         public DateTime LaunchDate { get; set; }
         public long Price { get; set; }

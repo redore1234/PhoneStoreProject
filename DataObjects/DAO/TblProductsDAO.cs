@@ -19,7 +19,7 @@ namespace DataObjects.DAO
             {
                 "@ProductID", pro.ProductID,
                 "@ProductName", pro.ProductName,
-                "@BrandID", pro.BrandID,
+                "@BrandID", pro.Brand,
                 "@Description", pro.Description,
                 "@LaunchDate", pro.LaunchDate,
                 "@Price", pro.Price,
@@ -34,7 +34,7 @@ namespace DataObjects.DAO
         {
             ProductID = int.Parse(reader["productID"].ToString()),
             ProductName = reader["productName"].ToString(),
-            BrandID = reader["brandID"].ToString(),
+            Brand = reader["brand"].ToString(),
             Description = reader["description"].ToString(),
             LaunchDate = DateTime.Parse(reader["launchDate"].ToString()),
             Price = long.Parse(reader["price"].ToString()),

@@ -23,8 +23,6 @@ namespace DataObjects.DAO
             Address = reader["address"].ToString(),
             Phone = reader["phone"].ToString(),
             SpentMoney = long.Parse(reader["spentMoney"].ToString()),
-            Point = int.Parse(reader["point"].ToString()),
-            RankID = int.Parse(reader["rankID"].ToString())
         };
 
         public bool AddCustomer(TblCustomer Customer)

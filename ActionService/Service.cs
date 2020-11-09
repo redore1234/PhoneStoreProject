@@ -82,11 +82,6 @@ namespace ActionService
             throw new NotImplementedException();
         }
 
-        public List<TblBrand> GetListBrands()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<TblCustomer> GetListCustomers()
         {
             return tblCustomerDAO.GetListCustomers();
@@ -110,11 +105,6 @@ namespace ActionService
         public TblProducts GetProduct(int ProductID)
         {
             return tblProductsDAO.GetProduct(ProductID);
-        }
-
-        public int GetRankIDByName(string RankName)
-        {
-            throw new NotImplementedException();
         }
 
         public TblRole GetRoleByRoleID(int RoleID)

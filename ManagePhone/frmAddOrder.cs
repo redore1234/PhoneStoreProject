@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,11 @@ namespace ManagePhone
             this.Hide();
             frmManager.ShowDialog();
             this.Close();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            (new frmAddCustomer()).ShowDialog();
         }
     }
 }
