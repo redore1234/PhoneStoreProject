@@ -44,6 +44,13 @@ namespace DataObjects.DAO
             return (List<TblCustomer>)db.Read(StoreProc, Make).ToList();
         }
 
+        public TblCustomer SearchCustomerByPhone(string Phone)
+        {
+            string StoreProc = "spSearchCustomerByPhone";
+            object[] parms = { "@Phone", Phone };
+            return db.Read(StoreProc, Make, parms).FirstOrDefault();
+        }
+
         public List<TblCustomer> SearchCustomers(string CustomerName, string Phone)
         {
             string StoreProc = "spSearchCustomers";

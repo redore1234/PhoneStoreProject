@@ -84,6 +84,12 @@ namespace ManagePhone.Models
             }
             return CustomerModelList;
         }
+
+        public CustomerModel SearchCustomerByPhone(string Phone)
+        {
+            var Customer = service.SearchCustomerByPhone(Phone);
+            return Mapper.Map<TblCustomer, CustomerModel>(Customer);
+        }
         #endregion
 
         #region Employee
@@ -146,9 +152,8 @@ namespace ManagePhone.Models
                 List<ProductModel> ProductModelList = new List<ProductModel>();
                 foreach (var item in TblProductNameList)
                 {
-                    //ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
-                ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
-            }
+                    ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+                }
                 return ProductModelList;
             }
 

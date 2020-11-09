@@ -112,6 +112,11 @@ namespace ActionService
             return tblCustomerDAO.SearchCustomers(CustomerName, Phone);
         }
 
+        public TblCustomer SearchCustomerByPhone(string Phone)
+        {
+            return tblCustomerDAO.SearchCustomerByPhone(Phone);
+        }
+
         public List<TblEmployee> SearchEmployeesByName(string EmployeeName)
         {
             return tblEmployeeDAO.SearchEmployeesByName(EmployeeName);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagePhone.Models.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,9 @@ namespace ManagePhone.Views
     public interface IAddOrder : IView
     {
         string CustomerPhone { get; }
-        string ProductName { get; set; }
+        string ProductName { get; }
+        IList<ProductModel> ListProduct { set; }
+        IList<CartItemModel> Cart { get; set; }
+        CustomerModel Customer { get; set; }
     }
 }

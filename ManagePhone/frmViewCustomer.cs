@@ -45,7 +45,6 @@ namespace ManagePhone {
             dgvListCustomer.DataSource = CustomerList;
         }
 
-
         private void btnCancelCustomer_Click(object sender, EventArgs e) {
             this.Close();
         }

@@ -40,6 +40,10 @@ namespace ManagePhone {
             bool isValid = _loginPresenter.Login();
             Show();
 
+            //clear text boxes
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+
             if(!isValid)
             {
                 MessageBox.Show("Username or Password is not correct.", "Invalid Account", MessageBoxButtons.OK);

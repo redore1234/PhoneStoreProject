@@ -35,6 +35,8 @@ namespace ActionService
 
             bool UpdateCustomer(TblCustomer Customer);
 
+            TblCustomer SearchCustomerByPhone(string Phone);
+
         #endregion
 
         #region Products Repository

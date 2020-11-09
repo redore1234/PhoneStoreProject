@@ -120,3 +120,8 @@
  	1. Remove DeleteCustomer function
 	1. Edit database (remove statusId in tblCustomer) and edit Procedure.sql
 	1. Edit UI in frmViewCustomer (remove Delete button)
+
+1. **[10/11/2020 00:58] Le Bao Long - @longlb88**
+ 	1. frmAddOrder: Do functions: Load products, Add to cart, Check Customer, Search Product
+	1. Add methods to Check customer in Model, Service, TblCustomerDAO and their Interfaces
+	1. Delete BrandModel

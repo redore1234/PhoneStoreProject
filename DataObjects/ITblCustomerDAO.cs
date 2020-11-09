@@ -21,5 +21,8 @@ namespace DataObjects
 
         //Update a customer
         bool UpdateCustomer(TblCustomer Customer);
+
+        //search customer by phone number
+        TblCustomer SearchCustomerByPhone(string phone);
     }
 }
