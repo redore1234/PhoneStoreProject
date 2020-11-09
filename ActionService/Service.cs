@@ -39,7 +39,7 @@ namespace ActionService
 
         public bool AddProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.AddProduct(Product);
         }
 
         public TblEmployee CheckLogin(string username, string password)

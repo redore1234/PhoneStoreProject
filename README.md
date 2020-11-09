@@ -121,6 +121,10 @@
 	1. Edit database (remove statusId in tblCustomer) and edit Procedure.sql
 	1. Edit UI in frmViewCustomer (remove Delete button)
 
+1. **[9/11/2020 23:42] Dam Dong Tin - @dtin**
+	1. Do add new phone
+	1. Add procedure to fit with add new phone
+
 1. **[10/11/2020 00:58] Le Bao Long - @longlb88**
  	1. frmAddOrder: Do functions: Load products, Add to cart, Check Customer, Search Product
 	1. Add methods to Check customer in Model, Service, TblCustomerDAO and their Interfaces

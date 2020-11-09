@@ -2,17 +2,14 @@
 using AutoMapper;
 using BusinessObjects;
 using ManagePhone.Models.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Security.Policy;
 
 namespace ManagePhone.Models
 {
     public class Model : IModel
     {
-        static Service service = new Service();
+        private static Service service = new Service();
 
         static Model()
         {
@@ -27,15 +24,17 @@ namespace ManagePhone.Models
         }
 
         #region Role
+
         public RoleModel GetRole(int RoleID)
         {
             var Role = service.GetRoleByRoleID(RoleID);
             return Mapper.Map<TblRole, RoleModel>(Role);
         }
 
-        #endregion
+        #endregion Role
 
         #region Login / Logout
+
         public EmployeeModel CheckLogin(string EmpID, string Password)
         {
             var Employee = service.CheckLogin(EmpID, Password);
@@ -44,11 +43,12 @@ namespace ManagePhone.Models
 
         public void Logout()
         {
-
         }
-        #endregion
+
+        #endregion Login / Logout
 
         #region Customer
+
         public List<CustomerModel> LoadCustomerList()
         {
             var TblCustomerList = service.GetListCustomers();
@@ -90,9 +90,10 @@ namespace ManagePhone.Models
             var Customer = service.SearchCustomerByPhone(Phone);
             return Mapper.Map<TblCustomer, CustomerModel>(Customer);
         }
-        #endregion
+        #endregion Customer
 
         #region Employee
+
         public bool AddEmployee(EmployeeModel model)
         {
             var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
@@ -138,16 +139,29 @@ namespace ManagePhone.Models
             var employee = Mapper.Map<EmployeeModel, TblEmployee>(model);
             return service.UpdateEmployeeWithPassword(employee);
         }
-        #endregion
+
+        #endregion Employee
 
         #region Products
-            public bool DeleteProduct(int proID)
-            {
-                return service.DeleteProduct(proID);
-            }
 
-            public List<ProductModel> SearchProducts(string ProductName)
+        public bool AddProduct(ProductModel model)
+        {
+            var Product = Mapper.Map<ProductModel, TblProducts>(model);
+            return service.AddProduct(Product);
+        }
+
+        public bool DeleteProduct(int proID)
+        {
+            return service.DeleteProduct(proID);
+        }
+
+        public List<ProductModel> SearchProducts(string ProductName)
+        {
+            var TblProductNameList = service.SearchProducts(ProductName);
+            List<ProductModel> ProductModelList = new List<ProductModel>();
+            foreach (var item in TblProductNameList)
             {
+<<<<<<< HEAD
                 var TblProductNameList = service.SearchProducts(ProductName);
                 List<ProductModel> ProductModelList = new List<ProductModel>();
                 foreach (var item in TblProductNameList)
@@ -156,19 +170,24 @@ namespace ManagePhone.Models
                 }
                 return ProductModelList;
             }
-
-            public List<ProductModel> LoadProductList()
-            {
-                var TblProductList = service.GetListProducts();
-                List<ProductModel> ProductModelList = new List<ProductModel>();
-                foreach (var item in TblProductList)
-                {
-                    //ProductsModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+=======
                 ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
-                }
-                return ProductModelList;
             }
+            return ProductModelList;
+        }
+>>>>>>> fca074324f701bbffcb2b4abfd051deb3602404a
 
-        #endregion
+        public List<ProductModel> LoadProductList()
+        {
+            var TblProductList = service.GetListProducts();
+            List<ProductModel> ProductModelList = new List<ProductModel>();
+            foreach (var item in TblProductList)
+            {
+                ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+            }
+            return ProductModelList;
+        }
+
+        #endregion Products
     }
 }

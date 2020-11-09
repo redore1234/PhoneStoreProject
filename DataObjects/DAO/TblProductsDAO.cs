@@ -17,9 +17,8 @@ namespace DataObjects.DAO
         {
             return new object[]
             {
-                "@ProductID", pro.ProductID,
                 "@ProductName", pro.ProductName,
-                "@BrandID", pro.Brand,
+                "@Brand", pro.Brand,
                 "@Description", pro.Description,
                 "@LaunchDate", pro.LaunchDate,
                 "@Price", pro.Price,
@@ -44,7 +43,8 @@ namespace DataObjects.DAO
 
         public bool AddProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spAddProduct";
+            return db.Update(StoreProc, TakeProduct(Product)) > 0;
         }
 
         public bool DeleteProduct(int ProductID)
