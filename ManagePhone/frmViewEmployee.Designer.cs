@@ -25,8 +25,8 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewEmployee));
             this.btnCancelEmployee = new System.Windows.Forms.Button();
-            this.btnUpdateEmployee = new System.Windows.Forms.Button();
-            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.dgvListEmployee = new System.Windows.Forms.DataGridView();
             this.txtSearchEmployeeName = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -52,31 +52,31 @@
             this.btnCancelEmployee.UseVisualStyleBackColor = true;
             this.btnCancelEmployee.Click += new System.EventHandler(this.btnCancelEmployee_Click);
             // 
-            // btnUpdateEmployee
+            // btnUpdate
             // 
-            this.btnUpdateEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdateEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateEmployee.Location = new System.Drawing.Point(2, 18);
-            this.btnUpdateEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateEmployee.Name = "btnUpdateEmployee";
-            this.btnUpdateEmployee.Size = new System.Drawing.Size(117, 24);
-            this.btnUpdateEmployee.TabIndex = 4;
-            this.btnUpdateEmployee.Text = "Update";
-            this.btnUpdateEmployee.UseVisualStyleBackColor = true;
-            this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(2, 18);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(117, 24);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
             // 
-            // btnDeleteEmployee
+            // btnDelete
             // 
-            this.btnDeleteEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeleteEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(123, 18);
-            this.btnDeleteEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(117, 24);
-            this.btnDeleteEmployee.TabIndex = 5;
-            this.btnDeleteEmployee.Text = "Delete";
-            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
-            this.btnDeleteEmployee.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(123, 18);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(117, 24);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDeleteEmployee_Click);
             // 
             // dgvListEmployee
             // 
@@ -146,8 +146,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.btnUpdateEmployee, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnDeleteEmployee, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnUpdate, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancelEmployee, 2, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(211, 110);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
@@ -182,8 +182,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnUpdateEmployee;
-        private System.Windows.Forms.Button btnDeleteEmployee;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvListEmployee;
         private System.Windows.Forms.TextBox txtSearchEmployeeName;
         private System.Windows.Forms.Label label29;

@@ -42,7 +42,7 @@
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
             this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -271,7 +271,7 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.btnAddEmployee);
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Location = new System.Drawing.Point(462, 423);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -279,18 +279,18 @@
             this.panel2.Size = new System.Drawing.Size(218, 37);
             this.panel2.TabIndex = 18;
             // 
-            // btnAddEmployee
+            // btnAdd
             // 
-            this.btnAddEmployee.AutoSize = true;
-            this.btnAddEmployee.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddEmployee.Location = new System.Drawing.Point(136, 0);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(80, 29);
-            this.btnAddEmployee.TabIndex = 8;
-            this.btnAddEmployee.Text = "ADD";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
-            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
+            this.btnAdd.AutoSize = true;
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(136, 0);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(80, 29);
+            this.btnAdd.TabIndex = 8;
+            this.btnAdd.Text = "ADD";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // btnCancel
             // 
@@ -308,7 +308,7 @@
             // 
             // frmAddEmployee
             // 
-            this.AcceptButton = this.btnAddEmployee;
+            this.AcceptButton = this.btnAdd;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(716, 470);
@@ -354,7 +354,7 @@
         private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnCancel;
     }
 }

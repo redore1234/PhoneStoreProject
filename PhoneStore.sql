@@ -49,6 +49,7 @@ CREATE TABLE tblOrders(
     orderDate DATETIME DEFAULT GETDATE() NOT NULL,
     employeeID VARCHAR(30) FOREIGN KEY REFERENCES tblEmployee(employeeID),
     totalPrice BIGINT NOT NULL,
+	statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblOrderDetail(
@@ -57,11 +58,11 @@ CREATE TABLE tblOrderDetail(
     productID INT FOREIGN KEY REFERENCES tblProducts(productID),
     quantity INT DEFAULT 1 NOT NULL,
     itemPrice BIGINT NOT NULL,
+	statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 DROP TABLE tblEmployee
 DROP TABLE tblRole
 DROP TABLE tblStatus
-DROP TABLE tblRank
 DROP TABLE tblCustomer
 DROP TABLE tblProducts

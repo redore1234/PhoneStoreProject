@@ -130,7 +130,15 @@
 	1. Add methods to Check customer in Model, Service, TblCustomerDAO and their Interfaces
 	1. Delete BrandModel
 
+1. **[10/11/2020 13:30] Pham Thanh Long - @redore1234**
+ 	1. Edit frmManager
+	1. Add new IManagerView, ManagerPresenter
+
 1. **[10/11/2020 13:49] Dam Dong Tin - @dtin**
 	1. Do update phone
 	1. Add procedure to fit with update phone
 	1. Update some view interface's name
+
+1. **[10/11/2020 14:56] Pham Thanh Long - @redore1234**
+	1. Change cbManager --> chkManager in UI
+	1. Change name value of button of Employee in UI

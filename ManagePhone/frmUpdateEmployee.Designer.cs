@@ -31,19 +31,19 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtEmployeePhone = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.cbManager = new System.Windows.Forms.CheckBox();
+            this.chkbManager = new System.Windows.Forms.CheckBox();
+            this.txtEmployeePhone = new System.Windows.Forms.MaskedTextBox();
+            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
+            this.txtEmployeeAddress = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdateEmployee = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpDOB = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label17, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.cbManager, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.chkbManager, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.txtEmployeePhone, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.dtpDOB, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.txtEmployeeAddress, 1, 5);
@@ -158,28 +158,6 @@
             this.txtUsername.Size = new System.Drawing.Size(431, 26);
             this.txtUsername.TabIndex = 17;
             // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 210);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Address:";
-            // 
-            // txtEmployeeAddress
-            // 
-            this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmployeeAddress.Location = new System.Drawing.Point(184, 207);
-            this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
-            this.txtEmployeeAddress.Size = new System.Drawing.Size(431, 26);
-            this.txtEmployeeAddress.TabIndex = 5;
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -202,6 +180,18 @@
             this.txtEmployeeName.Size = new System.Drawing.Size(431, 26);
             this.txtEmployeeName.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(2, 210);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Address:";
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,17 +204,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Phone:";
             // 
-            // txtEmployeePhone
+            // label4
             // 
-            this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtEmployeePhone.Location = new System.Drawing.Point(184, 247);
-            this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(2);
-            this.txtEmployeePhone.Mask = "(9999) 000-000";
-            this.txtEmployeePhone.Name = "txtEmployeePhone";
-            this.txtEmployeePhone.Size = new System.Drawing.Size(431, 26);
-            this.txtEmployeePhone.TabIndex = 6;
-            this.txtEmployeePhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(2, 170);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 19);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Date of birth";
             // 
             // label17
             // 
@@ -238,17 +228,50 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Manager:";
             // 
-            // cbManager
+            // chkbManager
             // 
-            this.cbManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbManager.AutoSize = true;
-            this.cbManager.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbManager.Location = new System.Drawing.Point(184, 295);
-            this.cbManager.Margin = new System.Windows.Forms.Padding(2);
-            this.cbManager.Name = "cbManager";
-            this.cbManager.Size = new System.Drawing.Size(431, 14);
-            this.cbManager.TabIndex = 7;
-            this.cbManager.UseVisualStyleBackColor = true;
+            this.chkbManager.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkbManager.AutoSize = true;
+            this.chkbManager.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkbManager.Location = new System.Drawing.Point(184, 295);
+            this.chkbManager.Margin = new System.Windows.Forms.Padding(2);
+            this.chkbManager.Name = "chkbManager";
+            this.chkbManager.Size = new System.Drawing.Size(431, 14);
+            this.chkbManager.TabIndex = 7;
+            this.chkbManager.UseVisualStyleBackColor = true;
+            // 
+            // txtEmployeePhone
+            // 
+            this.txtEmployeePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeePhone.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtEmployeePhone.Location = new System.Drawing.Point(184, 247);
+            this.txtEmployeePhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmployeePhone.Mask = "(9999) 000-000";
+            this.txtEmployeePhone.Name = "txtEmployeePhone";
+            this.txtEmployeePhone.Size = new System.Drawing.Size(431, 26);
+            this.txtEmployeePhone.TabIndex = 6;
+            this.txtEmployeePhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // dtpDOB
+            // 
+            this.dtpDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDOB.Font = new System.Drawing.Font("Arial", 12F);
+            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDOB.Location = new System.Drawing.Point(184, 167);
+            this.dtpDOB.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDOB.Name = "dtpDOB";
+            this.dtpDOB.Size = new System.Drawing.Size(431, 26);
+            this.dtpDOB.TabIndex = 26;
+            // 
+            // txtEmployeeAddress
+            // 
+            this.txtEmployeeAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmployeeAddress.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmployeeAddress.Location = new System.Drawing.Point(184, 207);
+            this.txtEmployeeAddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmployeeAddress.Name = "txtEmployeeAddress";
+            this.txtEmployeeAddress.Size = new System.Drawing.Size(431, 26);
+            this.txtEmployeeAddress.TabIndex = 5;
             // 
             // panel4
             // 
@@ -285,29 +308,6 @@
             this.btnUpdateEmployee.Text = "UPDATE";
             this.btnUpdateEmployee.UseVisualStyleBackColor = true;
             this.btnUpdateEmployee.Click += new System.EventHandler(this.btnUpdateEmployee_Click);
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(2, 170);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 19);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Date of birth";
-            // 
-            // dtpDOB
-            // 
-            this.dtpDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDOB.Font = new System.Drawing.Font("Arial", 12F);
-            this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDOB.Location = new System.Drawing.Point(184, 167);
-            this.dtpDOB.Margin = new System.Windows.Forms.Padding(2);
-            this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(431, 26);
-            this.dtpDOB.TabIndex = 26;
             // 
             // frmUpdateEmployee
             // 
@@ -352,7 +352,7 @@
         private System.Windows.Forms.TextBox txtEmployeeAddress;
         private System.Windows.Forms.TextBox txtEmployeeName;
         private System.Windows.Forms.MaskedTextBox txtEmployeePhone;
-        private System.Windows.Forms.CheckBox cbManager;
+        private System.Windows.Forms.CheckBox chkbManager;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dtpDOB;
     }
