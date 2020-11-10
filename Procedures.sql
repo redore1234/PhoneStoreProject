@@ -322,7 +322,7 @@ GO
 
 -- TBLORDERDETAIL --
 -- Add order detail
-CREATE PROCEDURE spAddOrderDeatil(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
+CREATE PROCEDURE spAddOrderDetail(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
 	BEGIN
 		INSERT INTO tblOrderDetail(orderID, productID, quantity, itemPrice)
