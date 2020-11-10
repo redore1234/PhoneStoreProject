@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ManagePhone.Presenters
 {
-    public class AddOrderPresenter : Presenter<IAddOrder>
+    public class AddOrderPresenter : Presenter<IAddOrderView>
     {
-        public AddOrderPresenter(IAddOrder view) : base(view)
+        public AddOrderPresenter(IAddOrderView view) : base(view)
         {
             LoadProduct();
         }

@@ -149,7 +149,7 @@ namespace ActionService
 
         public bool UpdateProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.UpdateProduct(Product);
         }
     }
 }

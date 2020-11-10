@@ -133,3 +133,8 @@
 1. **[10/11/2020 13:30] Pham Thanh Long - @redore1234**
  	1. Edit frmManager
 	1. Add new IManagerView, ManagerPresenter
+
+1. **[10/11/2020 13:49] Dam Dong Tin - @dtin**
+	1. Do update phone
+	1. Add procedure to fit with update phone
+	1. Update some view interface's name

@@ -1,3 +1,4 @@
+
 USE PhoneStore
 GO
 
@@ -183,6 +184,17 @@ AS
 		VALUES (@ProductName, @Brand, @Description, @LaunchDate, @Price, @Image, @Quantity, 1)
 	END
 GO
+
+-- Update A Product --
+CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
+ @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
+ AS
+	BEGIN
+		UPDATE dbo.tblProducts
+		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
+		WHERE productID=@ProductID
+	END
+ GO
 
 --Get List Products--
 CREATE PROC  spGetListProducts 

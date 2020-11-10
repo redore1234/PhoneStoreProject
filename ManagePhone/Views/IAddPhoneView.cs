@@ -2,7 +2,7 @@
 
 namespace ManagePhone.Views
 {
-    public interface IAddPhone : IView
+    public interface IAddPhoneView : IView
     {
         string PhoneName { get; }
         string Brand { get; }

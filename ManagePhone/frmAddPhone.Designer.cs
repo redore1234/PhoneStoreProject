@@ -74,6 +74,11 @@
             this.cbPhoneBrand.Font = new System.Drawing.Font("Arial", 12F);
             this.cbPhoneBrand.FormattingEnabled = true;
             this.cbPhoneBrand.Items.AddRange(new object[] {
+            "Apple",
+            "Oppo",
+            "Vivo",
+            "Oneplus",
+            "Realme",
             "Samsung",
             "Xiaomi"});
             this.cbPhoneBrand.Location = new System.Drawing.Point(432, 62);
