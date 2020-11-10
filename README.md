@@ -157,3 +157,6 @@
 1. **[10/11/2020 21:29] Dam Dong Tin - @dtin**
 	1. Do show image of a product
 	1. Fix bug project not working
+
+1. **[10/11/2020 21:39] Dam Dong Tin - @dtin**
+	1. Change SizeMode of image in Product to Zoom mode
