@@ -48,8 +48,8 @@ namespace ManagePhone {
         }
         
         public bool IsManager { 
-            get { return cbManager.Checked; } 
-            set { cbManager.Checked = value; } 
+            get { return chkbManager.Checked; } 
+            set { chkbManager.Checked = value; } 
         }
 
         public DateTime DOB
