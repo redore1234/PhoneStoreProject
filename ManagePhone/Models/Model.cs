@@ -161,21 +161,11 @@ namespace ManagePhone.Models
             List<ProductModel> ProductModelList = new List<ProductModel>();
             foreach (var item in TblProductNameList)
             {
-<<<<<<< HEAD
-                var TblProductNameList = service.SearchProducts(ProductName);
-                List<ProductModel> ProductModelList = new List<ProductModel>();
-                foreach (var item in TblProductNameList)
-                {
-                    ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
-                }
-                return ProductModelList;
-            }
-=======
                 ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
             }
             return ProductModelList;
         }
->>>>>>> fca074324f701bbffcb2b4abfd051deb3602404a
+        
 
         public List<ProductModel> LoadProductList()
         {
