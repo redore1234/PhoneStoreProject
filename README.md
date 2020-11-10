@@ -129,3 +129,7 @@
  	1. frmAddOrder: Do functions: Load products, Add to cart, Check Customer, Search Product
 	1. Add methods to Check customer in Model, Service, TblCustomerDAO and their Interfaces
 	1. Delete BrandModel
+
+1. **[10/11/2020 13:30] Pham Thanh Long - @redore1234**
+ 	1. Edit frmManager
+	1. Add new IManagerView, ManagerPresenter

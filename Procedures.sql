@@ -210,6 +210,17 @@ GO
 EXEC dbo.spSearchProducts a
 GO 
 
+-- Update A Product --
+CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
+ @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
+ AS
+	BEGIN
+		UPDATE dbo.tblProducts
+		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
+		WHERE productID=@ProductID
+	END
+ GO
+
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)
 AS 
