@@ -153,3 +153,6 @@
  	1. frmAddOrder: Do functions: Checkout, edit state of some control
 	1. Procedures.sql: add procedures for table tblOrders and tblOrderDetails use for checkout function
 	1. Delete Customer's SpentMoney attribute 
+
+1. **[10/11/2020 20:01] Pham Thanh Long - @redore1234**
+	1. Delete spentMoney attribute in Procedure.sql

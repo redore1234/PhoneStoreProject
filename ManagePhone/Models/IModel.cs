@@ -39,7 +39,7 @@ namespace ManagePhone.Models
             public List<ProductModel> SearchProductsByNameOrBrand(string ProductName, string Brand);
             public List<ProductModel> LoadProductList();
             public ProductModel GetProduct(int productID);
-            public CustomerModel SearchCustomerByPhone(string Phone);
+            //public CustomerModel SearchCustomerByPhone(string Phone);
             public bool UpdateProduct(ProductModel Product);
 
         #endregion

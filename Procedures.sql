@@ -195,7 +195,7 @@ CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VA
 		WHERE productID=@ProductID
 	END
  GO
-
+ 
 --Get List Products--
 CREATE PROC  spGetListProducts 
 AS 
@@ -230,17 +230,6 @@ GO
 
 EXEC dbo.spSearchProducts a
 GO 
-
--- Update A Product --
-CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
- @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
- AS
-	BEGIN
-		UPDATE dbo.tblProducts
-		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
-		WHERE productID=@ProductID
-	END
- GO
 
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)
@@ -300,6 +289,7 @@ AS
 GO
 
 EXEC spAddOrder 1, 1, 1000
+GO
 
 -- Get Lastest Order Using CustomerID
 CREATE PROCEDURE spGetLastestOrder(@CustomerID INT)
@@ -313,6 +303,7 @@ AS
 GO
 
 EXEC spGetLastestOrder 2
+GO 
 
 -- TBLORDERDETAIL --
 -- Add order detail
