@@ -142,3 +142,9 @@
 1. **[10/11/2020 14:56] Pham Thanh Long - @redore1234**
 	1. Change cbManager --> chkManager in UI
 	1. Change name value of button of Employee in UI
+
+1. **[10/11/2020 15:35] Dam Dong Tin - @dtin**
+	1. Do search phone
+	1. Create new procedure to fit with search phone
+	1. Modified some other search procedure
+	1. Fix crash when not have any customer in list
