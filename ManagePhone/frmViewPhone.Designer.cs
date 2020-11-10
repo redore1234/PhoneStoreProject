@@ -37,6 +37,7 @@
             this.btnCancelPhone = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnShowImage = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPhone)).BeginInit();
@@ -44,17 +45,19 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel2.Controls.Add(this.btnUpdatePhone, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnDeletePhone, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(312, 140);
+            this.tableLayoutPanel2.Controls.Add(this.btnShowImage, 2, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(188, 140);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(194, 45);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(408, 45);
             this.tableLayoutPanel2.TabIndex = 20;
             // 
             // btnUpdatePhone
@@ -64,7 +67,7 @@
             this.btnUpdatePhone.Location = new System.Drawing.Point(2, 10);
             this.btnUpdatePhone.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdatePhone.Name = "btnUpdatePhone";
-            this.btnUpdatePhone.Size = new System.Drawing.Size(93, 24);
+            this.btnUpdatePhone.Size = new System.Drawing.Size(132, 24);
             this.btnUpdatePhone.TabIndex = 4;
             this.btnUpdatePhone.Text = "Update";
             this.btnUpdatePhone.UseVisualStyleBackColor = true;
@@ -74,10 +77,10 @@
             // 
             this.btnDeletePhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeletePhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletePhone.Location = new System.Drawing.Point(99, 10);
+            this.btnDeletePhone.Location = new System.Drawing.Point(138, 10);
             this.btnDeletePhone.Margin = new System.Windows.Forms.Padding(2);
             this.btnDeletePhone.Name = "btnDeletePhone";
-            this.btnDeletePhone.Size = new System.Drawing.Size(93, 24);
+            this.btnDeletePhone.Size = new System.Drawing.Size(132, 24);
             this.btnDeletePhone.TabIndex = 5;
             this.btnDeletePhone.Text = "Delete";
             this.btnDeletePhone.UseVisualStyleBackColor = true;
@@ -169,7 +172,7 @@
             // 
             this.btnCancelPhone.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancelPhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelPhone.Location = new System.Drawing.Point(651, -1);
+            this.btnCancelPhone.Location = new System.Drawing.Point(641, 11);
             this.btnCancelPhone.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelPhone.Name = "btnCancelPhone";
             this.btnCancelPhone.Size = new System.Drawing.Size(108, 32);
@@ -190,6 +193,19 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // btnShowImage
+            // 
+            this.btnShowImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnShowImage.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShowImage.Location = new System.Drawing.Point(274, 10);
+            this.btnShowImage.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShowImage.Name = "btnShowImage";
+            this.btnShowImage.Size = new System.Drawing.Size(132, 24);
+            this.btnShowImage.TabIndex = 6;
+            this.btnShowImage.Text = "Show Image";
+            this.btnShowImage.UseVisualStyleBackColor = true;
+            this.btnShowImage.Click += new System.EventHandler(this.btnShowImage_Click);
+            // 
             // frmViewPhone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -207,6 +223,7 @@
             this.Name = "frmViewPhone";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Phone";
+            this.Load += new System.EventHandler(this.frmViewPhone_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -228,5 +245,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.Button btnShowImage;
     }
 }
