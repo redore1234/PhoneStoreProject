@@ -138,3 +138,7 @@
 	1. Do update phone
 	1. Add procedure to fit with update phone
 	1. Update some view interface's name
+
+1. **[10/11/2020 14:56] Pham Thanh Long - @redore1234**
+	1. Change cbManager --> chkManager in UI
+	1. Change name value of button of Employee in UI
