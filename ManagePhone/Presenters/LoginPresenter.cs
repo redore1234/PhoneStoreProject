@@ -39,7 +39,7 @@ namespace ManagePhone.Presenters
                         frmManager.ShowDialog();
                         break;
                     case "Employee":
-                        frmAddOrder frmAddOrder = new frmAddOrder();
+                        frmAddOrder frmAddOrder = new frmAddOrder(EmpID);
                         frmAddOrder.ShowDialog();
                         break;
                 }

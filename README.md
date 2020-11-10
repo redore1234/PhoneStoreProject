@@ -129,3 +129,8 @@
  	1. frmAddOrder: Do functions: Load products, Add to cart, Check Customer, Search Product
 	1. Add methods to Check customer in Model, Service, TblCustomerDAO and their Interfaces
 	1. Delete BrandModel
+
+1. **[10/11/2020 17:14] Le Bao Long - @longlb88**
+ 	1. frmAddOrder: Do functions: Checkout, edit state of some control
+	1. Procedures.sql: add procedures for table tblOrders and tblOrderDetails use for checkout function
+	1. Delete Customer's SpentMoney attribute 

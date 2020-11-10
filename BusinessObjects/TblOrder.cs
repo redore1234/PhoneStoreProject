@@ -13,6 +13,7 @@ namespace BusinessObjects
         public DateTime OrderDate { get; set; }
         public string EmployeeID { get; set; }
         public long TotalPrice { get; set; }
+        public int StatusID { get; set; }
 
         // ** Enterprise Design Pattern: Foreign Key Mapping. TblCustomer, TblEmployee are the parents
         public TblCustomer TblCustomer { get; set; }

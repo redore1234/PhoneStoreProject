@@ -21,5 +21,8 @@ namespace DataObjects
         //Add Order
         bool AddOrder(TblOrder Order);
 
+        //Get lastest insert Order using customer id
+        TblOrder GetLastestOrder(int CustomerID);
+
     }
 }

@@ -13,6 +13,7 @@ namespace BusinessObjects
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public long ItemPrice { get; set; }
+        public int StatusID { get; set; }
 
         // ** Enterprise Design Pattern: Foreign Key Mapping. TblCustomer, TblEmployee are the parents
         public TblOrder TblOrder { get; set; }

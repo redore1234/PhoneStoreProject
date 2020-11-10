@@ -78,5 +78,12 @@ namespace DataObjects.DAO
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateQuantity(int ProductID, int NewQuantity)
+        {
+            string StoreProc = "spUpdateQuantity";
+            object[] parms = { "@ProductID", ProductID, "@Quantity", NewQuantity };
+            db.Update(StoreProc, parms);
+        }
     }
 }

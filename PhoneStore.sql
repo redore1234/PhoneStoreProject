@@ -27,8 +27,7 @@ CREATE TABLE tblCustomer(
     name VARCHAR(50) NOT NULL,
     DOB DATE NOT NULL,
     address NVARCHAR(100),
-    phone VARCHAR(10),
-    spentMoney BIGINT DEFAULT 0 NOT NULL, 
+    phone VARCHAR(10)
 )
 
 CREATE TABLE tblProducts(
@@ -49,6 +48,7 @@ CREATE TABLE tblOrders(
     orderDate DATETIME DEFAULT GETDATE() NOT NULL,
     employeeID VARCHAR(30) FOREIGN KEY REFERENCES tblEmployee(employeeID),
     totalPrice BIGINT NOT NULL,
+	statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 CREATE TABLE tblOrderDetail(
@@ -57,6 +57,7 @@ CREATE TABLE tblOrderDetail(
     productID INT FOREIGN KEY REFERENCES tblProducts(productID),
     quantity INT DEFAULT 1 NOT NULL,
     itemPrice BIGINT NOT NULL,
+	statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
 DROP TABLE tblEmployee

@@ -150,7 +150,7 @@
     <Compile Include="Models\Models\CartItemModel.cs" />
     <Compile Include="Models\Models\CustomerModel.cs" />
     <Compile Include="Models\Models\EmployeeModel.cs" />
-    <Compile Include="Models\Models\OrdelModel.cs" />
+    <Compile Include="Models\Models\OrderModel.cs" />
     <Compile Include="Models\Models\OrderDetailModel.cs" />
     <Compile Include="Models\Models\ProductModel.cs" />
     <Compile Include="Models\Models\RoleModel.cs" />

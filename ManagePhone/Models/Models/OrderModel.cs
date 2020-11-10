@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ManagePhone.Models.Models
 {
 
-    public class OrdelModel
+    public class OrderModel
     {
         public string OrderID { get; set; }
         public int CustomerID { get; set; }

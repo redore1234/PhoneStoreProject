@@ -21,8 +21,7 @@ namespace DataObjects.DAO
             Name = reader["name"].ToString(),
             DOB = DateTime.Parse(reader["DOB"].ToString()),
             Address = reader["address"].ToString(),
-            Phone = reader["phone"].ToString(),
-            SpentMoney = long.Parse(reader["spentMoney"].ToString()),
+            Phone = reader["phone"].ToString()
         };
 
         public bool AddCustomer(TblCustomer Customer)

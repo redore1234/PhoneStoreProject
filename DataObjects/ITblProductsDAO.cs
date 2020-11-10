@@ -26,5 +26,6 @@ namespace DataObjects
 
         //Search by name for all products
         List<TblProducts> SearchProducts(string ProductName);
+        void UpdateQuantity(int productID, int newQuantity);
     }
 }

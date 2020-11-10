@@ -168,9 +168,9 @@ AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer
-		WHERE phone LIKE '%' + @Phone + '%'
+		WHERE phone = @Phone
 	END 
-GO 
+GO
 
 --TBLPRODUCTS 
 
@@ -236,6 +236,15 @@ GO
 EXEC dbo.spGetProduct @ProductID = 5 -- int
 GO
 
+--Update Product Quantity
+CREATE PROC spUpdateQuantity(@ProductID INT, @Quantity INT)
+AS
+	BEGIN
+		UPDATE tblProducts
+		SET quantity = @Quantity
+		WHERE productID = @ProductID
+	END
+GO
 
 -- TBLROLE --
 -- Get RoleName By RoleID
@@ -245,5 +254,50 @@ AS
 		SELECT roleName
 		FROM tblRole 
 		WHERE roleID=@RoleID
+	END
+GO
+
+-- TBLORDERS -- 
+-- Create Order
+CREATE PROCEDURE spAddOrder(@CustomerID INT, @EmployeeID varchar(30), @TotalPrice BIGINT)
+AS
+	BEGIN	
+		INSERT INTO tblOrders(customerID, employeeID, totalPrice)
+		VALUES(@CustomerID,@EmployeeID,@TotalPrice)
+	END
+GO
+
+EXEC spAddOrder 1, 1, 1000
+
+-- Get Lastest Order Using CustomerID
+CREATE PROCEDURE spGetLastestOrder(@CustomerID INT)
+AS
+	BEGIN
+		SELECT TOP(1) orderID, customerID, orderDate, employeeID, totalPrice, statusID
+		FROM tblOrders
+		WHERE customerID = @CustomerID
+		ORDER BY orderDate DESC
+	END
+GO
+
+EXEC spGetLastestOrder 2
+
+-- TBLORDERDETAIL --
+-- Add order detail
+CREATE PROCEDURE spAddOrderDeatil(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
+AS
+	BEGIN
+		INSERT INTO tblOrderDetail(orderID, productID, quantity, itemPrice)
+		VALUES(@OrderID,@ProductID,@Quantity,@Price)
+	END
+GO
+
+--Delete order details 
+CREATE PROCEDURE spDeleteOrderDetail(@OrderID varchar(100))
+AS
+	BEGIN
+		UPDATE tblOrderDetail
+		SET	statusID = 2
+		WHERE orderID = @OrderID
 	END
 GO

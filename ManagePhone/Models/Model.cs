@@ -21,6 +21,8 @@ namespace ManagePhone.Models
             Mapper.CreateMap<RoleModel, TblRole>();
             Mapper.CreateMap<TblProducts, ProductModel>();
             Mapper.CreateMap<ProductModel, TblProducts>();
+            Mapper.CreateMap<TblOrder, OrderModel>();
+            Mapper.CreateMap<OrderModel, TblOrder>();
         }
 
         #region Role
@@ -178,6 +180,38 @@ namespace ManagePhone.Models
             return ProductModelList;
         }
 
+        public ProductModel GetProduct(int ProductID)
+        {
+            var Product = service.GetProduct(ProductID);
+            return Mapper.Map<TblProducts, ProductModel>(Product);
+        }
+
+        public void UpdateProductQuantity(int ProductID, int NewQuantity)
+        {
+            service.UpdateProductQuantity(ProductID, NewQuantity);
+        }
+
         #endregion Products
+
+        #region Order
+        public bool AddOrder(OrderModel Model)
+        {
+            var Order = Mapper.Map<OrderModel, TblOrder>(Model);
+            return service.AddOrder(Order);
+        }
+
+        public OrderModel GetLastestOrder(int CustomerID)
+        {
+            var Order = service.GetLastestOrder(CustomerID);
+            return Mapper.Map<TblOrder, OrderModel>(Order);
+        }
+        #endregion
+
+        #region OrderDetail
+        public bool AddOrderDetail(string orderID, int productID, int quantity, long price)
+        {
+            return service.AddItemToOrder(orderID, productID, quantity, price);
+        }        
+        #endregion
     }
 }

@@ -53,6 +53,8 @@ namespace ActionService
 
             List<TblProducts> SearchProducts(string ProductName);
 
+            void UpdateProductQuantity(int productID, int newQuantity);
+
         #endregion
 
         #region Order Repository
@@ -64,12 +66,13 @@ namespace ActionService
             bool DeleteOrder(string OrderID);
 
             bool AddOrder(TblOrder Order);
+            TblOrder GetLastestOrder(int customerID);
 
         #endregion
 
         #region OrderDetail Repository
 
-            bool AddItemsToOrder(int OrderID, List<TblOrderDetail> ItemsList);
+            bool AddItemToOrder(string OrderID, int ProductID, int Quantity, long Price);
 
             List<TblOrderDetail> GetItemsByOrderID(int OrderID);
 

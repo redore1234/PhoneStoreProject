@@ -13,6 +13,7 @@ namespace ManagePhone.Views
         string ProductName { get; }
         IList<ProductModel> ListProduct { set; }
         IList<CartItemModel> Cart { get; set; }
-        CustomerModel Customer { get; set; }
+        int CustomerID { get; set; }
+        long TotalPrice { get; set; }
     }
 }

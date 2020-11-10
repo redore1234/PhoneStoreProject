@@ -99,7 +99,7 @@ namespace ManagePhone {
 
         private void pbAddOrder_Click(object sender, EventArgs e)
         {
-            frmAddOrder addOrder = new frmAddOrder();
+            frmAddOrder addOrder = new frmAddOrder(CurEmployeeModel.EmployeeID);
             this.Hide();
             addOrder.ShowDialog();
             this.Show();

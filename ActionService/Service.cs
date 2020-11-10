@@ -16,6 +16,8 @@ namespace ActionService
         static readonly ITblCustomerDAO tblCustomerDAO = new TblCustomerDAO();
         static readonly ITblRoleDAO tblRoleDAO = new TblRoleDAO();
         static readonly ITblProductsDAO tblProductsDAO = new TblProductsDAO();
+        static readonly ITblOrderDAO tblOrderDAO = new TblOrderDAO();
+        static readonly ITblOrderDetailDAO tblOrderDetailDAO = new TblOrderDetailDAO();
 
         public bool AddCustomer(TblCustomer Customer)
         {
@@ -27,14 +29,14 @@ namespace ActionService
             return tblEmployeeDAO.AddEmployee(Employee);
         }
 
-        public bool AddItemsToOrder(int OrderID, List<TblOrderDetail> ItemsList)
+        public bool AddItemToOrder(string OrderID, int ProductID, int Quantity, long Price)
         {
-            throw new NotImplementedException();
+            return tblOrderDetailDAO.AddItemsToOrder(OrderID, ProductID, Quantity, Price);
         }
 
         public bool AddOrder(TblOrder Order)
         {
-            throw new NotImplementedException();
+            return tblOrderDAO.AddOrder(Order);
         }
 
         public bool AddProduct(TblProducts Product)
@@ -150,6 +152,16 @@ namespace ActionService
         public bool UpdateProduct(TblProducts Product)
         {
             throw new NotImplementedException();
+        }
+
+        public TblOrder GetLastestOrder(int CustomerID)
+        {
+            return tblOrderDAO.GetLastestOrder(CustomerID);
+        }
+
+        public void UpdateProductQuantity(int ProductID, int NewQuantity)
+        {
+            tblProductsDAO.UpdateQuantity(ProductID, NewQuantity);
         }
     }
 }

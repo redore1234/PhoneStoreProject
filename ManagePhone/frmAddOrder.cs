@@ -16,7 +16,8 @@ namespace ManagePhone
 {
     public partial class frmAddOrder : Form, IAddOrder
     {
-        public CustomerModel Customer { get; set; }
+        private string EmpID;
+        public int CustomerID { get; set; }
         public string CustomerPhone => txtCustomerPhone.Text;
 
         public string ProductName => txtProductName.Text;
@@ -41,6 +42,12 @@ namespace ManagePhone
             }
         }
 
+        public long TotalPrice 
+        { 
+            get => long.Parse(lbTotalPrice.Text.Replace("Total (VND): ", ""));
+            set => lbTotalPrice.Text = "Total (VND): " + value.ToString(); 
+        }
+
         //the presenter
         AddOrderPresenter _addOrderPresenter;
         public frmAddOrder()
@@ -49,43 +56,102 @@ namespace ManagePhone
             _addOrderPresenter = new AddOrderPresenter(this);
         }
 
+        public frmAddOrder(string EmpID) : this()
+        {
+            this.EmpID = EmpID;
+        }
+
         private void LoadProduct(List<ProductModel> ListProduct)
         {
+            dgvSearchProduct.DataSource = null;
             dgvSearchProduct.DataSource = ListProduct;
+            dgvSearchProduct.Update();
         }
 
         private void LoadCart(List<CartItemModel> Cart)
         {
             dgvCart.DataSource = null;
-            dgvCart.DataSource = Cart;
+
+            if (Cart != null) 
+            {
+                dgvCart.DataSource = Cart;
+                txtBuyQuantity.DataBindings.Add("Text", Cart, "BuyQuantity");
+
+                txtBuyQuantity.Enabled = true;
+                btnUpdate.Enabled = true;
+                btnDelete.Enabled = true;
+            }
+            else
+            {
+                txtBuyQuantity.Enabled = false;
+                btnUpdate.Enabled = false;
+                btnDelete.Enabled = false;
+            }
+            
             dgvCart.Update();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void ClearBinding()
         {
-            this.Close();
+            txtBuyQuantity.DataBindings.Clear();
+            txtBuyQuantity.Text = "";
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
             _addOrderPresenter.CheckExistCustomer();
-            if (Customer != null)
+            if (CustomerID != 0)
             {
                 pbSuccess.Image = ManagePhone.Properties.Resources.tick;
                 txtProductName.Enabled = true;
+                pbAddToCart.Enabled = true;
+                btnCheckOut.Enabled = true;
+            }
+            else
+            {
+                pbSuccess.Image = null;
+                txtProductName.Enabled = false;
+                pbAddToCart.Enabled = false;
+                btnCheckOut.Enabled = false;
             }
         }
 
         private void pbAddToCart_Click(object sender, EventArgs e)
         {
             ProductModel Phone = (ProductModel) dgvSearchProduct.CurrentRow.DataBoundItem;
-            long TotalPrice = _addOrderPresenter.AddToCart(Phone);
-            lbTotalPrice.Text = "Total: " + TotalPrice.ToString() + " VND";
+            ClearBinding();
+            _addOrderPresenter.AddToCart(Phone);
         }
 
         private void txtProductName_TextChanged(object sender, EventArgs e)
         {
             _addOrderPresenter.SearchProduct();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            CartItemModel SelectedItem = (CartItemModel)dgvCart.CurrentRow.DataBoundItem;
+            int NewQuantity = int.Parse(txtBuyQuantity.Text);
+            ClearBinding();
+            _addOrderPresenter.UpdateBuyQuantity(SelectedItem , NewQuantity);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            CartItemModel SelectedItem = (CartItemModel)dgvCart.CurrentRow.DataBoundItem;
+            ClearBinding();
+            _addOrderPresenter.DeleteFromCart(SelectedItem);
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            ClearBinding();
+            _addOrderPresenter.Checkout(EmpID);
         }
     }
 }

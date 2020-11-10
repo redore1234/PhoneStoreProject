@@ -13,6 +13,5 @@ namespace ManagePhone.Models.Models
         public DateTime DOB { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public long SpentMoney { get; set; }
     }
 }

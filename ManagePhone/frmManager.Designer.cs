@@ -64,14 +64,14 @@
             this.toolTip1.ReshowDelay = 10;
             this.toolTip1.ShowAlways = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.toolTip1.ToolTipTitle = "Phone Information";
+            this.toolTip1.ToolTipTitle = "Information";
             // 
             // btnLogout
             // 
             this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogout.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnLogout.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(618, 11);
+            this.btnLogout.Location = new System.Drawing.Point(621, 9);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(93, 31);
@@ -101,7 +101,7 @@
             this.label3.Location = new System.Drawing.Point(138, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 40);
+            this.label3.Size = new System.Drawing.Size(90, 31);
             this.label3.TabIndex = 16;
             this.label3.Text = "Phone";
             // 
@@ -115,6 +115,7 @@
             this.pbViewPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewPhone.TabIndex = 23;
             this.pbViewPhone.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbViewPhone, "View Phones");
             this.pbViewPhone.Click += new System.EventHandler(this.pbViewPhone_Click);
             // 
             // pbAddPhone
@@ -127,6 +128,7 @@
             this.pbAddPhone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAddPhone.TabIndex = 22;
             this.pbAddPhone.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbAddPhone, "Add Phone");
             this.pbAddPhone.Click += new System.EventHandler(this.pbAddPhone_Click);
             // 
             // panel7
@@ -151,7 +153,7 @@
             this.label1.Location = new System.Drawing.Point(100, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 40);
+            this.label1.Size = new System.Drawing.Size(132, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee";
             // 
@@ -165,6 +167,7 @@
             this.pbViewEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewEmployee.TabIndex = 22;
             this.pbViewEmployee.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbViewEmployee, "View Employees");
             this.pbViewEmployee.Click += new System.EventHandler(this.pbViewEmployee_Click);
             // 
             // pbAddEmployee
@@ -177,6 +180,7 @@
             this.pbAddEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAddEmployee.TabIndex = 21;
             this.pbAddEmployee.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbAddEmployee, "Add Employee");
             this.pbAddEmployee.Click += new System.EventHandler(this.pbAddEmployee_Click);
             // 
             // panel10
@@ -194,6 +198,7 @@
             // 
             // pbAddOrder
             // 
+            this.pbAddOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbAddOrder.Image = global::ManagePhone.Properties.Resources.addordericon;
             this.pbAddOrder.Location = new System.Drawing.Point(39, 110);
             this.pbAddOrder.Name = "pbAddOrder";
@@ -201,6 +206,7 @@
             this.pbAddOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAddOrder.TabIndex = 25;
             this.pbAddOrder.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbAddOrder, "Add Order");
             this.pbAddOrder.Click += new System.EventHandler(this.pbAddOrder_Click);
             // 
             // label4
@@ -210,12 +216,13 @@
             this.label4.Location = new System.Drawing.Point(133, 43);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 40);
+            this.label4.Size = new System.Drawing.Size(83, 31);
             this.label4.TabIndex = 17;
             this.label4.Text = "Order";
             // 
             // pbViewOrder
             // 
+            this.pbViewOrder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbViewOrder.Image = global::ManagePhone.Properties.Resources.vieworder;
             this.pbViewOrder.Location = new System.Drawing.Point(229, 110);
             this.pbViewOrder.Name = "pbViewOrder";
@@ -223,6 +230,7 @@
             this.pbViewOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewOrder.TabIndex = 24;
             this.pbViewOrder.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbViewOrder, "View Orders");
             this.pbViewOrder.Click += new System.EventHandler(this.pbViewOrder_Click);
             // 
             // panel9
@@ -244,7 +252,7 @@
             this.label2.Location = new System.Drawing.Point(98, 43);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 40);
+            this.label2.Size = new System.Drawing.Size(131, 31);
             this.label2.TabIndex = 15;
             this.label2.Text = "Customer";
             // 
@@ -258,6 +266,7 @@
             this.pbViewCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbViewCustomer.TabIndex = 23;
             this.pbViewCustomer.TabStop = false;
+            this.toolTip1.SetToolTip(this.pbViewCustomer, "View Customers");
             this.pbViewCustomer.Click += new System.EventHandler(this.pbViewCustomer_Click);
             // 
             // tableLayoutPanel1
