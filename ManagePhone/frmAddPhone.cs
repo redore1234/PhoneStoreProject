@@ -90,6 +90,7 @@ namespace ManagePhone
         {
             dtLaunchDate.Format = DateTimePickerFormat.Custom;
             dtLaunchDate.CustomFormat = "dd-MM-yyyy";
+            cbPhoneBrand.SelectedIndex = 0;
         }
     }
 }

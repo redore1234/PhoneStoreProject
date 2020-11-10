@@ -35,6 +35,7 @@ namespace ManagePhone.Models
             public bool AddProduct(ProductModel Product);
             public bool DeleteProduct(int ProductID);
             public List<ProductModel> SearchProducts(string ProductName);
+            public List<ProductModel> SearchProductsByNameOrBrand(string ProductName, string Brand);
             public List<ProductModel> LoadProductList();
             public CustomerModel SearchCustomerByPhone(string Phone);
             public bool UpdateProduct(ProductModel Product);

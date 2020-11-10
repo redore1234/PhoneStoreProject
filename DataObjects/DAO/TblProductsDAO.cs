@@ -70,7 +70,18 @@ namespace DataObjects.DAO
         public List<TblProducts> SearchProducts(string ProductName)
         {
             string StoreProc = "spSearchProducts";
-            object[] parms = { "@ProductName", ProductName };
+            object[] parms = { "@ProductName", "%" + ProductName + "%"};
+            return db.Read(StoreProc, Make, parms).ToList();
+        }
+
+        public List<TblProducts> SearchProductsNameOrBrand(string ProductName, string Brand)
+        {
+            string StoreProc = "spSearchProductsByNameOrBrand";
+            object[] parms =
+            {
+                "@ProductName", "%" + ProductName + "%",
+                "@Brand", "%" + Brand + "%"
+            };
             return db.Read(StoreProc, Make, parms).ToList();
         }
 

@@ -66,6 +66,8 @@ namespace ManagePhone {
 
         private void frmUpdatePhone_Load(object sender, EventArgs e)
         {
+            dtLaunchDate.Format = DateTimePickerFormat.Custom;
+            dtLaunchDate.CustomFormat = "dd-MM-yyyy";
             _updatePhonePresenter.Display(Model);
             ImagePath = Model.Image;
         }

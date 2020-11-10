@@ -26,5 +26,8 @@ namespace DataObjects
 
         //Search by name for all products
         List<TblProducts> SearchProducts(string ProductName);
+
+        //Search by name or brand (use in view phone)
+        List<TblProducts> SearchProductsNameOrBrand(string productName, string brand);
     }
 }

@@ -37,7 +37,10 @@ namespace ManagePhone {
         {
             InitializeComponent();
             _viewCustomerPresenter = new ViewCustomerPresenter(this);
-            CustomerID = int.Parse(dgvListCustomer[0, 0].Value.ToString());
+            if(dgvListCustomer.Rows.Count > 0)
+            {
+                CustomerID = int.Parse(dgvListCustomer[0, 0].Value.ToString());
+            }
         } 
 
         private void BindingData(IList<CustomerModel> CustomerList)

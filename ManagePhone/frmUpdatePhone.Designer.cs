@@ -103,8 +103,17 @@
             // cbPhoneBrand
             // 
             this.cbPhoneBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbPhoneBrand.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbPhoneBrand.Font = new System.Drawing.Font("Arial", 12F);
             this.cbPhoneBrand.FormattingEnabled = true;
+            this.cbPhoneBrand.Items.AddRange(new object[] {
+            "Apple",
+            "Oppo",
+            "Vivo",
+            "Oneplus",
+            "Realme",
+            "Samsung",
+            "Xiaomi"});
             this.cbPhoneBrand.Location = new System.Drawing.Point(431, 50);
             this.cbPhoneBrand.Margin = new System.Windows.Forms.Padding(2);
             this.cbPhoneBrand.Name = "cbPhoneBrand";

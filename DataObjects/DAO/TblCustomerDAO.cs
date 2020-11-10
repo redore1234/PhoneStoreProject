@@ -41,7 +41,7 @@ namespace DataObjects.DAO
         public List<TblCustomer> GetListCustomers()
         {
             string StoreProc = "spGetListCustomers";
-            return (List<TblCustomer>)db.Read(StoreProc, Make).ToList();
+            return db.Read(StoreProc, Make).ToList();
         }
 
         public TblCustomer SearchCustomerByPhone(string Phone)
@@ -54,19 +54,25 @@ namespace DataObjects.DAO
         public List<TblCustomer> SearchCustomers(string CustomerName, string Phone)
         {
             string StoreProc = "spSearchCustomers";
-            object[] parms = { "@Name", CustomerName, "@Phone", Phone };
-            return (List<TblCustomer>)db.Read(StoreProc, Make, parms).ToList();
+            object[] parms = 
+            { 
+                "@Name", "%" + CustomerName + "%",
+                "@Phone", "%" + Phone + "%" 
+            };
+            return db.Read(StoreProc, Make, parms).ToList();
         }
 
         public bool UpdateCustomer(TblCustomer Customer)
         {
             string StoreProc = "spUpdateCustomer";
             object[] parms =
-                { "@CustomerID", Customer.CustomerID,
+            { 
+                "@CustomerID", Customer.CustomerID,
                 "@Name", Customer.Name,
                 "@DOB", Customer.DOB,
                 "@Address", Customer.Address,
-                "@Phone", Customer.Phone };
+                "@Phone", Customer.Phone 
+            };
             return db.Update(StoreProc, parms) > 0;
         }
     }

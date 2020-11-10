@@ -18,7 +18,6 @@ namespace ManagePhone
     {
         public CustomerModel Customer { get; set; }
         public string CustomerPhone => txtCustomerPhone.Text;
-
         public string ProductName => txtProductName.Text;
 
         public IList<ProductModel> ListProduct 

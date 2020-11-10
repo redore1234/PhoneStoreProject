@@ -159,7 +159,7 @@ AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer
-		WHERE name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%'
+		WHERE name LIKE @Name AND phone LIKE @Phone
 	END
 GO
 
@@ -215,7 +215,16 @@ AS
 	BEGIN
 		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
-		WHERE productName LIKE '%' + @ProductName + '%' AND statusID=1
+		WHERE productName LIKE @ProductName AND statusID=1
+	END
+GO
+
+CREATE PROC spSearchProductsByNameOrBrand(@ProductName NVARCHAR(50), @Brand VARCHAR(20))
+AS
+	BEGIN
+		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
+		FROM dbo.tblProducts 
+		WHERE (productName LIKE @ProductName AND brand LIKE @Brand) AND statusID=1
 	END
 GO
 

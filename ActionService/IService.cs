@@ -53,6 +53,8 @@ namespace ActionService
 
             List<TblProducts> SearchProducts(string ProductName);
 
+            List<TblProducts> SearchProductsByNameOrBrand(string ProductName, string Brand);
+
         #endregion
 
         #region Order Repository

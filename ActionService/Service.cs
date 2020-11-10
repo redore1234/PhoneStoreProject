@@ -151,5 +151,10 @@ namespace ActionService
         {
             return tblProductsDAO.UpdateProduct(Product);
         }
+
+        public List<TblProducts> SearchProductsByNameOrBrand(string ProductName, string Brand)
+        {
+            return tblProductsDAO.SearchProductsNameOrBrand(ProductName, Brand);
+        }
     }
 }

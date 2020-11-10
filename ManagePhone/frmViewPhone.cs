@@ -9,12 +9,9 @@ namespace ManagePhone
 {
     public partial class frmViewPhone : Form, IPhonesView
     {
-        public string Brand { get; set; }
+        public string Brand => txtBrand.Text.Trim();
 
-        public string Phone
-        {
-            get { return txtSearchPhone.Text.Trim(); }
-        }
+        public string Phone => txtSearchName.Text.Trim();
 
         public IList<ProductModel> ProductList
         {
@@ -60,6 +57,28 @@ namespace ManagePhone
 
             _viewProductPresenter.DeleteProduct(ProductModel);
             _viewProductPresenter.LoadProducts();
+        }
+
+        private void txtBrand_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Brand) || !string.IsNullOrEmpty(Phone))
+            {
+                _viewProductPresenter.SearchProductsByNameOrBrand();
+            } else
+            {
+                _viewProductPresenter.LoadProducts();
+            }
+        }
+
+        private void txtSearchName_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Brand) || !string.IsNullOrEmpty(Phone))
+            {
+                _viewProductPresenter.SearchProductsByNameOrBrand();
+            } else
+            {
+                _viewProductPresenter.LoadProducts();
+            }
         }
     }
 }
