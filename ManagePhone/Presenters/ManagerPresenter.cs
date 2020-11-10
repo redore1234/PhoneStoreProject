@@ -48,9 +48,9 @@ namespace ManagePhone.Presenters
             viewCustomer.ShowDialog();
         }
 
-        public void ClickAddOrder()
+        public void ClickAddOrder(EmployeeModel curEmployeeModel)
         {
-            frmAddOrder addOrder = new frmAddOrder();
+            frmAddOrder addOrder = new frmAddOrder(curEmployeeModel.EmployeeID);
             addOrder.ShowDialog();
         }
 

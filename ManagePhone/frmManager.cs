@@ -86,7 +86,7 @@ namespace ManagePhone {
         private void pbAddOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
-            _managerPresenter.ClickAddOrder();
+            _managerPresenter.ClickAddOrder(CurEmployeeModel);
             this.Show();
         }
     }

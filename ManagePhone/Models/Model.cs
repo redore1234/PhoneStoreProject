@@ -211,6 +211,18 @@ namespace ManagePhone.Models
         #endregion Products
 
         #region Order
+        public List<OrderModel> GetOrdersList()
+        {
+            var TblOrderList = service.GetListOrders();
+            List<OrderModel> OrderModelList = new List<OrderModel>();
+            foreach (var item in TblOrderList)
+            {
+                OrderModelList.Add(Mapper.Map<TblOrder, OrderModel>(item));
+            }
+
+            return OrderModelList;
+        }
+
         public bool AddOrder(OrderModel Model)
         {
             var Order = Mapper.Map<OrderModel, TblOrder>(Model);

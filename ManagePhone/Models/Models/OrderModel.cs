@@ -14,6 +14,5 @@ namespace ManagePhone.Models.Models
         public DateTime OrderDate { get; set; }
         public string EmployeeID { get; set; }
         public long TotalPrice { get; set; }
-        public IList<OrderDetailModel> Order { get; set; }
     }
 }

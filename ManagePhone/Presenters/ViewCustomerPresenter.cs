@@ -32,12 +32,6 @@ namespace ManagePhone.Presenters
         {
             string Name = View.CustomerName;
             string Phone = View.Phone;
-
-            if (Name.Length == 0 && Phone.Length == 0)
-            {
-                LoadCustomers();
-                return;
-            }
             View.CustomerList = Model.SearchCustomer(Name, Phone);
         }
     }

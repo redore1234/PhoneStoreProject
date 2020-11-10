@@ -91,7 +91,7 @@ namespace ActionService
 
         public List<TblOrder> GetListOrders()
         {
-            throw new NotImplementedException();
+            return tblOrderDAO.GetListOrders();
         }
 
         public List<TblProducts> GetListProducts()

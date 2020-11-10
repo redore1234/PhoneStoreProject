@@ -50,7 +50,8 @@ namespace DataObjects.DAO
 
         public List<TblOrder> GetListOrders()
         {
-            throw new NotImplementedException();
+            string StoreProc = "spGetOrderList";
+            return db.Read(StoreProc, Make).ToList();
         }
 
         public TblOrder SearchOrder(string OrderID)
