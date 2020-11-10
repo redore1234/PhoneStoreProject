@@ -159,9 +159,11 @@
     <Compile Include="Presenters\AddOrderPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\AddCustomerPresenter.cs" />
+    <Compile Include="Presenters\ManagerPresenter.cs" />
     <Compile Include="Presenters\Presenter.cs" />
     <Compile Include="Presenters\UpdateCustomerPresenter.cs" />
     <Compile Include="Presenters\UpdateEmployeePresenter.cs" />
+    <Compile Include="Presenters\UpdatePhonePresenter.cs" />
     <Compile Include="Presenters\ViewCustomerPresenter.cs" />
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
     <Compile Include="Presenters\ViewProductPresenter.cs" />
@@ -174,13 +176,14 @@
     </Compile>
     <Compile Include="Views\IAddCustomerView.cs" />
     <Compile Include="Views\IAddEmployeeView.cs" />
-    <Compile Include="Views\IAddOrder.cs" />
-    <Compile Include="Views\IAddPhone.cs" />
+    <Compile Include="Views\IAddOrderView.cs" />
+    <Compile Include="Views\IAddPhoneView.cs" />
     <Compile Include="Views\ICheckoutView.cs" />
     <Compile Include="Views\ICustomersView.cs" />
     <Compile Include="Views\IEmployeesView.cs" />
     <Compile Include="Views\ILoginView.cs" />
-    <Compile Include="Views\IOrderDetail.cs" />
+    <Compile Include="Views\IOrderDetailView.cs" />
+    <Compile Include="Views\IManagerView.cs" />
     <Compile Include="Views\IOrderView.cs" />
     <Compile Include="Views\IPhonesView.cs" />
     <Compile Include="Views\IUpdateCustomerView.cs" />

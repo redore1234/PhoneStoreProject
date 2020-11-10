@@ -5,10 +5,10 @@ using System.Windows.Forms;
 
 namespace ManagePhone
 {
-    public partial class frmAddPhone : Form, IAddPhone
+    public partial class frmAddPhone : Form, IAddPhoneView
     {
         public string PhoneName => txtPhoneName.Text;
-        public string Brand => cbPhoneBrand.SelectedItem.ToString();
+        public string Brand => cbPhoneBrand.Text;
         public DateTime LaunchDate => dtLaunchDate.Value;
         public long Price => long.Parse(txtPrice.Text);
         public int Quantity => int.Parse(numQuantity.Value.ToString());
@@ -90,6 +90,7 @@ namespace ManagePhone
         {
             dtLaunchDate.Format = DateTimePickerFormat.Custom;
             dtLaunchDate.CustomFormat = "dd-MM-yyyy";
+            cbPhoneBrand.SelectedIndex = 0;
         }
     }
 }

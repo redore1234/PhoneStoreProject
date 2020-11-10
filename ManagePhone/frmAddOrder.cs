@@ -14,12 +14,11 @@ using System.Windows.Forms;
 
 namespace ManagePhone
 {
-    public partial class frmAddOrder : Form, IAddOrder
+    public partial class frmAddOrder : Form, IAddOrderView
     {
         private string EmpID;
         public int CustomerID { get; set; }
         public string CustomerPhone => txtCustomerPhone.Text;
-
         public string ProductName => txtProductName.Text;
 
         public IList<ProductModel> ListProduct 

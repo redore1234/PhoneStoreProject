@@ -70,13 +70,36 @@ namespace DataObjects.DAO
         public List<TblProducts> SearchProducts(string ProductName)
         {
             string StoreProc = "spSearchProducts";
-            object[] parms = { "@ProductName", ProductName };
+            object[] parms = { "@ProductName", "%" + ProductName + "%"};
+            return db.Read(StoreProc, Make, parms).ToList();
+        }
+
+        public List<TblProducts> SearchProductsNameOrBrand(string ProductName, string Brand)
+        {
+            string StoreProc = "spSearchProductsByNameOrBrand";
+            object[] parms =
+            {
+                "@ProductName", "%" + ProductName + "%",
+                "@Brand", "%" + Brand + "%"
+            };
             return db.Read(StoreProc, Make, parms).ToList();
         }
 
         public bool UpdateProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spUpdateProduct";
+            object[] parms =
+            {
+                "@ProductID", Product.ProductID,
+                "@ProductName", Product.ProductName,
+                "@Brand", Product.Brand,
+                "@Description", Product.Description,
+                "@LaunchDate", Product.LaunchDate,
+                "@Price", Product.Price,
+                "@Image", Product.Image,
+                "@Quantity", Product.Quantity
+            };
+            return db.Update(StoreProc, parms) > 0;
         }
 
         public void UpdateQuantity(int ProductID, int NewQuantity)

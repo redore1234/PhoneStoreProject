@@ -26,6 +26,11 @@ namespace DataObjects
 
         //Search by name for all products
         List<TblProducts> SearchProducts(string ProductName);
+        
+        //Update quantity of the product
         void UpdateQuantity(int productID, int newQuantity);
+
+        //Search by name or brand (use in view phone)
+        List<TblProducts> SearchProductsNameOrBrand(string productName, string brand);
     }
 }

@@ -13,7 +13,7 @@ namespace ManagePhone
         public string Address => txtEmployeeAddress.Text;
         public DateTime DOB => dtEmployeeDOB.Value;
         public string Phone => txtEmployeePhone.Text;
-        public bool IsManager => cbManager.Checked;
+        public bool IsManager => chkbManager.Checked;
 
         //The presenter
         private AddEmployeePresenter _addEmployeePresenter;

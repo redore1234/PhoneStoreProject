@@ -69,7 +69,8 @@
             // 
             // dgvListCustomer
             // 
-            this.dgvListCustomer.AllowUserToOrderColumns = true;
+            this.dgvListCustomer.AllowUserToAddRows = false;
+            this.dgvListCustomer.AllowUserToDeleteRows = false;
             this.dgvListCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -91,10 +92,10 @@
             // 
             this.txtSearchCustomerName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearchCustomerName.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchCustomerName.Location = new System.Drawing.Point(150, 10);
+            this.txtSearchCustomerName.Location = new System.Drawing.Point(150, 12);
             this.txtSearchCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearchCustomerName.Name = "txtSearchCustomerName";
-            this.txtSearchCustomerName.Size = new System.Drawing.Size(260, 30);
+            this.txtSearchCustomerName.Size = new System.Drawing.Size(260, 26);
             this.txtSearchCustomerName.TabIndex = 8;
             this.txtSearchCustomerName.TextChanged += new System.EventHandler(this.txtSearchCustomerName_TextChanged);
             // 
@@ -103,10 +104,10 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 1);
+            this.label5.Location = new System.Drawing.Point(2, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 48);
+            this.label5.Size = new System.Drawing.Size(144, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Customer Name:";
             // 
@@ -166,10 +167,10 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 13);
+            this.label1.Location = new System.Drawing.Point(2, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 24);
+            this.label1.Size = new System.Drawing.Size(145, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Phone:";
             // 
@@ -177,10 +178,10 @@
             // 
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(152, 12);
+            this.txtPhone.Location = new System.Drawing.Point(152, 14);
             this.txtPhone.Mask = "(9999) 000-000";
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(257, 26);
+            this.txtPhone.Size = new System.Drawing.Size(257, 22);
             this.txtPhone.TabIndex = 8;
             this.txtPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);

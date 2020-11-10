@@ -30,13 +30,13 @@
             this.btnDeletePhone = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label28 = new System.Windows.Forms.Label();
-            this.txtSearchPhone = new System.Windows.Forms.TextBox();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.txtBrand = new System.Windows.Forms.TextBox();
             this.dgvListPhone = new System.Windows.Forms.DataGridView();
             this.btnCancelPhone = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.txtBrand = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListPhone)).BeginInit();
@@ -89,7 +89,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.68917F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75.31084F));
             this.tableLayoutPanel1.Controls.Add(this.label28, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.txtSearchPhone, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearchName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label27, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtBrand, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(188, 41);
@@ -107,44 +107,61 @@
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(2, 8);
+            this.label28.Location = new System.Drawing.Point(2, 10);
             this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(97, 24);
+            this.label28.Size = new System.Drawing.Size(97, 19);
             this.label28.TabIndex = 7;
             this.label28.Text = "Brand:";
             // 
-            // txtSearchPhone
+            // txtSearchName
             // 
-            this.txtSearchPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchPhone.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtSearchPhone.Location = new System.Drawing.Point(103, 45);
-            this.txtSearchPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearchPhone.Name = "txtSearchPhone";
-            this.txtSearchPhone.Size = new System.Drawing.Size(305, 30);
-            this.txtSearchPhone.TabIndex = 10;
+            this.txtSearchName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchName.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtSearchName.Location = new System.Drawing.Point(103, 47);
+            this.txtSearchName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(305, 26);
+            this.txtSearchName.TabIndex = 10;
+            this.txtSearchName.TextChanged += new System.EventHandler(this.txtSearchName_TextChanged);
             // 
             // label27
             // 
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(2, 48);
+            this.label27.Location = new System.Drawing.Point(2, 51);
             this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(97, 24);
+            this.label27.Size = new System.Drawing.Size(97, 19);
             this.label27.TabIndex = 9;
-            this.label27.Text = "Phone:";
+            this.label27.Text = "Name:";
+            // 
+            // txtBrand
+            // 
+            this.txtBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBrand.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtBrand.Location = new System.Drawing.Point(103, 7);
+            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(305, 26);
+            this.txtBrand.TabIndex = 11;
+            this.txtBrand.TextChanged += new System.EventHandler(this.txtBrand_TextChanged);
             // 
             // dgvListPhone
             // 
+            this.dgvListPhone.AllowUserToAddRows = false;
+            this.dgvListPhone.AllowUserToDeleteRows = false;
             this.dgvListPhone.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvListPhone.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListPhone.Location = new System.Drawing.Point(18, 209);
             this.dgvListPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListPhone.MultiSelect = false;
             this.dgvListPhone.Name = "dgvListPhone";
+            this.dgvListPhone.ReadOnly = true;
             this.dgvListPhone.RowHeadersWidth = 51;
             this.dgvListPhone.RowTemplate.Height = 24;
+            this.dgvListPhone.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListPhone.Size = new System.Drawing.Size(726, 358);
             this.dgvListPhone.TabIndex = 17;
             // 
@@ -173,16 +190,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // txtBrand
-            // 
-            this.txtBrand.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBrand.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtBrand.Location = new System.Drawing.Point(103, 5);
-            this.txtBrand.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBrand.Name = "txtBrand";
-            this.txtBrand.Size = new System.Drawing.Size(305, 30);
-            this.txtBrand.TabIndex = 11;
-            // 
             // frmViewPhone
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -209,7 +216,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSearchPhone;
+        private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridView dgvListPhone;

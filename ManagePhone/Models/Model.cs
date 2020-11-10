@@ -190,6 +190,23 @@ namespace ManagePhone.Models
         {
             service.UpdateProductQuantity(ProductID, NewQuantity);
         }
+        
+        public bool UpdateProduct(ProductModel model)
+        {
+            var Product = Mapper.Map<ProductModel, TblProducts>(model);
+            return service.UpdateProduct(Product);
+        }
+
+        public List<ProductModel> SearchProductsByNameOrBrand(string ProductName, string Brand)
+        {
+            var TblProductNameList = service.SearchProductsByNameOrBrand(ProductName, Brand);
+            List<ProductModel> ProductModelList = new List<ProductModel>();
+            foreach (var item in TblProductNameList)
+            {
+                ProductModelList.Add(Mapper.Map<TblProducts, ProductModel>(item));
+            }
+            return ProductModelList;
+        }
 
         #endregion Products
 

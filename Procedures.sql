@@ -1,3 +1,4 @@
+
 USE PhoneStore
 GO
 
@@ -158,7 +159,7 @@ AS
 	BEGIN
 		SELECT customerID, name, DOB, address, phone, spentMoney
 		FROM dbo.tblCustomer
-		WHERE name LIKE '%' + @Name + '%' OR phone LIKE '%' + @Phone + '%'
+		WHERE name LIKE @Name AND phone LIKE @Phone
 	END
 GO
 
@@ -184,6 +185,17 @@ AS
 	END
 GO
 
+-- Update A Product --
+CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
+ @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
+ AS
+	BEGIN
+		UPDATE dbo.tblProducts
+		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
+		WHERE productID=@ProductID
+	END
+ GO
+
 --Get List Products--
 CREATE PROC  spGetListProducts 
 AS 
@@ -203,12 +215,32 @@ AS
 	BEGIN
 		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
 		FROM dbo.tblProducts 
-		WHERE productName LIKE '%' + @ProductName + '%' AND statusID=1
+		WHERE productName LIKE @ProductName AND statusID=1
+	END
+GO
+
+CREATE PROC spSearchProductsByNameOrBrand(@ProductName NVARCHAR(50), @Brand VARCHAR(20))
+AS
+	BEGIN
+		SELECT productID, productName, brand, description, launchDate, price, image, quantity, statusID
+		FROM dbo.tblProducts 
+		WHERE (productName LIKE @ProductName AND brand LIKE @Brand) AND statusID=1
 	END
 GO
 
 EXEC dbo.spSearchProducts a
 GO 
+
+-- Update A Product --
+CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
+ @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
+ AS
+	BEGIN
+		UPDATE dbo.tblProducts
+		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
+		WHERE productID=@ProductID
+	END
+ GO
 
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)

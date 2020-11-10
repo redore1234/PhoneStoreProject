@@ -8,10 +8,9 @@ namespace ManagePhone.Views
 {
     public interface IUpdatePhoneView : IView
     {
-        string Name { get; set; }
+        string PhoneName { get; set; }
         string Brand { get; set; }
-        //IList<BrandModel> Brands { set; }
-        string ReleaseYear { get; set; }
+        DateTime LaunchDate { get; set; }
         long Price { get; set; }
         int Quantity { get; set; }
         string Description { get; set; }

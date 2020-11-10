@@ -54,6 +54,8 @@ namespace ActionService
             List<TblProducts> SearchProducts(string ProductName);
 
             void UpdateProductQuantity(int productID, int newQuantity);
+            
+            List<TblProducts> SearchProductsByNameOrBrand(string ProductName, string Brand);
 
         #endregion
 

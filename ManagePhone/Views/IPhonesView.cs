@@ -9,8 +9,8 @@ namespace ManagePhone.Views
 {
     public interface IPhonesView : IView
     {
-        string Brand { get; set; }
-        string Phone { get;}
+        string Brand { get; }
+        string Phone { get; }
         IList<ProductModel> ProductList { set; }
     }
 }

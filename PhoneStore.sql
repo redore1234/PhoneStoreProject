@@ -63,6 +63,5 @@ CREATE TABLE tblOrderDetail(
 DROP TABLE tblEmployee
 DROP TABLE tblRole
 DROP TABLE tblStatus
-DROP TABLE tblRank
 DROP TABLE tblCustomer
 DROP TABLE tblProducts

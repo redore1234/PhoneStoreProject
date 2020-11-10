@@ -32,11 +32,16 @@ namespace ManagePhone.Models
         #endregion
 
         #region Products
+
             public bool AddProduct(ProductModel Product);
             public bool DeleteProduct(int ProductID);
             public List<ProductModel> SearchProducts(string ProductName);
+            public List<ProductModel> SearchProductsByNameOrBrand(string ProductName, string Brand);
             public List<ProductModel> LoadProductList();
             public ProductModel GetProduct(int productID);
+            public CustomerModel SearchCustomerByPhone(string Phone);
+            public bool UpdateProduct(ProductModel Product);
+
         #endregion
 
         #region Order

@@ -151,7 +151,12 @@ namespace ActionService
 
         public bool UpdateProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            return tblProductsDAO.UpdateProduct(Product);
+        }
+
+        public List<TblProducts> SearchProductsByNameOrBrand(string ProductName, string Brand)
+        {
+            return tblProductsDAO.SearchProductsNameOrBrand(ProductName, Brand);
         }
 
         public TblOrder GetLastestOrder(int CustomerID)

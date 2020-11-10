@@ -34,6 +34,13 @@ namespace ManagePhone.Presenters
             }
         }
 
+        public void UpdateProduct(ProductModel Model)
+        {
+            frmUpdatePhone frmUpdatePhone = new frmUpdatePhone(Model);
+            frmUpdatePhone.ShowDialog();
+            LoadProducts();
+        }
+
         public void SearchProduct(string ProductName)
         {
             View.ProductList = Model.SearchProducts(ProductName);
@@ -44,5 +51,11 @@ namespace ManagePhone.Presenters
             View.ProductList = Model.LoadProductList();
         }
 
+        public void SearchProductsByNameOrBrand()
+        {
+            string ProductName = View.Phone;
+            string Brand = View.Brand;
+            View.ProductList = Model.SearchProductsByNameOrBrand(ProductName, Brand);
+        }
     }
 }

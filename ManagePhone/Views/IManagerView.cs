@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ManagePhone.Views
 {
-    public interface IOrderView : IView
+    public interface IManagerView : IView
     {
-        string OrderID { get; set; }
     }
 }
