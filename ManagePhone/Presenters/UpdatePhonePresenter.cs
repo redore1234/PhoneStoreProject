@@ -28,7 +28,7 @@ namespace ManagePhone.Presenters
             View.Description = Product.Description;
         }
 
-        public string UploadPicture()
+        public string UploadPicture(string ImagePath)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Image Files(" + IMAGE_EXTENSIONS + ")|" + IMAGE_EXTENSIONS + "";
@@ -47,6 +47,9 @@ namespace ManagePhone.Presenters
 
                     //Copy image to folder resource in project
                     File.Copy(LocalPath, ProjectPath, true);
+
+                    //Delete old image
+                    File.Delete(ProjectDirectory + ImagePath);
 
                     //Set image
                     View.Image = ProjectPath;

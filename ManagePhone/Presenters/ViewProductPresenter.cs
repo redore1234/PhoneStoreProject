@@ -57,5 +57,11 @@ namespace ManagePhone.Presenters
             string Brand = View.Brand;
             View.ProductList = Model.SearchProductsByNameOrBrand(ProductName, Brand);
         }
+
+        public void ShowImage(string ProductName, string ImagePath)
+        {
+            frmShowImage frmShowImage = new frmShowImage(ProductName, ImagePath);
+            frmShowImage.ShowDialog();
+        }
     }
 }

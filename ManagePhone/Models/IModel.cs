@@ -39,7 +39,6 @@ namespace ManagePhone.Models
             public List<ProductModel> SearchProductsByNameOrBrand(string ProductName, string Brand);
             public List<ProductModel> LoadProductList();
             public ProductModel GetProduct(int productID);
-            //public CustomerModel SearchCustomerByPhone(string Phone);
             public bool UpdateProduct(ProductModel Product);
 
         #endregion
@@ -48,7 +47,7 @@ namespace ManagePhone.Models
             public bool AddOrder(OrderModel order);
             public OrderModel GetLastestOrder(int customerID);
             bool AddOrderDetail(string orderID, int productID, int quantity, long price);
-        void UpdateProductQuantity(int productID, int newQuantity);
+            void UpdateProductQuantity(int productID, int newQuantity);
         #endregion
     }
 }

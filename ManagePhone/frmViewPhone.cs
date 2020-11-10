@@ -80,5 +80,17 @@ namespace ManagePhone
                 _viewProductPresenter.LoadProducts();
             }
         }
+
+        private void btnShowImage_Click(object sender, EventArgs e)
+        {
+            string ImagePath = dgvListPhone.CurrentRow.Cells["Image"].Value.ToString();
+            string ProductName = dgvListPhone.CurrentRow.Cells["ProductName"].Value.ToString();
+            _viewProductPresenter.ShowImage(ProductName, ImagePath);
+        }
+
+        private void frmViewPhone_Load(object sender, EventArgs e)
+        {
+            dgvListPhone.Columns["Image"].Visible = false;
+        }
     }
 }

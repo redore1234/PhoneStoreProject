@@ -78,7 +78,7 @@ namespace ManagePhone {
 
         private void pbImage_Click(object sender, EventArgs e)
         {
-            ImagePath = _updatePhonePresenter.UploadPicture();
+            ImagePath = _updatePhonePresenter.UploadPicture(ImagePath);
         }
 
         private void btnUpdatePhone_Click(object sender, EventArgs e)
