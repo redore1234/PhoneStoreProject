@@ -40,10 +40,13 @@
     <Reference Include="AutoMapper, Version=2.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\packages\AutoMapper.2.1.1\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,6 +56,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="frmAddCustomer.cs">
@@ -157,6 +161,7 @@
     <Compile Include="Presenters\AddEmployeePresenter.cs" />
     <Compile Include="Presenters\AddPhonePresenter.cs" />
     <Compile Include="Presenters\AddOrderPresenter.cs" />
+    <Compile Include="Presenters\CheckoutPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\AddCustomerPresenter.cs" />
     <Compile Include="Presenters\ManagerPresenter.cs" />
@@ -166,6 +171,7 @@
     <Compile Include="Presenters\UpdatePhonePresenter.cs" />
     <Compile Include="Presenters\ViewCustomerPresenter.cs" />
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ViewOrderPresenter.cs" />
     <Compile Include="Presenters\ViewProductPresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -269,7 +275,6 @@
     <None Include="Resources\tick.png" />
     <None Include="Resources\addemployee.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ActionService\ActionService.csproj">
       <Project>{fd10f4f2-8ac3-4e92-a50b-1f77daff156f}</Project>

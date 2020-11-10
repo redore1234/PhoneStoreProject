@@ -163,6 +163,11 @@ AS
 	END
 GO
 
+EXEC spSearchCustomers '%%', '%2345678901%'
+
+SELECT customerID, name, DOB, address, phone
+		FROM dbo.tblCustomer
+		WHERE name LIKE '%%' AND phone LIKE '%2345678901%'
 --Get List Customer By Phone--
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
@@ -313,6 +318,16 @@ AS
 GO
 
 EXEC spGetLastestOrder 2
+
+-- Get order list
+CREATE PROCEDURE spGetOrderList
+AS
+	BEGIN
+		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
+		FROM tblOrders
+		ORDER BY orderDate DESC
+	END
+GO
 
 -- TBLORDERDETAIL --
 -- Add order detail

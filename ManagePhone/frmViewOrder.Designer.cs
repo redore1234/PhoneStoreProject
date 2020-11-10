@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewOrder));
-            this.dgvListBill = new System.Windows.Forms.DataGridView();
+            this.dgvListOrder = new System.Windows.Forms.DataGridView();
             this.txtOrderID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -32,39 +32,39 @@
             this.btnDeleteBill = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOrder)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgvListBill
+            // dgvListOrder
             // 
-            this.dgvListBill.AllowUserToAddRows = false;
-            this.dgvListBill.AllowUserToDeleteRows = false;
-            this.dgvListBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvListOrder.AllowUserToAddRows = false;
+            this.dgvListOrder.AllowUserToDeleteRows = false;
+            this.dgvListOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBill.Location = new System.Drawing.Point(11, 167);
-            this.dgvListBill.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvListBill.MultiSelect = false;
-            this.dgvListBill.Name = "dgvListBill";
-            this.dgvListBill.ReadOnly = true;
-            this.dgvListBill.RowHeadersWidth = 51;
-            this.dgvListBill.RowTemplate.Height = 24;
-            this.dgvListBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListBill.Size = new System.Drawing.Size(738, 399);
-            this.dgvListBill.TabIndex = 31;
+            this.dgvListOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListOrder.Location = new System.Drawing.Point(11, 124);
+            this.dgvListOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListOrder.MultiSelect = false;
+            this.dgvListOrder.Name = "dgvListOrder";
+            this.dgvListOrder.ReadOnly = true;
+            this.dgvListOrder.RowHeadersWidth = 51;
+            this.dgvListOrder.RowTemplate.Height = 24;
+            this.dgvListOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListOrder.Size = new System.Drawing.Size(738, 442);
+            this.dgvListOrder.TabIndex = 31;
             // 
             // txtOrderID
             // 
             this.txtOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOrderID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtOrderID.Location = new System.Drawing.Point(150, 12);
+            this.txtOrderID.Location = new System.Drawing.Point(96, 12);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(260, 26);
+            this.txtOrderID.Size = new System.Drawing.Size(349, 26);
             this.txtOrderID.TabIndex = 8;
             // 
             // label5
@@ -75,7 +75,7 @@
             this.label5.Location = new System.Drawing.Point(2, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 19);
+            this.label5.Size = new System.Drawing.Size(90, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Order ID:";
             // 
@@ -84,16 +84,16 @@
             this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.06557F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.93443F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.02908F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.97092F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtOrderID, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(182, 21);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(159, 11);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(412, 50);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(447, 50);
             this.tableLayoutPanel1.TabIndex = 32;
             // 
             // btnViewDetail
@@ -135,7 +135,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnDeleteBill, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnViewDetail, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(203, 89);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(204, 68);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -166,7 +166,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.dgvListBill);
+            this.Controls.Add(this.dgvListOrder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -174,7 +174,7 @@
             this.Name = "frmViewOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Order";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOrder)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -184,7 +184,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvListBill;
+        private System.Windows.Forms.DataGridView dgvListOrder;
         private System.Windows.Forms.TextBox txtOrderID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

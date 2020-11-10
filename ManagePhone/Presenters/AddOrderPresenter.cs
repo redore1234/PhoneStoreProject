@@ -136,6 +136,13 @@ namespace ManagePhone.Presenters
             List<CartItemModel> Cart = (List<CartItemModel>)View.Cart;
             if (Cart != null)
             {
+                //pop up checkout form
+                DialogResult CheckOutResult = (new frmCheckout(View.TotalPrice)).ShowDialog();
+                if (CheckOutResult == DialogResult.Cancel)
+                {
+                    return;
+                }
+
                 //check valid quantity (buy less than store)
                 bool IsValidQuantity = CheckQuanityOfProducts(Cart);
                 if (!IsValidQuantity)
