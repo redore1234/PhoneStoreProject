@@ -1,5 +1,6 @@
 ﻿using ManagePhone.GUI;
 using ManagePhone.Models.Models;
+using ManagePhone.Presenters;
 using ManagePhone.Views;
 using System;
 using System.Collections.Generic;
@@ -12,36 +13,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ManagePhone {
-    public partial class frmManager : Form{
+    public partial class frmManager : Form, IManagerView{
         public EmployeeModel CurEmployeeModel;
 
+
+        // The presenter 
+        ManagerPresenter _managerPresenter;
+
         public frmManager() {
-            InitializeComponent();  
+            InitializeComponent();
             //Set custom format for DateTimePicker
             /* this.dtEmployeeDOB.Format = DateTimePickerFormat.Custom;
             this.dtPhoneYear.Format = DateTimePickerFormat.Custom;
 
             this.dtEmployeeDOB.CustomFormat = "dd-MM-yyyy";
             this.dtPhoneYear.CustomFormat = "dd-MM-yyyy";*/
+            _managerPresenter = new ManagerPresenter(this);
         }
 
         public frmManager(EmployeeModel emp):this()
         {
             CurEmployeeModel = emp;
-        }
-
-        private void btnCheckOut_Click(object sender, EventArgs e) {
-            frmCheckout checkout = new frmCheckout();
-            this.Hide();
-            checkout.ShowDialog();
-            this.Show();
-        }
-
-        private void btnCheck_Click(object sender, EventArgs e) {
-            frmAddCustomer addCustomer = new frmAddCustomer();
-            this.Hide();
-            addCustomer.ShowDialog();
-            this.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -51,57 +43,50 @@ namespace ManagePhone {
 
         private void pbAddEmployee_Click(object sender, EventArgs e)
         {
-            frmAddEmployee addEmployee = new frmAddEmployee();
             this.Hide();
-            addEmployee.ShowDialog();
+            _managerPresenter.ClickAddEmployee();
             this.Show();
         }
 
         private void pbViewEmployee_Click(object sender, EventArgs e)
         {
-            frmViewEmployee viewEmployee = new frmViewEmployee(CurEmployeeModel);
             this.Hide();
-            viewEmployee.ShowDialog();
+            _managerPresenter.ClickViewEmployee(CurEmployeeModel);
             this.Show();
         }
 
         private void pbAddPhone_Click(object sender, EventArgs e)
         {
-            frmAddPhone addPhone = new frmAddPhone();
             this.Hide();
-            addPhone.ShowDialog();
+            _managerPresenter.ClickAddPhone();
             this.Show();
         }
 
         private void pbViewPhone_Click(object sender, EventArgs e)
         {
-            frmViewPhone viewPhone = new frmViewPhone();
             this.Hide();
-            viewPhone.ShowDialog();
+            _managerPresenter.ClickViewPhone();
             this.Show();
         }
 
         private void pbViewCustomer_Click(object sender, EventArgs e)
         {
-            frmViewCustomer viewCustomer = new frmViewCustomer();
             this.Hide();
-            viewCustomer.ShowDialog();
+            _managerPresenter.ClickViewCustomer();
             this.Show();
         }
 
         private void pbViewOrder_Click(object sender, EventArgs e)
         {
-            frmViewOrder viewOrder = new frmViewOrder();
             this.Hide();
-            viewOrder.ShowDialog();
+            _managerPresenter.ClickViewOrder();
             this.Show();
         }
 
         private void pbAddOrder_Click(object sender, EventArgs e)
         {
-            frmAddOrder addOrder = new frmAddOrder();
             this.Hide();
-            addOrder.ShowDialog();
+            _managerPresenter.ClickAddOrder();
             this.Show();
         }
     }
