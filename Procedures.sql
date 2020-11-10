@@ -145,7 +145,7 @@ GO
 CREATE PROC  spGetListCustomers 
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney
+		SELECT customerID, name, DOB, address, phone
 		FROM dbo.tblCustomer 
 	END 
 GO 
@@ -157,7 +157,7 @@ GO
 CREATE PROC spSearchCustomers(@Name VARCHAR(50), @Phone VARCHAR(10))
 AS
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney
+		SELECT customerID, name, DOB, address, phone
 		FROM dbo.tblCustomer
 		WHERE name LIKE @Name AND phone LIKE @Phone
 	END
@@ -167,7 +167,7 @@ GO
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
 	BEGIN
-		SELECT customerID, name, DOB, address, phone, spentMoney
+		SELECT customerID, name, DOB, address, phone
 		FROM dbo.tblCustomer
 		WHERE phone = @Phone
 	END 
