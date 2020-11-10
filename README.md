@@ -168,3 +168,9 @@
  	1. Edit GUI and implement functions on frmCheckout, load list on frmViewOrder
 	1. Procedures.sql: add spGetOrderList
 
+1. **[10/11/2020 23:19] Le Bao Long - @longlb88**
+ 	1. frmViewOrder: implements functions (Search Orders by ID, Delete Order)
+	1. frmAddOrder, AddOrderPresenter: Fix update quantity bug
+	1. frmCheckout: Fix empty Cash field bug
+	1. Procedures.sql: add spDeleteOrder, spSearchOrder; Edit spGetOrderList
+

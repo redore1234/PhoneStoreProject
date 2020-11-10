@@ -223,6 +223,18 @@ namespace ManagePhone.Models
             return OrderModelList;
         }
 
+        public List<OrderModel> SearchOrder(string orderID)
+        {
+            var TblOrderList = service.SearchOrder(orderID);
+            List<OrderModel> OrderModelList = new List<OrderModel>();
+            foreach (var item in TblOrderList)
+            {
+                OrderModelList.Add(Mapper.Map<TblOrder, OrderModel>(item));
+            }
+
+            return OrderModelList;
+        }
+
         public bool AddOrder(OrderModel Model)
         {
             var Order = Mapper.Map<OrderModel, TblOrder>(Model);
@@ -234,13 +246,23 @@ namespace ManagePhone.Models
             var Order = service.GetLastestOrder(CustomerID);
             return Mapper.Map<TblOrder, OrderModel>(Order);
         }
+
+        public bool DeleteOrder(string OrderID)
+        {
+            return service.DeleteOrder(OrderID);
+        }
         #endregion
 
         #region OrderDetail
         public bool AddOrderDetail(string orderID, int productID, int quantity, long price)
         {
             return service.AddItemToOrder(orderID, productID, quantity, price);
-        }        
+        }
+
+        public bool DeleteOrderDetail(string OrderID)
+        {
+            return service.DeleteOrderDetail(OrderID);
+        }
         #endregion
     }
 }

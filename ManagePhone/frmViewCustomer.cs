@@ -13,7 +13,6 @@ using System.Windows.Forms;
 
 namespace ManagePhone {
     public partial class frmViewCustomer : Form, ICustomersView {
-        public int CustomerID;
         public string CustomerName 
         { 
             get => txtSearchCustomerName.Text;
@@ -37,10 +36,6 @@ namespace ManagePhone {
         {
             InitializeComponent();
             _viewCustomerPresenter = new ViewCustomerPresenter(this);
-            if(dgvListCustomer.Rows.Count > 0)
-            {
-                CustomerID = int.Parse(dgvListCustomer[0, 0].Value.ToString());
-            }
         } 
 
         private void BindingData(IList<CustomerModel> CustomerList)
@@ -58,15 +53,6 @@ namespace ManagePhone {
                 CustomerModel customer = (CustomerModel)dgvListCustomer.CurrentRow.DataBoundItem;
                 _viewCustomerPresenter.UpdateCustomer(customer);
                 _viewCustomerPresenter.LoadCustomers();
-            }
-        }
-
-        private void dgvListCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int row = e.RowIndex;
-            if (row >= 0)
-            {
-                CustomerID = int.Parse(dgvListCustomer[0, row].Value.ToString());
             }
         }
 

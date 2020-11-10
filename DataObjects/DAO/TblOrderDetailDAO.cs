@@ -37,7 +37,7 @@ namespace DataObjects.DAO
             return db.Update(StoreProc, parms) > 0;
         }
 
-        public bool DeleteOrderDetails(int OrderID)
+        public bool DeleteOrderDetails(string OrderID)
         {
             string StoreProc = "spDeleteOrderDetail";
             object[] parms =

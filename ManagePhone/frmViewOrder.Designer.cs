@@ -61,11 +61,12 @@
             // 
             this.txtOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtOrderID.Font = new System.Drawing.Font("Arial", 12F);
-            this.txtOrderID.Location = new System.Drawing.Point(96, 12);
+            this.txtOrderID.Location = new System.Drawing.Point(95, 12);
             this.txtOrderID.Margin = new System.Windows.Forms.Padding(2);
             this.txtOrderID.Name = "txtOrderID";
-            this.txtOrderID.Size = new System.Drawing.Size(349, 26);
+            this.txtOrderID.Size = new System.Drawing.Size(350, 26);
             this.txtOrderID.TabIndex = 8;
+            this.txtOrderID.TextChanged += new System.EventHandler(this.txtOrderID_TextChanged);
             // 
             // label5
             // 
@@ -75,7 +76,7 @@
             this.label5.Location = new System.Drawing.Point(2, 15);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 19);
+            this.label5.Size = new System.Drawing.Size(89, 19);
             this.label5.TabIndex = 7;
             this.label5.Text = "Order ID:";
             // 
@@ -123,6 +124,7 @@
             this.btnDeleteBill.TabIndex = 5;
             this.btnDeleteBill.Text = "Delete";
             this.btnDeleteBill.UseVisualStyleBackColor = true;
+            this.btnDeleteBill.Click += new System.EventHandler(this.btnDeleteBill_Click);
             // 
             // tableLayoutPanel2
             // 

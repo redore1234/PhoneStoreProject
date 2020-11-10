@@ -168,6 +168,7 @@ EXEC spSearchCustomers '%%', '%2345678901%'
 SELECT customerID, name, DOB, address, phone
 		FROM dbo.tblCustomer
 		WHERE name LIKE '%%' AND phone LIKE '%2345678901%'
+GO 
 --Get List Customer By Phone--
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
@@ -316,13 +317,34 @@ AS
 	BEGIN
 		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
 		FROM tblOrders
+		WHERE statusID = 1
 		ORDER BY orderDate DESC
 	END
 GO
 
+--Search order by orderID
+CREATE PROCEDURE spSearchOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
+		FROM tblOrders
+		WHERE orderID LIKE @OrderID AND statusID = 1
+		ORDER BY orderDate DESC
+	END
+GO
+
+CREATE PROC spDeleteOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		UPDATE tblOrders
+		SET statusID = 2
+		WHERE orderID = @OrderID
+	END
+GO
 -- TBLORDERDETAIL --
 -- Add order detail
-CREATE PROCEDURE spAddOrderDetail(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
+
+CREATE PROCEDURE spAddOrderDetail(@OrderID VARCHAR(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
 	BEGIN
 		INSERT INTO tblOrderDetail(orderID, productID, quantity, itemPrice)

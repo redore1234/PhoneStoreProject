@@ -19,7 +19,7 @@ namespace ActionService
 
             bool AddEmployee(TblEmployee Employee);
 
-            bool DeleteEmployee(int EmployeeID);
+            bool DeleteEmployee(string EmployeeID);
 
             bool UpdateEmployeeWithoutPassword(TblEmployee Employee);
 
@@ -63,7 +63,7 @@ namespace ActionService
 
             List<TblOrder> GetListOrders();
 
-            TblOrder SearchOrder(string OrderID);
+            List<TblOrder> SearchOrder(string OrderID);
 
             bool DeleteOrder(string OrderID);
 
@@ -75,6 +75,8 @@ namespace ActionService
         #region OrderDetail Repository
 
             bool AddItemToOrder(string OrderID, int ProductID, int Quantity, long Price);
+
+            bool DeleteOrderDetail(string OrderID);
 
             List<TblOrderDetail> GetItemsByOrderID(int OrderID);
 
