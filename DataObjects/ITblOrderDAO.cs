@@ -13,7 +13,7 @@ namespace DataObjects
         List<TblOrder> GetListOrders();
 
         //Search Order
-        TblOrder SearchOrder(string OrderID);
+        List<TblOrder> SearchOrder(string OrderID);
 
         //Delete Order
         bool DeleteOrder(string OrderID);

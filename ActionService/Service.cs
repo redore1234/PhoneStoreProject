@@ -54,24 +54,14 @@ namespace ActionService
             return tblEmployeeDAO.DeleteEmployee(EmployeeID);
         }
 
-        public bool DeleteEmployee(int EmployeeID)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool DeleteOrder(string OrderID)
         {
-            throw new NotImplementedException();
+            return tblOrderDAO.DeleteOrder(OrderID);
         }
 
         public bool DeleteProduct(int ProductID)
         {
             return tblProductsDAO.DeleteProduct(ProductID);
-        }
-
-        public string GetBrandByBrandID(int BrandID)
-        {
-            throw new NotImplementedException();
         }
 
         public List<TblOrderDetail> GetItemsByOrderID(string OrderID)
@@ -124,9 +114,9 @@ namespace ActionService
             return tblEmployeeDAO.SearchEmployeesByName(EmployeeName);
         }
 
-        public TblOrder SearchOrder(string OrderID)
+        public List<TblOrder> SearchOrder(string OrderID)
         {
-            throw new NotImplementedException();
+            return tblOrderDAO.SearchOrder(OrderID);
         }
 
         public List<TblProducts> SearchProducts(string ProductName)
@@ -172,6 +162,11 @@ namespace ActionService
         public string GetProductNameById(int ProductID)
         {
             return tblProductsDAO.GetProductNameByID(ProductID);
+        }
+        
+        public bool DeleteOrderDetail(string OrderID)
+        {
+            return tblOrderDetailDAO.DeleteOrderDetails(OrderID);
         }
     }
 }

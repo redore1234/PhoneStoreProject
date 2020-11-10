@@ -19,7 +19,7 @@ namespace ManagePhone
         private string EmpID;
         public int CustomerID { get; set; }
         public string CustomerPhone => txtCustomerPhone.Text;
-        public string ProductName => txtProductName.Text;
+        public string PhoneName => txtProductName.Text;
 
         public IList<ProductModel> ListProduct 
         { 
@@ -70,10 +70,10 @@ namespace ManagePhone
         private void LoadCart(List<CartItemModel> Cart)
         {
             dgvCart.DataSource = null;
-
             if (Cart != null) 
             {
                 dgvCart.DataSource = Cart;
+                txtBuyQuantity.DataBindings.Clear();
                 txtBuyQuantity.DataBindings.Add("Text", Cart, "BuyQuantity");
 
                 txtBuyQuantity.Enabled = true;

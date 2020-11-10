@@ -194,7 +194,7 @@ CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VA
 		WHERE productID=@ProductID
 	END
  GO
-
+ 
 --Get List Products--
 CREATE PROC  spGetListProducts 
 AS 
@@ -229,17 +229,6 @@ GO
 
 EXEC dbo.spSearchProducts a
 GO 
-
--- Update A Product --
-CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
- @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
- AS
-	BEGIN
-		UPDATE dbo.tblProducts
-		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
-		WHERE productID=@ProductID
-	END
- GO
 
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)
@@ -306,6 +295,7 @@ AS
 GO
 
 EXEC spAddOrder 1, 1, 1000
+GO
 
 -- Get Lastest Order Using CustomerID
 CREATE PROCEDURE spGetLastestOrder(@CustomerID INT)
@@ -324,10 +314,30 @@ AS
 	BEGIN
 		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
 		FROM tblOrders
+		WHERE statusID = 1
 		ORDER BY orderDate DESC
 	END
 GO
 
+--Search order by orderID
+CREATE PROCEDURE spSearchOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
+		FROM tblOrders
+		WHERE orderID LIKE @OrderID AND statusID = 1
+		ORDER BY orderDate DESC
+	END
+GO
+
+CREATE PROC spDeleteOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		UPDATE tblOrders
+		SET statusID = 2
+		WHERE orderID = @OrderID
+	END
+GO
 -- TBLORDERDETAIL --
 -- Get items in an order --
 CREATE PROC spGetItemsByOrderID(@OrderID VARCHAR(100))
@@ -340,7 +350,8 @@ AS
 GO
 
 -- Add order detail
-CREATE PROCEDURE spAddOrderDeatil(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
+
+CREATE PROCEDURE spAddOrderDetail(@OrderID VARCHAR(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
 	BEGIN
 		INSERT INTO tblOrderDetail(orderID, productID, quantity, itemPrice)

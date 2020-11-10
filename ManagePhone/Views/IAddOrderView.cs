@@ -10,7 +10,7 @@ namespace ManagePhone.Views
     public interface IAddOrderView : IView
     {
         string CustomerPhone { get; }
-        string ProductName { get; }
+        string PhoneName { get; }
         IList<ProductModel> ListProduct { set; }
         IList<CartItemModel> Cart { get; set; }
         int CustomerID { get; set; }

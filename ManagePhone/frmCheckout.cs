@@ -44,10 +44,18 @@ namespace ManagePhone {
 
         private void txtCash_TextChanged(object sender, EventArgs e)
         {
-            bool IsValidCash = _checkoutPresenter.CalculateCharge();
-            if (IsValidCash)
+            if (txtCash.TextLength > 0)
             {
-                btnFinish.Enabled = true;
+                bool IsValidCash = _checkoutPresenter.CalculateCharge();
+                if (IsValidCash)
+                {
+                    btnFinish.Enabled = true;
+                }
+                else
+                {
+                    txtCharge.Text = "";
+                    btnFinish.Enabled = false;
+                }
             }
             else
             {

@@ -16,6 +16,6 @@ namespace DataObjects
         List<TblOrderDetail> GetItemsByOrderID(string OrderID);
 
         //Delete all Items by OrderID
-        bool DeleteOrderDetails(int OrderID);
+        bool DeleteOrderDetails(string OrderID);
     }
 }

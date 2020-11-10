@@ -154,6 +154,9 @@
 	1. Procedures.sql: add procedures for table tblOrders and tblOrderDetails use for checkout function
 	1. Delete Customer's SpentMoney attribute 
 
+1. **[10/11/2020 20:01] Pham Thanh Long - @redore1234**
+	1. Delete spentMoney attribute in Procedure.sql
+
 1. **[10/11/2020 21:29] Dam Dong Tin - @dtin**
 	1. Do show image of a product
 	1. Fix bug project not working
@@ -164,3 +167,13 @@
 1. **[10/11/2020 21:59] Le Bao Long - @longlb88**
  	1. Edit GUI and implement functions on frmCheckout, load list on frmViewOrder
 	1. Procedures.sql: add spGetOrderList
+
+1. **[10/11/2020 23:19] Le Bao Long - @longlb88**
+ 	1. frmViewOrder: implements functions (Search Orders by ID, Delete Order)
+	1. frmAddOrder, AddOrderPresenter: Fix update quantity bug
+	1. frmCheckout: Fix empty Cash field bug
+	1. Procedures.sql: add spDeleteOrder, spSearchOrder; Edit spGetOrderList
+
+1. **[11/11/2020 00:27] Dam Dong Tin - @dtin**
+	1. Do show all items detail in a order
+	1. Create some store procedure to fit with show function

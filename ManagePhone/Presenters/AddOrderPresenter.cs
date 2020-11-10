@@ -82,7 +82,7 @@ namespace ManagePhone.Presenters
 
         public void SearchProduct()
         {
-            string Name = View.ProductName;
+            string Name = View.PhoneName;
             if (Name.Length != 0)
             {
                 View.ListProduct = Model.SearchProducts(Name);
@@ -112,21 +112,18 @@ namespace ManagePhone.Presenters
         public void DeleteFromCart(CartItemModel RemoveItem)
         {
             List<CartItemModel> Cart = (List<CartItemModel>)View.Cart;
+            List<CartItemModel> NewCart = new List<CartItemModel>();
             long TotalPrice = 0;
             foreach (CartItemModel Item in Cart)
             {
-                if (Item.ProductID == RemoveItem.ProductID)
+                if (Item.ProductID != RemoveItem.ProductID)
                 {
-                    RemoveItem = Item;
+                    NewCart.Add(Item);
+                    TotalPrice += Item.Price * Item.BuyQuantity;
                 }
             }
-            Cart.Remove(RemoveItem);
 
-            if (Cart.Count == 0)
-            {
-                Cart = null;
-            }
-            View.Cart = Cart;
+            View.Cart = NewCart;
             View.TotalPrice = TotalPrice;
         }
 

@@ -27,5 +27,26 @@ namespace ManagePhone.Presenters
             frmViewOrderDetails frmViewOrderDetails = new frmViewOrderDetails(OrderID);
             frmViewOrderDetails.ShowDialog();
         }
+        
+        public void SearchOrder()
+        {
+            string OrderID = View.OrderID;
+            List<OrderModel> OrderList = Model.SearchOrder(OrderID);
+            View.OrderList = OrderList;
+        }
+
+        public void DeleteOrder(string OrderID)
+        {
+            bool DeleteSuccess = Model.DeleteOrder(OrderID);
+            if (DeleteSuccess)
+            {
+                bool Result = Model.DeleteOrderDetail(OrderID);
+                if (Result)
+                {
+                    MessageBox.Show("Deleted Successfully", "Notice");
+                    LoadOrders();
+                }
+            }
+        }
     }
 }

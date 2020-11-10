@@ -23,7 +23,7 @@ namespace DataObjects.DAO
 
         public bool AddItemsToOrder(string OrderID, int ProductID, int Quantity, long Price)
         {
-            string StoreProc = "spAddOrderDeatil";
+            string StoreProc = "spAddOrderDetail";
             object[] parms =
             {
                 "@OrderID" , OrderID,
@@ -34,7 +34,7 @@ namespace DataObjects.DAO
             return db.Update(StoreProc, parms) > 0;
         }
 
-        public bool DeleteOrderDetails(int OrderID)
+        public bool DeleteOrderDetails(string OrderID)
         {
             string StoreProc = "spDeleteOrderDetail";
             object[] parms =
