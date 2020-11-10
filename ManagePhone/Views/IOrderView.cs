@@ -9,6 +9,5 @@ namespace ManagePhone.Views
     public interface IOrderView : IView
     {
         string OrderID { get; set; }
-        //IList<OrderModel> Models { set; }
     }
 }

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace ManagePhone
 {
-    public partial class frmAddOrder : Form, IAddOrder
+    public partial class frmAddOrder : Form, IAddOrderView
     {
         public CustomerModel Customer { get; set; }
         public string CustomerPhone => txtCustomerPhone.Text;

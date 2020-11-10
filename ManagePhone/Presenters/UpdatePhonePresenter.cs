@@ -1,17 +1,31 @@
 ﻿using ManagePhone.Models.Models;
 using ManagePhone.Views;
+using System.Windows.Forms;
 using System;
 using System.IO;
-using System.Windows.Forms;
 
 namespace ManagePhone.Presenters
 {
-    public class AddPhonePresenter : Presenter<IAddPhoneView>
+    public class UpdatePhonePresenter : Presenter<IUpdatePhoneView>
     {
         private const string IMAGE_EXTENSIONS = "*.jpg; *.jpeg; *.png; *.gif; *.bmp";
 
-        public AddPhonePresenter(IAddPhoneView view) : base(view)
+        //Constructor
+        public UpdatePhonePresenter(IUpdatePhoneView view) : base(view) {}
+
+        public void Display(ProductModel Product)
         {
+            string WorkingDirectory = Environment.CurrentDirectory;
+            string ProjectDirectory = Directory.GetParent(WorkingDirectory).Parent.Parent.FullName;
+            string ImagePath = ProjectDirectory + Product.Image;
+
+            View.PhoneName = Product.ProductName;
+            View.Brand = Product.Brand;
+            View.Image = ImagePath;
+            View.LaunchDate = Product.LaunchDate;
+            View.Price = Product.Price;
+            View.Quantity = Product.Quantity;
+            View.Description = Product.Description;
         }
 
         public string UploadPicture()
@@ -48,37 +62,40 @@ namespace ManagePhone.Presenters
             return null;
         }
 
-        public bool AddPhone(string PictureName)
+        public bool UpdatePhone(ProductModel Product, string PictureName)
         {
-            string Name = View.PhoneName;
+            int ProductID = Product.ProductID;
+            string ProductName = View.PhoneName;
             string Brand = View.Brand;
-            string Description = View.Description;
+            string Image = PictureName;
             DateTime LaunchDate = View.LaunchDate;
             long Price = View.Price;
             int Quantity = View.Quantity;
+            string Description = View.Description;
 
-            ProductModel Product = new ProductModel()
+            ProductModel UpdateProduct = new ProductModel()
             {
-                ProductName = Name,
+                ProductID = ProductID,
+                ProductName = ProductName,
                 Brand = Brand,
-                Price = Price,
-                Image = PictureName,
+                Image = Image,
                 LaunchDate = LaunchDate,
+                Price = Price,
                 Quantity = Quantity,
                 Description = Description
             };
 
-            bool IsAdded = Model.AddProduct(Product);
-            if (IsAdded)
+
+            bool IsUpdated = Model.UpdateProduct(UpdateProduct);
+            if(IsUpdated)
             {
-                MessageBox.Show("Product Added", "Notice");
-            }
-            else
+                MessageBox.Show("Updated successful!", "Notice");
+            } else
             {
-                MessageBox.Show("Add Failed", "Error");
+                MessageBox.Show("Updated fail!", "Error");
             }
 
-            return IsAdded;
+            return IsUpdated;
         }
     }
 }

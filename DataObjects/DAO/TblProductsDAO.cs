@@ -76,7 +76,19 @@ namespace DataObjects.DAO
 
         public bool UpdateProduct(TblProducts Product)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spUpdateProduct";
+            object[] parms =
+            {
+                "@ProductID", Product.ProductID,
+                "@ProductName", Product.ProductName,
+                "@Brand", Product.Brand,
+                "@Description", Product.Description,
+                "@LaunchDate", Product.LaunchDate,
+                "@Price", Product.Price,
+                "@Image", Product.Image,
+                "@Quantity", Product.Quantity
+            };
+            return db.Update(StoreProc, parms) > 0;
         }
     }
 }

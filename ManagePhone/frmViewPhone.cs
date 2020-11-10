@@ -3,15 +3,10 @@ using ManagePhone.Presenters;
 using ManagePhone.Views;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ManagePhone {
+namespace ManagePhone
+{
     public partial class frmViewPhone : Form, IPhonesView
     {
         public string Brand { get; set; }
@@ -33,9 +28,10 @@ namespace ManagePhone {
         public ProductModel CurProductModel;
 
         //the presenter
-        ViewProductPresenter _viewProductPresenter;
+        private ViewProductPresenter _viewProductPresenter;
 
-        public frmViewPhone() {
+        public frmViewPhone()
+        {
             InitializeComponent();
             _viewProductPresenter = new ViewProductPresenter(this);
         }
@@ -45,15 +41,17 @@ namespace ManagePhone {
             dgvListPhone.DataSource = ProductList;
         }
 
-        private void btnCancelPhone_Click(object sender, EventArgs e) {
+        private void btnCancelPhone_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btnUpdatePhone_Click(object sender, EventArgs e) {
-            frmUpdatePhone updatePhone = new frmUpdatePhone();
-            this.Hide();
-            updatePhone.ShowDialog();
-            this.Show();
+        private void btnUpdatePhone_Click(object sender, EventArgs e)
+        {
+            ProductModel ProductModel = (ProductModel)dgvListPhone.CurrentRow.DataBoundItem;
+
+            _viewProductPresenter.UpdateProduct(ProductModel);
+            _viewProductPresenter.LoadProducts();
         }
 
         private void btnDeletePhone_Click(object sender, EventArgs e)

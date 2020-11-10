@@ -34,6 +34,13 @@ namespace ManagePhone.Presenters
             }
         }
 
+        public void UpdateProduct(ProductModel Model)
+        {
+            frmUpdatePhone frmUpdatePhone = new frmUpdatePhone(Model);
+            frmUpdatePhone.ShowDialog();
+            LoadProducts();
+        }
+
         public void SearchProduct(string ProductName)
         {
             View.ProductList = Model.SearchProducts(ProductName);

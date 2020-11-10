@@ -178,6 +178,12 @@ namespace ManagePhone.Models
             return ProductModelList;
         }
 
+        public bool UpdateProduct(ProductModel model)
+        {
+            var Product = Mapper.Map<ProductModel, TblProducts>(model);
+            return service.UpdateProduct(Product);
+        }
+
         #endregion Products
     }
 }
