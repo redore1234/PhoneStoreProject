@@ -325,13 +325,33 @@ AS
 	BEGIN
 		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
 		FROM tblOrders
+		WHERE statusID = 1
 		ORDER BY orderDate DESC
 	END
 GO
 
+--Search order by orderID
+CREATE PROCEDURE spSearchOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		SELECT orderID, customerID, orderDate, employeeID, totalPrice, statusID
+		FROM tblOrders
+		WHERE orderID LIKE @OrderID AND statusID = 1
+		ORDER BY orderDate DESC
+	END
+GO
+
+CREATE PROC spDeleteOrder(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		UPDATE tblOrders
+		SET statusID = 2
+		WHERE orderID = @OrderID
+	END
+GO
 -- TBLORDERDETAIL --
 -- Add order detail
-CREATE PROCEDURE spAddOrderDeatil(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
+CREATE PROCEDURE spAddOrderDetail(@OrderID VARCHAR(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
 	BEGIN
 		INSERT INTO tblOrderDetail(orderID, productID, quantity, itemPrice)

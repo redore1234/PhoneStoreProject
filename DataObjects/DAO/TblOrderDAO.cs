@@ -38,7 +38,9 @@ namespace DataObjects.DAO
 
         public bool DeleteOrder(string OrderID)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spDeleteOrder";
+            object[] parms = { "@OrderID", OrderID };
+            return db.Update(StoreProc, parms) > 0;
         }
 
         public TblOrder GetLastestOrder(int CustomerID)
@@ -54,9 +56,11 @@ namespace DataObjects.DAO
             return db.Read(StoreProc, Make).ToList();
         }
 
-        public TblOrder SearchOrder(string OrderID)
+        public List<TblOrder> SearchOrder(string OrderID)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spSearchOrder";
+            object[] parms = { "@OrderID", "%" + OrderID + "%" };
+            return db.Read(StoreProc, Make, parms).ToList();
         }
     }
 }

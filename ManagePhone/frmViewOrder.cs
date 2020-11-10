@@ -50,5 +50,16 @@ namespace ManagePhone {
             viewOrderDetails.ShowDialog();
             //this.Close();
         }
+
+        private void txtOrderID_TextChanged(object sender, EventArgs e)
+        {
+            _viewOrderPresenter.SearchOrder();
+        }
+
+        private void btnDeleteBill_Click(object sender, EventArgs e)
+        {
+            OrderModel OrderModel = (OrderModel)dgvListOrder.CurrentRow.DataBoundItem;
+            _viewOrderPresenter.DeleteOrder(OrderModel.OrderID);
+        }
     }
 }

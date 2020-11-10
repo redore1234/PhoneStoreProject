@@ -86,7 +86,6 @@
             this.dgvListCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListCustomer.Size = new System.Drawing.Size(738, 398);
             this.dgvListCustomer.TabIndex = 27;
-            this.dgvListCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListCustomer_CellClick);
             // 
             // txtSearchCustomerName
             // 

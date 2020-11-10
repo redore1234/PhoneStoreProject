@@ -26,7 +26,8 @@ namespace ManagePhone.Models
         #region Customer
             public bool AddCustomer(CustomerModel customer);
             public bool UpdateCustomer(CustomerModel customer);
-            public List<CustomerModel> LoadCustomerList();
+        
+        public List<CustomerModel> LoadCustomerList();
             public List<CustomerModel> SearchCustomer(string name, string phone);
             public CustomerModel SearchCustomerByPhone(string Phone);
         #endregion
@@ -40,6 +41,7 @@ namespace ManagePhone.Models
             public List<ProductModel> LoadProductList();
             public ProductModel GetProduct(int productID);
             public bool UpdateProduct(ProductModel Product);
+            public void UpdateProductQuantity(int productID, int newQuantity);
 
         #endregion
 
@@ -47,8 +49,14 @@ namespace ManagePhone.Models
             public List<OrderModel> GetOrdersList();
             public bool AddOrder(OrderModel order);
             public OrderModel GetLastestOrder(int customerID);
-            bool AddOrderDetail(string orderID, int productID, int quantity, long price);
-            void UpdateProductQuantity(int productID, int newQuantity);
+            public List<OrderModel> SearchOrder(string orderID);
+            public bool DeleteOrder(string OrderID);
+
+        #endregion
+
+        #region Order Detail
+        public bool AddOrderDetail(string orderID, int productID, int quantity, long price);
+        public bool DeleteOrderDetail(string orderID);
         #endregion
     }
 }

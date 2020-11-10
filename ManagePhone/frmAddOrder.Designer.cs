@@ -202,6 +202,7 @@
             this.dgvSearchProduct.ReadOnly = true;
             this.dgvSearchProduct.RowHeadersWidth = 51;
             this.dgvSearchProduct.RowTemplate.Height = 24;
+            this.dgvSearchProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearchProduct.Size = new System.Drawing.Size(711, 374);
             this.dgvSearchProduct.TabIndex = 4;
             // 
@@ -217,6 +218,7 @@
             this.dgvCart.ReadOnly = true;
             this.dgvCart.RowHeadersWidth = 51;
             this.dgvCart.RowTemplate.Height = 24;
+            this.dgvCart.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCart.Size = new System.Drawing.Size(350, 374);
             this.dgvCart.TabIndex = 6;
             // 
