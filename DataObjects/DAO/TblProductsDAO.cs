@@ -41,6 +41,9 @@ namespace DataObjects.DAO
             Quantity = int.Parse(reader["quantity"].ToString())
         };
 
+        //Return string value form DataReader
+        static Func<IDataReader, string> StringMake = reader => reader["productName"].ToString();
+
         public bool AddProduct(TblProducts Product)
         {
             string StoreProc = "spAddProduct";
@@ -59,6 +62,17 @@ namespace DataObjects.DAO
             string StoreProc = "spGetProduct";
             object[] parms = { "@ProductID", ProductID };
             return db.Read(StoreProc, Make, parms).FirstOrDefault();
+        }
+
+        //Get name of product using Product ID
+        public string GetProductNameByID(int ProductID)
+        {
+            string StoreProc = "spGetProducNameByID";
+            object[] parms =
+            {
+                "@ProductID", ProductID
+            };
+            return db.Read(StoreProc, StringMake, parms).FirstOrDefault();
         }
 
         public List<TblProducts> GetListProducts()

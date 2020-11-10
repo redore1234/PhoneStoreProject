@@ -8,8 +8,7 @@ namespace ManagePhone.Models.Models
 {
     public class OrderDetailModel
     {
-        public int OrderDetailID { get; set; }
-        public string OrderID { get; set; }
+        public string ProductName { get; set; }
         public int ProductID { get; set; }
         public int Quantity { get; set; }
         public long ItemPrice { get; set; }

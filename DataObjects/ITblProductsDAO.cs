@@ -21,11 +21,16 @@ namespace DataObjects
         //Get a single product using ProductID
         TblProducts GetProduct(int ProductID);
 
+        //Search product name by Id
+        string GetProductNameByID(int ProductID);
+
         //Get list all of products
         List<TblProducts> GetListProducts();
 
         //Search by name for all products
         List<TblProducts> SearchProducts(string ProductName);
+
+
         
         //Update quantity of the product
         void UpdateQuantity(int productID, int newQuantity);

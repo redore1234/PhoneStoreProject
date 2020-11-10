@@ -178,6 +178,7 @@
     <Compile Include="Presenters\UpdatePhonePresenter.cs" />
     <Compile Include="Presenters\ViewCustomerPresenter.cs" />
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ViewOrderDetailsPreseneter.cs" />
     <Compile Include="Presenters\ViewOrderPresenter.cs" />
     <Compile Include="Presenters\ViewProductPresenter.cs" />
     <Compile Include="Program.cs" />

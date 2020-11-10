@@ -21,5 +21,11 @@ namespace ManagePhone.Presenters
             List<OrderModel> OrderList = Model.GetOrdersList();
             View.OrderList = OrderList;
         }
+
+        public void ViewOrderDetails(string OrderID)
+        {
+            frmViewOrderDetails frmViewOrderDetails = new frmViewOrderDetails(OrderID);
+            frmViewOrderDetails.ShowDialog();
+        }
     }
 }

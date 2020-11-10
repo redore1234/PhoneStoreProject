@@ -49,6 +49,7 @@ namespace ManagePhone.Models
             public OrderModel GetLastestOrder(int customerID);
             bool AddOrderDetail(string orderID, int productID, int quantity, long price);
             void UpdateProductQuantity(int productID, int newQuantity);
+            public List<OrderDetailModel> GetItemsByOrderID(string orderID);
         #endregion
     }
 }

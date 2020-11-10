@@ -1,4 +1,3 @@
-
 USE PhoneStore
 GO
 
@@ -163,11 +162,6 @@ AS
 	END
 GO
 
-EXEC spSearchCustomers '%%', '%2345678901%'
-
-SELECT customerID, name, DOB, address, phone
-		FROM dbo.tblCustomer
-		WHERE name LIKE '%%' AND phone LIKE '%2345678901%'
 --Get List Customer By Phone--
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
@@ -270,7 +264,14 @@ AS
 	END
 GO
 
-EXEC dbo.spGetProduct @ProductID = 5 -- int
+-- Get Product Name by ID --
+CREATE PROC spGetProducNameByID(@ProductID INT)
+AS
+	BEGIN
+		SELECT productName
+		FROM tblProducts
+		WHERE productID=@ProductID
+	END
 GO
 
 --Update Product Quantity
@@ -317,8 +318,6 @@ AS
 	END
 GO
 
-EXEC spGetLastestOrder 2
-
 -- Get order list
 CREATE PROCEDURE spGetOrderList
 AS
@@ -330,6 +329,16 @@ AS
 GO
 
 -- TBLORDERDETAIL --
+-- Get items in an order --
+CREATE PROC spGetItemsByOrderID(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		SELECT productID, quantity, itemPrice
+		FROM tblOrderDetail
+		WHERE orderID=@OrderID
+	END
+GO
+
 -- Add order detail
 CREATE PROCEDURE spAddOrderDeatil(@OrderID varchar(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
