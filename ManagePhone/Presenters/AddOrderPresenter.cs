@@ -71,13 +71,15 @@ namespace ManagePhone.Presenters
             CustomerModel Customer = Model.SearchCustomerByPhone(Phone);
             if (Customer == null)
             {
-                (new frmAddCustomer()).ShowDialog();
-                View.CustomerID = 0;
+                DialogResult AddResult = (new frmAddCustomer(Phone)).ShowDialog();
+                if (AddResult == DialogResult.Cancel)
+                {
+                    View.CustomerID = 0;
+                    return;
+                }
+                Customer = Model.SearchCustomerByPhone(Phone);
             }
-            else
-            {
-                View.CustomerID = Customer.CustomerID;
-            }
+            View.CustomerID = Customer.CustomerID;
         }
 
         public void SearchProduct()

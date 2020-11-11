@@ -15,7 +15,11 @@ namespace ManagePhone.GUI {
     {
         public string CustomerName => txtCustomerName.Text;
         public DateTime DOB => dtCustomerDOB.Value;
-        public string Phone => txtCustomerPhone.Text;
+        public string Phone
+        {
+            get => txtCustomerPhone.Text;
+            set => txtCustomerPhone.Text = value;
+        }
         public string Address => txtCustomerAddress.Text;
 
         //The presenter
@@ -26,6 +30,11 @@ namespace ManagePhone.GUI {
             dtCustomerDOB.CustomFormat = "dd-MM-yyyy";
 
             _addCustomerPresenter = new AddCustomerPresenter(this);
+        }
+
+        public frmAddCustomer(string Phone) : this()
+        {
+            this.Phone = Phone;
         }
 
         private void btnCancel_Click(object sender, EventArgs e) {

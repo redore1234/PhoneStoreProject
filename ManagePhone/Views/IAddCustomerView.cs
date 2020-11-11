@@ -10,7 +10,7 @@ namespace ManagePhone.Views
     {
         string CustomerName { get; }
         DateTime DOB { get; }
-        string Phone { get; }
+        string Phone { get; set; }
         string Address { get; }
     }
 }
