@@ -340,7 +340,7 @@ AS
 		ORDER BY orderDate DESC
 	END
 GO
-
+	
 CREATE PROC spDeleteOrder(@OrderID VARCHAR(100))
 AS
 	BEGIN

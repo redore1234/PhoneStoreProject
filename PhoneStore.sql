@@ -60,6 +60,8 @@ CREATE TABLE tblOrderDetail(
 	statusID INT DEFAULT 1 FOREIGN KEY REFERENCES tblStatus(statusID)
 )
 
+DROP TABLE tblOrderDetail
+DROP TABLE tblOrders
 DROP TABLE tblEmployee
 DROP TABLE tblRole
 DROP TABLE tblStatus
