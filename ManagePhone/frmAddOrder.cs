@@ -64,6 +64,7 @@ namespace ManagePhone
         {
             dgvSearchProduct.DataSource = null;
             dgvSearchProduct.DataSource = ListProduct;
+            dgvSearchProduct.Columns["Image"].Visible = false;
             dgvSearchProduct.Update();
         }
 

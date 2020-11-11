@@ -190,3 +190,6 @@
 
 1. **[11/11/2020 10:13] Le Bao Long - @longlb88**
 	1. Update check customer phone number function in frmAddOrder: Automatically check as Found Customer when create new customer.
+
+1. **[11/11/2020 13:51] Le Bao Long - @longlb88**
+	1. Fix bug when delete all item from cart.

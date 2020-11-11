@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddOrder));
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCustomerPhone = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -357,6 +358,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tableLayoutPanel6);
             this.Controls.Add(this.pbSuccess);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmAddOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

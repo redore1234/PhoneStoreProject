@@ -114,17 +114,21 @@ namespace ManagePhone.Presenters
         public void DeleteFromCart(CartItemModel RemoveItem)
         {
             List<CartItemModel> Cart = (List<CartItemModel>)View.Cart;
-            List<CartItemModel> NewCart = new List<CartItemModel>();
+            List<CartItemModel> NewCart = null;
             long TotalPrice = 0;
             foreach (CartItemModel Item in Cart)
             {
                 if (Item.ProductID != RemoveItem.ProductID)
                 {
+                    if (NewCart == null)
+                    {
+                        NewCart = new List<CartItemModel>();
+                    }
                     NewCart.Add(Item);
                     TotalPrice += Item.Price * Item.BuyQuantity;
                 }
             }
-
+            
             View.Cart = NewCart;
             View.TotalPrice = TotalPrice;
         }
