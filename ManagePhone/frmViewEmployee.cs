@@ -68,12 +68,12 @@ namespace ManagePhone {
 
         private void txtSearchEmployeeName_TextChanged(object sender, EventArgs e)
         {
-            if (EmployeeName.Length > 0 || !EmployeeName.Equals(""))
-            {
-                _viewEmployeePresenter.SearchEmployee(EmployeeName);
-            } else
+            if (EmployeeName == null || EmployeeName.Equals(""))
             {
                 _viewEmployeePresenter.LoadEmployees();
+            } else
+            {
+                _viewEmployeePresenter.SearchEmployee(EmployeeName);
             }
         }
     }

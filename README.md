@@ -177,3 +177,6 @@
 1. **[11/11/2020 00:27] Dam Dong Tin - @dtin**
 	1. Do show all items detail in a order
 	1. Create some store procedure to fit with show function
+
+1. **[11/11/2020 9:01] Pham Thanh Long - @redore1234**
+	1. Fix search OrderID in ViewOrderPresenter
