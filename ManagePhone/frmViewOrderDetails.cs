@@ -34,7 +34,6 @@ namespace ManagePhone
         private void frmViewOrderDetails_Load(object sender, EventArgs e)
         {
             _viewOrderDetailsPreseneter.ShowOrderDetails(OrderID);
-            dgvListOrderItem.Columns["ProductID"].Visible = false;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

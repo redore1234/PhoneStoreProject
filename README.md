@@ -184,3 +184,6 @@
 1. **[11/11/2020 9:36] Le Bao Long - @longlb88**
 	1. Fix typo error: spGetProducNameByID -> spGetProductNameByID
 	1. Delete test code in Procedures.sql
+
+1. **[11/11/2020 10:09] Dam Dong Tin - @dtin**
+	1. Delete field ProductID in OrderDetailModel
