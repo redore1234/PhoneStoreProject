@@ -185,5 +185,8 @@
 	1. Fix typo error: spGetProducNameByID -> spGetProductNameByID
 	1. Delete test code in Procedures.sql
 
+1. **[11/11/2020 10:09] Dam Dong Tin - @dtin**
+	1. Delete field ProductID in OrderDetailModel
+
 1. **[11/11/2020 10:13] Le Bao Long - @longlb88**
 	1. Update check customer phone number function in frmAddOrder: Automatically check as Found Customer when create new customer.
