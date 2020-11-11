@@ -22,11 +22,24 @@ namespace ManagePhone.Presenters
             View.OrderList = OrderList;
         }
 
-        public void SearchOrder()
+        public void ViewOrderDetails(string OrderID)
         {
-            string OrderID = View.OrderID;
-            List<OrderModel> OrderList = Model.SearchOrder(OrderID);
-            View.OrderList = OrderList;
+            frmViewOrderDetails frmViewOrderDetails = new frmViewOrderDetails(OrderID);
+            frmViewOrderDetails.ShowDialog();
+        }
+        
+        public void SearchOrder(String OrderID)
+        {
+            OrderID = View.OrderID;
+            if (OrderID == null || OrderID.Equals(""))
+            {
+                LoadOrders();
+            } else
+            {
+                List<OrderModel> OrderList = Model.SearchOrder(OrderID);
+                View.OrderList = OrderList;
+            }
+
         }
 
         public void DeleteOrder(string OrderID)

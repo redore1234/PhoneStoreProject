@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvListBill = new System.Windows.Forms.DataGridView();
+            this.dgvListOrderItem = new System.Windows.Forms.DataGridView();
             this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOrderItem)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvListBill
+            // dgvListOrderItem
             // 
-            this.dgvListBill.AllowUserToAddRows = false;
-            this.dgvListBill.AllowUserToDeleteRows = false;
-            this.dgvListBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvListOrderItem.AllowUserToAddRows = false;
+            this.dgvListOrderItem.AllowUserToDeleteRows = false;
+            this.dgvListOrderItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListBill.Location = new System.Drawing.Point(11, 11);
-            this.dgvListBill.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dgvListBill.Name = "dgvListBill";
-            this.dgvListBill.ReadOnly = true;
-            this.dgvListBill.RowHeadersWidth = 51;
-            this.dgvListBill.RowTemplate.Height = 24;
-            this.dgvListBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListBill.Size = new System.Drawing.Size(834, 426);
-            this.dgvListBill.TabIndex = 34;
+            this.dgvListOrderItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListOrderItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListOrderItem.Location = new System.Drawing.Point(11, 11);
+            this.dgvListOrderItem.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListOrderItem.Name = "dgvListOrderItem";
+            this.dgvListOrderItem.ReadOnly = true;
+            this.dgvListOrderItem.RowHeadersWidth = 51;
+            this.dgvListOrderItem.RowTemplate.Height = 24;
+            this.dgvListOrderItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListOrderItem.Size = new System.Drawing.Size(834, 426);
+            this.dgvListOrderItem.TabIndex = 34;
             // 
             // btnCancel
             // 
@@ -58,7 +58,7 @@
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(748, 441);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.btnCancel.Size = new System.Drawing.Size(97, 26);
@@ -74,20 +74,21 @@
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(856, 469);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.dgvListBill);
+            this.Controls.Add(this.dgvListOrderItem);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmViewOrderDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Order Details";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
+            this.Load += new System.EventHandler(this.frmViewOrderDetails_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListOrderItem)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dgvListBill;
+        private System.Windows.Forms.DataGridView dgvListOrderItem;
         private System.Windows.Forms.Button btnCancel;
     }
 }

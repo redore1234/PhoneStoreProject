@@ -46,17 +46,19 @@ namespace ManagePhone.Models
         #endregion
 
         #region Order
+        
             public List<OrderModel> GetOrdersList();
             public bool AddOrder(OrderModel order);
             public OrderModel GetLastestOrder(int customerID);
+            public List<OrderDetailModel> GetItemsByOrderID(string orderID);
             public List<OrderModel> SearchOrder(string orderID);
             public bool DeleteOrder(string OrderID);
 
         #endregion
 
         #region Order Detail
-        public bool AddOrderDetail(string orderID, int productID, int quantity, long price);
-        public bool DeleteOrderDetail(string orderID);
+            public bool AddOrderDetail(string orderID, int productID, int quantity, long price);
+            public bool DeleteOrderDetail(string orderID);
         #endregion
     }
 }

@@ -1,4 +1,3 @@
-
 USE PhoneStore
 GO
 
@@ -163,11 +162,6 @@ AS
 	END
 GO
 
-EXEC spSearchCustomers '%%', '%2345678901%'
-
-SELECT customerID, name, DOB, address, phone
-		FROM dbo.tblCustomer
-		WHERE name LIKE '%%' AND phone LIKE '%2345678901%'
 --Get List Customer By Phone--
 CREATE PROC spSearchCustomerByPhone(@Phone VARCHAR(10))
 AS 
@@ -200,7 +194,7 @@ CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VA
 		WHERE productID=@ProductID
 	END
  GO
-
+ 
 --Get List Products--
 CREATE PROC  spGetListProducts 
 AS 
@@ -236,17 +230,6 @@ GO
 EXEC dbo.spSearchProducts a
 GO 
 
--- Update A Product --
-CREATE PROC spUpdateProduct(@ProductID INT, @ProductName NVARCHAR(50), @Brand VARCHAR(20), @Description VARCHAR(200),
- @LaunchDate DATE, @Price BIGINT, @Image VARCHAR(200), @Quantity INT)
- AS
-	BEGIN
-		UPDATE dbo.tblProducts
-		SET productName=@ProductName, brand=@Brand, description=@Description, launchDate=@LaunchDate, price=@Price, image=@Image, quantity=@Quantity
-		WHERE productID=@ProductID
-	END
- GO
-
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)
 AS 
@@ -270,7 +253,14 @@ AS
 	END
 GO
 
-EXEC dbo.spGetProduct @ProductID = 5 -- int
+-- Get Product Name by ID --
+CREATE PROC spGetProducNameByID(@ProductID INT)
+AS
+	BEGIN
+		SELECT productName
+		FROM tblProducts
+		WHERE productID=@ProductID
+	END
 GO
 
 --Update Product Quantity
@@ -305,6 +295,7 @@ AS
 GO
 
 EXEC spAddOrder 1, 1, 1000
+GO
 
 -- Get Lastest Order Using CustomerID
 CREATE PROCEDURE spGetLastestOrder(@CustomerID INT)
@@ -316,8 +307,6 @@ AS
 		ORDER BY orderDate DESC
 	END
 GO
-
-EXEC spGetLastestOrder 2
 
 -- Get order list
 CREATE PROCEDURE spGetOrderList
@@ -350,7 +339,18 @@ AS
 	END
 GO
 -- TBLORDERDETAIL --
+-- Get items in an order --
+CREATE PROC spGetItemsByOrderID(@OrderID VARCHAR(100))
+AS
+	BEGIN
+		SELECT productID, quantity, itemPrice
+		FROM tblOrderDetail
+		WHERE orderID=@OrderID
+	END
+GO
+
 -- Add order detail
+
 CREATE PROCEDURE spAddOrderDetail(@OrderID VARCHAR(100), @ProductID INT, @Quantity INT, @Price BIGINT)
 AS
 	BEGIN

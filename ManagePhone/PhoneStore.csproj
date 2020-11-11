@@ -178,6 +178,7 @@
     <Compile Include="Presenters\UpdatePhonePresenter.cs" />
     <Compile Include="Presenters\ViewCustomerPresenter.cs" />
     <Compile Include="Presenters\ViewEmployeePresenter.cs" />
+    <Compile Include="Presenters\ViewOrderDetailsPreseneter.cs" />
     <Compile Include="Presenters\ViewOrderPresenter.cs" />
     <Compile Include="Presenters\ViewProductPresenter.cs" />
     <Compile Include="Program.cs" />
@@ -257,6 +258,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -267,9 +269,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\employeeinformation.png" />

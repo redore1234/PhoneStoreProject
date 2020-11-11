@@ -64,9 +64,9 @@ namespace ActionService
             return tblProductsDAO.DeleteProduct(ProductID);
         }
 
-        public List<TblOrderDetail> GetItemsByOrderID(int OrderID)
+        public List<TblOrderDetail> GetItemsByOrderID(string OrderID)
         {
-            throw new NotImplementedException();
+            return tblOrderDetailDAO.GetItemsByOrderID(OrderID);
         }
 
         public List<TblCustomer> GetListCustomers()
@@ -159,6 +159,11 @@ namespace ActionService
             tblProductsDAO.UpdateQuantity(ProductID, NewQuantity);
         }
 
+        public string GetProductNameById(int ProductID)
+        {
+            return tblProductsDAO.GetProductNameByID(ProductID);
+        }
+        
         public bool DeleteOrderDetail(string OrderID)
         {
             return tblOrderDetailDAO.DeleteOrderDetails(OrderID);

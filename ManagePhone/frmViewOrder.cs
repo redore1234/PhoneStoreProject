@@ -45,15 +45,15 @@ namespace ManagePhone {
 
         private void btnViewDetail_Click(object sender, EventArgs e)
         {
-            frmViewOrderDetails viewOrderDetails = new frmViewOrderDetails();
             this.Hide();
-            viewOrderDetails.ShowDialog();
-            //this.Close();
+            string CurrentOrderID = dgvListOrder.CurrentRow.Cells["OrderID"].Value.ToString();
+            _viewOrderPresenter.ViewOrderDetails(CurrentOrderID);
+            this.Show();
         }
 
         private void txtOrderID_TextChanged(object sender, EventArgs e)
         {
-            _viewOrderPresenter.SearchOrder();
+                _viewOrderPresenter.SearchOrder(OrderID);
         }
 
         private void btnDeleteBill_Click(object sender, EventArgs e)

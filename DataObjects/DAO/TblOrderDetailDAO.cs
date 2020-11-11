@@ -16,12 +16,9 @@ namespace DataObjects.DAO
         static Func<IDataReader, TblOrderDetail> Make = reader =>
         new TblOrderDetail
         {
-            OrderDetailID = int.Parse(reader["orderDetailID"].ToString()),
-            OrderID = reader["orderID"].ToString(),
             ProductID = int.Parse(reader["productID"].ToString()),
             ItemPrice = long.Parse(reader["itemPrice"].ToString()),
-            Quantity = int.Parse(reader["quantity"].ToString()),
-            StatusID = int.Parse(reader["statusID"].ToString())
+            Quantity = int.Parse(reader["quantity"].ToString())
         };
 
         public bool AddItemsToOrder(string OrderID, int ProductID, int Quantity, long Price)
@@ -47,9 +44,14 @@ namespace DataObjects.DAO
             return db.Update(StoreProc, parms) > 0;
         }
 
-        public List<TblOrderDetail> GetItemsByOrderID(int OrderID)
+        public List<TblOrderDetail> GetItemsByOrderID(string OrderID)
         {
-            throw new NotImplementedException();
+            string StoreProc = "spGetItemsByOrderID";
+            object[] parms =
+            {
+                "@OrderID", OrderID
+            };
+            return db.Read(StoreProc, Make, parms).ToList();
         }
     }
 }
