@@ -53,7 +53,7 @@ namespace ManagePhone {
 
         private void txtOrderID_TextChanged(object sender, EventArgs e)
         {
-                _viewOrderPresenter.SearchOrder(OrderID);
+                _viewOrderPresenter.SearchOrder();
         }
 
         private void btnDeleteBill_Click(object sender, EventArgs e)

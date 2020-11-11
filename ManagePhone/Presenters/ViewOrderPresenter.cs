@@ -28,18 +28,10 @@ namespace ManagePhone.Presenters
             frmViewOrderDetails.ShowDialog();
         }
         
-        public void SearchOrder(String OrderID)
+        public void SearchOrder()
         {
-            OrderID = View.OrderID;
-            if (OrderID == null || OrderID.Equals(""))
-            {
-                LoadOrders();
-            } else
-            {
-                List<OrderModel> OrderList = Model.SearchOrder(OrderID);
-                View.OrderList = OrderList;
-            }
-
+            string OrderID = View.OrderID;
+            View.OrderList = Model.SearchOrder(OrderID);
         }
 
         public void DeleteOrder(string OrderID)

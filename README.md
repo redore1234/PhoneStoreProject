@@ -180,3 +180,7 @@
 
 1. **[11/11/2020 9:01] Pham Thanh Long - @redore1234**
 	1. Fix search OrderID in ViewOrderPresenter
+
+1. **[11/11/2020 9:36] Le Bao Long - @longlb88**
+	1. Fix typo error: spGetProducNameByID -> spGetProductNameByID
+	1. Delete test code in Procedures.sql

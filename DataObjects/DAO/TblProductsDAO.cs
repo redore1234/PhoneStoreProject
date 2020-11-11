@@ -67,7 +67,7 @@ namespace DataObjects.DAO
         //Get name of product using Product ID
         public string GetProductNameByID(int ProductID)
         {
-            string StoreProc = "spGetProducNameByID";
+            string StoreProc = "spGetProductNameByID";
             object[] parms =
             {
                 "@ProductID", ProductID

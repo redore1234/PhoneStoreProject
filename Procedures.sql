@@ -11,10 +11,6 @@ AS
 		FROM dbo.tblEmployee
 		WHERE employeeID=@EmpID AND password=@Pass AND statusID = 1
 	END
-GO
-
-EXEC dbo.spCheckLogin @EmpID = 'admin', -- varchar(30)
-    @Pass = 'admin' -- varchar(64)
 GO 
 
 --Add Employee--
@@ -25,15 +21,6 @@ AS
 		INSERT dbo.tblEmployee(employeeID , password , name , DOB , address , phone , roleID , statusID)
 		VALUES (@EmpID, @Pass, @Name, @DOB, @Address, @Phone, @RoleID, 1)
 	END
-GO
-
-EXEC dbo.spAddEmployee @EmpID = 'tindd', -- varchar(30)
-    @Pass = '234', -- varchar(64)
-    @Name = 'DongTin', -- varchar(50)
-    @DOB = '2000-10-20', -- date
-    @Address = '234TQD', -- varchar(100)
-    @Phone = '234', -- varchar(10)
-    @RoleID = '1' -- varchar(10)
 GO 
 
 --Delete Employee--
@@ -45,10 +32,6 @@ AS
 		WHERE employeeID = @EmpID
 	END
 GO
-
-
-EXEC dbo.spDeleteEmployee @EmpID = 'tindd' -- varchar(30)
-GO 
 
 --Update Employee With Update Password--
 CREATE PROC spUpdateEmployeeWithPass(@EmpID VARCHAR(30), @Pass VARCHAR(64), @Name VARCHAR(50), 
@@ -82,9 +65,6 @@ AS
 	END
 GO
 
-EXEC dbo.spGetListEmployees 
-GO
-
 --Search Employee by Name--
 CREATE PROC spSearchEmployeesByName(@Name VARCHAR(100))
 AS
@@ -94,11 +74,6 @@ AS
 		WHERE name LIKE '%' + @Name + '%' AND statusID=1
 	END
 GO 
-
-EXEC dbo.spSearchEmployeesByName @Name = 'h' -- varchar(100)
-GO 
-
-
 
 -- TBLCUSTOMER --
 
@@ -114,13 +89,7 @@ AS
 		        )
 		;SELECT SCOPE_IDENTITY();
 	END 
-GO 
-
-EXEC dbo.spAddCustomer @Name = 'longpt', -- varchar(50)
-    @DOB = '2000-10-31 ', -- date
-    @Address = '123PXL', -- varchar(100)
-    @Phone = '0808' -- varchar(10)
-GO	
+GO
 
 --Update Customer--
 CREATE PROC spUpdateCustomer(@CustomerID INT, @Name VARCHAR(50), @DOB DATE, @Address VARCHAR(100), 
@@ -133,13 +102,6 @@ AS
 	END
 GO 
 
-EXEC dbo.spUpdateCustomer @CustomerID = 5, -- int
-    @Name = 'longpt', -- varchar(50)
-    @DOB = '2000-10-31 ', -- date
-    @Address = '123PXL', -- varchar(100)
-    @Phone = '0808' -- varchar(10)
-GO 
-
 --Get List Customer--
 CREATE PROC  spGetListCustomers 
 AS 
@@ -147,9 +109,6 @@ AS
 		SELECT customerID, name, DOB, address, phone
 		FROM dbo.tblCustomer 
 	END 
-GO 
-
-EXEC dbo.spGetListCustomers
 GO 
 
 --Search Customers By Phone Or Name
@@ -205,9 +164,6 @@ AS
 	END 
 GO
 
-EXEC dbo.spGetListProducts
-GO 
-
 --Search Product Name
 CREATE PROC spSearchProducts(@ProductName NVARCHAR(50))
 AS
@@ -227,9 +183,6 @@ AS
 	END
 GO
 
-EXEC dbo.spSearchProducts a
-GO 
-
 --Delete Product
 CREATE PROC spDeleteProduct(@ProductID INT)
 AS 
@@ -238,9 +191,6 @@ AS
 		SET statusID=2
 		WHERE productID=@ProductID
 	END
-GO
-
-EXEC dbo.spDeleteProduct @ProductID = 1 -- int
 GO
 
 --Get Product by ID
@@ -254,7 +204,7 @@ AS
 GO
 
 -- Get Product Name by ID --
-CREATE PROC spGetProducNameByID(@ProductID INT)
+CREATE PROC spGetProductNameByID(@ProductID INT)
 AS
 	BEGIN
 		SELECT productName
@@ -294,9 +244,6 @@ AS
 	END
 GO
 
-EXEC spAddOrder 1, 1, 1000
-GO
-
 -- Get Lastest Order Using CustomerID
 CREATE PROCEDURE spGetLastestOrder(@CustomerID INT)
 AS
@@ -330,6 +277,7 @@ AS
 	END
 GO
 	
+--Delete order by OrderID
 CREATE PROC spDeleteOrder(@OrderID VARCHAR(100))
 AS
 	BEGIN
@@ -338,6 +286,7 @@ AS
 		WHERE orderID = @OrderID
 	END
 GO
+
 -- TBLORDERDETAIL --
 -- Get items in an order --
 CREATE PROC spGetItemsByOrderID(@OrderID VARCHAR(100))
