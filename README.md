@@ -1,4 +1,4 @@
-# Welcome to our repository
+# Welcome to our project
 
 ### What is this?
   This repo contains the source code of C# Application - Phone Store Project - at FPT University - HCMC campus.
