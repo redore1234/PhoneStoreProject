@@ -13,7 +13,7 @@
  - Manage the product
  - Manage the order
  - Manage the customer
-1. The Employee:
+2. The Employee:
  - Add the order
  - Add the customer
  
